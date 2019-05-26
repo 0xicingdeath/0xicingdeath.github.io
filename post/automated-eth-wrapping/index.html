@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8" />
+
+  
+  <title>Automated Eth Wrapping</title>
+
+  
+  
+  <link href="//cdn.jsdelivr.net" rel="dns-prefetch">
+  <link href="//cdnjs.cloudflare.com" rel="dns-prefetch">
+  
+  <link href="//at.alicdn.com" rel="dns-prefetch">
+  
+  <link href="//fonts.googleapis.com" rel="dns-prefetch">
+  <link href="//fonts.gstatic.com" rel="dns-prefetch">
+  
+  
+  
+  
+  
+
+  
+
+  
+  <meta name="author" content="Natalie Chin">
+  <meta name="description" content="How to make a contract auto wrap and unwrap ETH
+">
+
+  
+  
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@NatalieChin7">
+    <meta name="twitter:title" content="Automated Eth Wrapping">
+    <meta name="twitter:description" content="How to make a contract auto wrap and unwrap ETH
+">
+    <meta name="twitter:image" content="/images/blah.jpg">
+  
+
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Automated Eth Wrapping">
+  <meta property="og:description" content="How to make a contract auto wrap and unwrap ETH
+">
+  <meta property="og:url" content="http://example.org/post/automated-eth-wrapping/">
+  <meta property="og:image" content="/images/blah.jpg">
+
+
+
+
+<meta name="generator" content="Hugo 0.55.6">
+
+
+<link rel="canonical" href="http://example.org/post/automated-eth-wrapping/">
+
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="format-detection" content="telephone=no,email=no,adress=no">
+<meta http-equiv="Cache-Control" content="no-transform">
+
+
+<meta name="robots" content="index,follow">
+<meta name="referrer" content="origin-when-cross-origin">
+<meta name="google-site-verification" content="_moDmnnBNVLBN1rzNxyGUGdPHE20YgbmrtzLIbxaWFc">
+<meta name="msvalidate.01" content="22596E34341DD1D17D6022C44647E587">
+
+
+
+
+
+<meta name="theme-color" content="#02b875">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Natalie Chin">
+<meta name="msapplication-tooltip" content="Natalie Chin">
+<meta name='msapplication-navbutton-color' content="#02b875">
+<meta name="msapplication-TileColor" content="#02b875">
+<meta name="msapplication-TileImage" content="/icons/icon-144x144.png">
+<link rel="icon" href="../../favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="../../icons/icon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../icons/icon-32x32.png">
+<link rel="icon" sizes="192x192" href="../../icons/icon-192x192.png">
+<link rel="apple-touch-icon" href="../../icons/icon-152x152.png">
+<link rel="manifest" href="../../manifest.json">
+
+
+<link rel="preload" href="../../styles/main-rendered.min.css" as="style">
+
+
+<link rel="preload" href="https://fonts.googleapis.com/css?family=Lobster" as="style">
+<link rel="preload" href="../../images/blah.jpg" as="image">
+<link rel="preload" href="../../images/grey-prism.svg" as="image">
+
+
+<style>
+  body {
+    background: rgb(244, 243, 241) url('/images/grey-prism.svg') repeat fixed;
+  }
+</style>
+<link rel="stylesheet" href="../../styles/main-rendered.min.css">
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.2/dist/medium-zoom.min.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/video.js@7.3.0/dist/video-js.min.css">
+
+
+
+  
+  
+<!--[if lte IE 8]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/videojs-ie8@1.1.2/dist/videojs-ie8.min.js"></script>
+<![endif]-->
+
+<!--[if lte IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/eligrey-classlist-js-polyfill@1.2.20180112/classList.min.js"></script>
+<![endif]-->
+
+
+</head>
+  <body>
+    <div class="suspension">
+      <a role="button" aria-label="Go to top" title="Go to top" class="to-top is-hide"><span class="icon icon-up" aria-hidden="true"></span></a>
+      
+        
+      
+    </div>
+    
+    
+  <header class="site-header">
+  <img class="avatar" src="../../images/blah.jpg" alt="Avatar">
+  
+  <h2 class="title">Natalie Chin</h2>
+  
+  <p class="subtitle">I&#39;m a blockchain nerd.</p>
+  <button class="menu-toggle" type="button" aria-label="Main Menu" aria-expanded="false" tab-index="0">
+    <span class="icon icon-menu" aria-hidden="true"></span>
+  </button>
+
+  <nav class="site-menu collapsed">
+    <h2 class="offscreen">Main Menu</h2>
+    <ul class="menu-list">
+      
+      
+      
+      
+        <li class="menu-item
+          
+          
+           is-active">
+          <a href="../../">Home</a>
+        </li>
+      
+        <li class="menu-item
+          
+          
+          ">
+          <a href="https://github.com/NatalieChin80">Works</a>
+        </li>
+      
+        <li class="menu-item
+          
+          
+          ">
+          <a href="../../tags/">Tags</a>
+        </li>
+      
+    </ul>
+  </nav>
+  <nav class="social-menu collapsed">
+    <h2 class="offscreen">Social Networks</h2>
+    <ul class="social-list"><li class="social-item">
+          <a href="mailto:natchin08@gmail.com" title="Email" aria-label="Email">
+            <span class="icon icon-email" aria-hidden="true"></span>
+          </a>
+        </li><li class="social-item">
+          <a href="//github.com/NatalieChin80" rel="me" title="GitHub" aria-label="GitHub">
+	    <span class="icon icon-github" aria-hidden="true"></span>
+          </a>
+        </li><li class="social-item">
+          <a href="//twitter.com/NatalieChin7" rel="me" title="Twitter" aria-label="Twitter">
+            <span class="icon icon-twitter" aria-hidden="true"></span>
+          </a>
+        </li><li class="social-item">
+          <a href="//medium.com/@ethers" rel="me" title="Medium" aria-label="Medium">
+            <span class="icon icon-medium" aria-hidden="true"></span>
+          </a>
+        </li><li class="social-item">
+          <a href="//www.linkedin.com/in/nataliechin168" rel="me" title="LinkedIn" aria-label="LinkedIn">
+            <span class="icon icon-linkedin" aria-hidden="true"></span>
+          </a>
+        </li></ul>
+  </nav>
+</header>
+
+  <section class="main post-detail">
+    <header class="post-header">
+      <h1 class="post-title">Automated Eth Wrapping</h1>
+      <p class="post-meta">@Natalie Chin · Sep 21, 2018 · 5 min read</p>
+    </header>
+    <article class="post-content"><p>How to make a contract auto wrap and unwrap ETH</p>
+
+<h1 id="the-user-experience-effect-on-a-multi-token-payment-channel">The User Experience Effect on a Multi-token Payment Channel</h1>
+
+<p>Back in August, when we released our Multi-token Payment Channel, it allowed dynamic instantiation of any ERC20 tokens. For all intents and purposes, this functionality allowed us to reuse the channel for any number of tokens as needed. Considering most of the tokens followed the ERC20 standard, this would sufficiently cover our needs. Implementing such a channel not only ensured reduced gas costs, but ensured a uniform and consistent user experience, as the underlying contracts would remain unchanged.</p>
+
+<p>There was one need, however, that was not met: ETH.</p>
+
+<p>With the existing codebase, the contract would reject any ETH sent to it. A user would not be able to transact and exchange with ETH, due to the syntactical difference in transfer functions.</p>
+
+<p>To transfer ERC20 tokens between addresses, the syntax is: tokenAddress.transfer(dstAddress, amountToSend). Contrarily, to transfer ETH to another address, the syntax is: dstAddress.transfer(amountToSend). This website goes into a bit more detail on the nonconformity of ETH — but here’s the point:</p>
+
+<blockquote>
+<p>ETH DOESN’T CONFORM TO ITS OWN ERC20 STANDARD.</p>
+</blockquote>
+
+<p>Due to the underlying difference, updating state to an ETH channel would not be able to use the same functions as an ERC20 token channel would.</p>
+
+<p>Even though a unified token standard exists, ETH does not meet these standards. As a developer, working within these bounds is very limiting.</p>
+
+<p>From a user perspective, I find this overly tedious. To use decentralized exchanges, the exchange will take you through a series of steps in order to ensure that you can then trade your ETH for ERC20 tokens.</p>
+
+<ol>
+<li>Send your ETH into a contract which will convert it into WETH and assign it to the your address</li>
+<li>Send WETH to decentralized exchange address to trade other tokens</li>
+</ol>
+
+<p>Given the number of additional steps to be able to simply convert ETH to WETH and use it in a Dex, the user experience is often awkward and cumbersome. The additional number of steps just to make ETH conform to ERC20 specifications is over-the-top. Not to mention, the complex number of steps required to convert and send increases the chance of human error.</p>
+
+<h1 id="achieving-automated-wrapping-and-unwrapping-of-weth">Achieving Automated Wrapping and Unwrapping of WETH</h1>
+
+<p>Note: These set of smart contracts are still undergoing audits, thus are not guaranteed to be safe. Use at your own risk.</p>
+
+<p>This is why STK started to look into wrapping tokens on behalf of the user. Instead of having to manually convert WETH, or make the user do it, it can be done through functions in the contract. This allowed us to simplify the process:</p>
+
+<ol>
+<li>A user can send funds into the contract at any time they wish through a fallback payable function</li>
+<li>At any point after ETH has been sent into the contract, call deposit() to tokenize ETH to WETH</li>
+<li>The close, contest, and settle functionality is identical due to the wrapped ETH being an ERC20 token</li>
+<li>In the settle, it uses the WETH version of transfer, which decreases the balance of the channel, and sends ETH.</li>
+</ol>
+
+<p>Our new smart contract redesign abstracts the entirety of the wrapping experience, so from a user standpoint, transacting with an ERC20 token and ETH is the exact same.</p>
+
+<pre><code>
+    function transfer(address _to, uint256 _value) public returns (bool success) {
+        if (balances[msg.sender] &gt;= _value &amp;&amp; _value &gt; 0) {
+            balances[msg.sender] -= _value;
+            balances[_to] += _value;
+            emit Transfer(msg.sender, _to, _value);
+            return true;
+        } else { return false; }
+    }
+</code></pre>
+
+<p>Similarly, in our WETH contract, when the contract calls WETH.transfer(dst,amount), it makes use of the following transfer token function. This functionality is essentially the unwrapping of wrapped ETH to ETH. The function reduces the balance of WETH tokens the smart contract owns, and sends out ETH to the destination address.</p>
+
+<pre><code>  function transfer(address dst, uint wad) public returns(bool) {
+    send(msg.sender,dst,wad);
+    return true;
+  }
+
+  function send(address src, address dst, uint wad) public returns(bool) {
+    require(msg.sender == src)
+    require(balances[src]&gt;=wad);
+    balances[src] -= wad;
+    dst.transfer(wad);
+    return true;
+  }
+</code></pre>
+
+<p>That way, in our settle function, the code for transferring tokens can remain the same. It was not necessary to update anything specifically for a WETH channel functionality. If Solidity detected the function being non-existent, the fallback would be invoked; but if it detected a transfer() function present, it would execute the function of the code in the respective contract address.</p>
+
+<pre><code>    function settle(MultiChannelData storage data, address _channelAddress)
+    public
+    channelAlreadyClosed(data)
+    timeoutOver(data)
+    callerIsChannelParticipant(data)
+    isSufficientBalance(data, data.amountOwed_, _channelAddress) {
+        uint balance = data.token_.balanceOf(_channelAddress);
+        uint owedAmount = data.amountOwed_;
+        uint returnToUserAmount = balance.minus(owedAmount);
+
+        data.amountOwed_ = 0;
+
+        data.closedBlock_ = 0;
+
+        if (owedAmount &gt; 0) {
+            require(data.token_.transfer(data.recipientAddress_,owedAmount));
+        }
+
+        if (returnToUserAmount &gt; 0 &amp;&amp; data.shouldReturn_) {
+            require(data.token_.transfer(data.userAddress_, returnToUserAmount));
+        }
+
+        emit LogChannelSettled(block.number, owedAmount);
+    }
+</code></pre>
+
+<p>Thirdly, a user would never have to worry about the process of unwrapping and wrapping ETH. From a user standpoint, loading a wallet with ETH is the same thing as any ERC20 token. The contract performs the entirety of the wrapping and unwrapping process, thus is not subject to human error throughout its execution.</p>
+
+<p>There’s a wrap to our latest development in our smart contracts — with Multi-token Payment Channels with Automatic Wrapping and Unwrapping of WETH! If you’d like to check out our code in its entirety, visit us here: <a href="https://github.com/STKtoken/Multi-Token-smart-contracts!">https://github.com/STKtoken/Multi-Token-smart-contracts!</a></p></article>
+    <footer class="post-footer">
+      
+      <ul class="post-tags">
+        
+          <li><a href="../../tags/ethereum"><span class="tag">Ethereum</span></a></li>
+        
+          <li><a href="../../tags/solidity"><span class="tag">Solidity</span></a></li>
+        
+          <li><a href="../../tags/state-channels"><span class="tag">State Channels</span></a></li>
+        
+          <li><a href="../../tags/eth"><span class="tag">Eth</span></a></li>
+        
+          <li><a href="../../tags/weth"><span class="tag">Weth</span></a></li>
+        
+      </ul>
+      
+      <p class="post-copyright">
+        This post was published <strong>246</strong> days ago, content in the post may be inaccurate, even wrong now, please take risk yourself.
+      </p>
+    </footer>
+    
+      
+    
+  </section>
+  
+<footer class="site-footer">
+  <p>© 2017-2019 Natalie Chin</p>
+  <p>Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> with theme <a href="https://github.com/laozhu/hugo-nuo" target="_blank" rel="noopener">Nuo</a>.</p>
+  
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@15.0.0/dist/smooth-scroll.min.js"></script>
+
+
+
+<script async src="https://cdn.jsdelivr.net/npm/video.js@7.3.0/dist/video.min.js"></script>
+
+
+
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\\[','\\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+      extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    },
+  });
+</script>
+<script type="text/x-mathjax-config">
+  // Fix <code> tags after MathJax finishes running. This is a
+  // hack to overcome a shortcoming of Markdown. Discussion at
+  // https://github.com/mojombo/jekyll/issues/199
+  MathJax.Hub.Queue(() => {
+    MathJax.Hub.getAllJax().map(v => v.SourceElement().parentNode.className += ' has-jax');
+  });
+</script>
+
+
+
+<script src="../../scripts/index.min.js"></script>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('\/service-worker.js').then(function() {
+      console.log('[ServiceWorker] Registered');
+    });
+  }
+</script>
+
+
+
+
+
+
+
+
+  </body>
+</html>
