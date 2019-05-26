@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Natalie Chin</title>
+    <link>http://example.org/</link>
+    <description>Recent content on Natalie Chin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 06 Dec 2018 00:00:16 -0400</lastBuildDate>
+    
+	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Looking Forward Moving Back</title>
+      <link>http://example.org/post/looking-forward-moving-back/</link>
+      <pubDate>Thu, 06 Dec 2018 00:00:16 -0400</pubDate>
+      
+      <guid>http://example.org/post/looking-forward-moving-back/</guid>
+      <description>&lt;p&gt;This is a part of a previous series that I started while  at STK to honour females in tech.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Automated Eth Wrapping</title>
+      <link>http://example.org/post/automated-eth-wrapping/</link>
+      <pubDate>Fri, 21 Sep 2018 23:53:13 -0400</pubDate>
+      
+      <guid>http://example.org/post/automated-eth-wrapping/</guid>
+      <description>&lt;p&gt;How to make a contract auto wrap and unwrap ETH&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Smart Contract Security</title>
+      <link>http://example.org/post/smart-contract-security/</link>
+      <pubDate>Tue, 31 Jul 2018 23:42:24 -0400</pubDate>
+      
+      <guid>http://example.org/post/smart-contract-security/</guid>
+      <description>&lt;p&gt;Storing your cryptocurrency in a private wallet vs a smart contract wallet&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
