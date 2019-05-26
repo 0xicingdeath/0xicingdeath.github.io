@@ -2,75 +2,75 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Natalie Chin</title>
-    <link>http://example.org/tags/</link>
+    <link>https://nataliechin80.github.io/tags/</link>
     <description>Recent content in Tags on Natalie Chin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 06 Dec 2018 00:00:16 -0400</lastBuildDate>
     
-	<atom:link href="http://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nataliechin80.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>women in science</title>
-      <link>http://example.org/tags/women-in-science/</link>
+      <link>https://nataliechin80.github.io/tags/women-in-science/</link>
       <pubDate>Thu, 06 Dec 2018 00:00:16 -0400</pubDate>
       
-      <guid>http://example.org/tags/women-in-science/</guid>
+      <guid>https://nataliechin80.github.io/tags/women-in-science/</guid>
       <description></description>
     </item>
     
     <item>
       <title>women in tech</title>
-      <link>http://example.org/tags/women-in-tech/</link>
+      <link>https://nataliechin80.github.io/tags/women-in-tech/</link>
       <pubDate>Thu, 06 Dec 2018 00:00:16 -0400</pubDate>
       
-      <guid>http://example.org/tags/women-in-tech/</guid>
+      <guid>https://nataliechin80.github.io/tags/women-in-tech/</guid>
       <description></description>
     </item>
     
     <item>
       <title>eth</title>
-      <link>http://example.org/tags/eth/</link>
+      <link>https://nataliechin80.github.io/tags/eth/</link>
       <pubDate>Fri, 21 Sep 2018 23:53:13 -0400</pubDate>
       
-      <guid>http://example.org/tags/eth/</guid>
+      <guid>https://nataliechin80.github.io/tags/eth/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ethereum</title>
-      <link>http://example.org/tags/ethereum/</link>
+      <link>https://nataliechin80.github.io/tags/ethereum/</link>
       <pubDate>Fri, 21 Sep 2018 23:53:13 -0400</pubDate>
       
-      <guid>http://example.org/tags/ethereum/</guid>
+      <guid>https://nataliechin80.github.io/tags/ethereum/</guid>
       <description></description>
     </item>
     
     <item>
       <title>solidity</title>
-      <link>http://example.org/tags/solidity/</link>
+      <link>https://nataliechin80.github.io/tags/solidity/</link>
       <pubDate>Fri, 21 Sep 2018 23:53:13 -0400</pubDate>
       
-      <guid>http://example.org/tags/solidity/</guid>
+      <guid>https://nataliechin80.github.io/tags/solidity/</guid>
       <description></description>
     </item>
     
     <item>
       <title>state channels</title>
-      <link>http://example.org/tags/state-channels/</link>
+      <link>https://nataliechin80.github.io/tags/state-channels/</link>
       <pubDate>Fri, 21 Sep 2018 23:53:13 -0400</pubDate>
       
-      <guid>http://example.org/tags/state-channels/</guid>
+      <guid>https://nataliechin80.github.io/tags/state-channels/</guid>
       <description></description>
     </item>
     
     <item>
       <title>weth</title>
-      <link>http://example.org/tags/weth/</link>
+      <link>https://nataliechin80.github.io/tags/weth/</link>
       <pubDate>Fri, 21 Sep 2018 23:53:13 -0400</pubDate>
       
-      <guid>http://example.org/tags/weth/</guid>
+      <guid>https://nataliechin80.github.io/tags/weth/</guid>
       <description></description>
     </item>
     
