@@ -58,5 +58,23 @@ I was first introduced to Blockchain at ETHWaterloo, where I built a P2P System 
       <description>&lt;p&gt;Storing your cryptocurrency in a private wallet vs a smart contract wallet&lt;/p&gt;</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://nataliechin80.github.io/testingsmartcontracts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nataliechin80.github.io/testingsmartcontracts/</guid>
+      <description> Testing Smart Contracts Agenda  Testing Principles Embark Mocha Setup  TESTING: Primary purpose of Software Developer VERY LITTLE TIME SPENT ON WRITING SOLIDITY/VYPER COMPARED TO WRITING TESTS Test Driven Development  Understand business requirements Created automated tests that meet said requirement Create code logic that implements feature Once the tests pass, the code logic is complete Refactor code for readability and maintainability, and rerun tests to ensure you did not break anything  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://nataliechin80.github.io/slideshow/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nataliechin80.github.io/slideshow/</guid>
+      <description>Testing Smart Contractsbody {font-family: &#34;Helvetica Neue&#34;, Helvetica, Arial, sans-serif;}h1, h2, h3 {font-weight: 400;margin-bottom: 0;}.remark-slide-content h1 { font-size: 3em; }.remark-slide-content h2 { font-size: 2em; }.remark-slide-content h3 { font-size: 1.6em; }.footnote {position: absolute;bottom: 3em;}li p { line-height: 1.25em; }.red { color: #fa0000; }.large { font-size: 2em; }a, a  code {color: rgb(249, 38, 114);text-decoration: none;}code {background: none repeat scroll 0 0 #F8F8FF;border: 1px solid #DEDEDE;border-radius: 3px ;padding: 0 0.</description>
+    </item>
+    
   </channel>
 </rss>
