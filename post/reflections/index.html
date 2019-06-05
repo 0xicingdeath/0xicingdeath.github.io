@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
 
   
-  <title>Smart Contract Security</title>
+  <title>Reflections</title>
 
   
   
@@ -26,25 +26,25 @@
 
   
   <meta name="author" content="Natalie Chin">
-  <meta name="description" content="Storing your cryptocurrency in a private wallet vs a smart contract wallet
+  <meta name="description" content="Three years ago, my life changed forever.
 ">
 
   
   
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@NatalieChin7">
-    <meta name="twitter:title" content="Smart Contract Security">
-    <meta name="twitter:description" content="Storing your cryptocurrency in a private wallet vs a smart contract wallet
+    <meta name="twitter:title" content="Reflections">
+    <meta name="twitter:description" content="Three years ago, my life changed forever.
 ">
     <meta name="twitter:image" content="/images/blah.jpg">
   
 
   
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Smart Contract Security">
-  <meta property="og:description" content="Storing your cryptocurrency in a private wallet vs a smart contract wallet
+  <meta property="og:title" content="Reflections">
+  <meta property="og:description" content="Three years ago, my life changed forever.
 ">
-  <meta property="og:url" content="https://nataliechin80.github.io/post/smart-contract-security/">
+  <meta property="og:url" content="https://nataliechin80.github.io/post/reflections/">
   <meta property="og:image" content="/images/blah.jpg">
 
 
@@ -53,7 +53,7 @@
 <meta name="generator" content="Hugo 0.55.6">
 
 
-<link rel="canonical" href="https://nataliechin80.github.io/post/smart-contract-security/">
+<link rel="canonical" href="https://nataliechin80.github.io/post/reflections/">
 
 <meta name="renderer" content="webkit">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -220,50 +220,18 @@
 
   <section class="main post-detail">
     <header class="post-header">
-      <h1 class="post-title">Smart Contract Security</h1>
-      <p class="post-meta">@Natalie Chin · Jul 31, 2018 · 4 min read</p>
+      <h1 class="post-title">Reflections</h1>
+      <p class="post-meta">@Natalie Chin · Jun 3, 2019 · 1 min read</p>
     </header>
-    <article class="post-content"><p>Storing your cryptocurrency in a private wallet vs a smart contract wallet</p>
+    <article class="post-content"><p>Three years ago, my life changed forever.</p>
 
-<h1 id="storing-crypto-in-a-wallet-vs-a-smart-contract">Storing Crypto in a Wallet vs a Smart Contract</h1>
+<p>It&rsquo;s amazing what can happen in three years. Three years today, I got my acceptance for a switch into Computer Science from Commerce - something I&rsquo;d been wanting and dreaming, but never knowing whether it would be possible.</p>
 
-<p>A crypto wallet is always generated using a private/public key pair. In other words, when you sign up for a new address with something like MyEtherWallet, you will get a “safety package” — containing your private key that you should be keeping safe. With MetaMask, you would have the mnemonic with the 12 seed words. If you forget these, you lose access entirely to your account. If you accidentally make your private key accessible to someone else, this person has full control over your funds.</p>
-
-<p>A smart contract, on the other hand, is different. There is no explicit private/public key differentiation — the address of the contract is the contract’s public key, but the private key is never made available. Unlike a crypto wallet, a smart contract does what its assigned to do, through code. For instance, our STK-smart-contracts is set to interact with only STK tokens. If other ERC20 tokens are sent to the smart contract, they are lost. This contract does not accept ETH transfers — so, if a customer accidentally transfers Ether to the smart contract, our contract will explicitly refuse it and refund it back. The only thing a user would lose is the gas fees for execution of said operation. Our smart contract also specifies that only STACK and User’s address can settle a channel. The settle function controls the movement of STK Tokens through a payment channel. Due to the restriction of changing the state of the channel, once an IOU has been submitted to change the state of a channel, no one can control the refund or transfers of tokens except yourself. The cryptocurrency you own is completely within your control.</p>
-
-<h1 id="transactions-are-safer-with-state-channels">Transactions are safer with state channels</h1>
-
-<p>In the initialization of a state channel, there are a few addresses that we make use of:</p>
-
-<ul>
-<li>user address: the address of the wallet in which your funds are stored. When a channel is settled and the funds are returned back to the user, the tokens/ETH will be returned to this address.</li>
-<li>signer address: the private and public key pair generated on your device for signing purposes*</li>
-<li>recipient address: the address of the STACK’s wallet. When a channel is settled, the IOU amount will be transferred to STACK.</li>
-<li>channel address: the address of your personal state channel. When you deposit funds, this is where your funds are stored.</li>
-<li>For you to sign transactions, the app automatically generates private and public key pairs. All transactions (IOU’s) are signed with this private key. These are only ever used to sign transactions that are sent to the smart contract. STACK never interacts with your signer’s private key. Notice your signer’s key never holds funds. Its only purpose is to sign off-chain transactions.</li>
-</ul>
-
-<p>With the following setup, transactions are safer with state channels, because there is no single point of failure. No matter what tokens there are in our payment channel, the funds inside it are always safe. Even if STK’s backend or database fails or goes down, the user is in complete control of the funds within the state channel.</p>
-
-<h1 id="network-congestion">Network Congestion</h1>
-
-<p>Back in December of last year, when Cryptokitties was released officially, the sheer number of transactions on the Ethereum Network skyrocketed and caused complete congestion. A few people in the Reddit AMA asked about the effects of network congestion on our state channels.</p>
-
-<p>We sign the IOU’s off chain with the signer’s public and private key pair. These do not need to interact with the network. When you decide to settle a channel, these transactions will be pushed on-chain. During the settle period, you have the option to transfer any unused tokens back to your address. Your transaction amount will also be transferred to STACK. In other words, the end user is not affected by congestion on the network. This is ultimately safer for customers, because they are not affected by the volatility and the ever-changing block times on the network. To read more about how the IOU and signing off-chain transactions work, check this out.</p>
-
-<p>If you’re intrigued, feel free to check out our crypto beta demo located here: <a href="https://www.youtube.com/watch?v=Yhmjks3eFIA">https://www.youtube.com/watch?v=Yhmjks3eFIA</a>, where we go through a live purchase at a local coffee shop.</p></article>
+<p>I was in Commerce for all of 1.5 years, when I realized it was absolutely not what I wanted.</p></article>
     <footer class="post-footer">
       
-      <ul class="post-tags">
-        
-          <li><a href="../../tags/ethereum"><span class="tag">Ethereum</span></a></li>
-        
-          <li><a href="../../tags/solidity"><span class="tag">Solidity</span></a></li>
-        
-      </ul>
-      
       <p class="post-copyright">
-        This post was published <strong>308</strong> days ago, content in the post may be inaccurate, even wrong now, please take risk yourself.
+        
       </p>
     </footer>
     
