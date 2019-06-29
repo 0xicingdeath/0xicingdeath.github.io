@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Natalie Chin</title>
+    <link>https://nataliechin80.github.io/</link>
+    <description>Recent content on Natalie Chin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 27 May 2019 21:20:33 -0400</lastBuildDate>
+    
+	<atom:link href="https://nataliechin80.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About Me</title>
+      <link>https://nataliechin80.github.io/about/</link>
+      <pubDate>Sun, 26 May 2019 15:17:50 -0400</pubDate>
+      
+      <guid>https://nataliechin80.github.io/about/</guid>
+      <description>Hey there! My name is Natalie.
+I&amp;rsquo;m a blockchain developer, and I love it. I&amp;rsquo;m also a blogger - and at times, have a passion for writing (other times, I&amp;rsquo;ve just got a brick wall that I can&amp;rsquo;t get past).
+I was first introduced to Blockchain at ETHWaterloo, where I built a P2P System where I learnt a whole lot about the blockchain space. I became passionate about learning more and understanding more about the technology.</description>
+    </item>
+    
+    <item>
+      <title>George Brown</title>
+      <link>https://nataliechin80.github.io/george-brown/</link>
+      <pubDate>Mon, 27 May 2019 21:20:33 -0400</pubDate>
+      
+      <guid>https://nataliechin80.github.io/george-brown/</guid>
+      <description> The following content contains slides for the George Brown Blockchain Program.
+Dapps 1 - June 2019  Secret Management Ethers Hands on Ethers Hands on Express  Design Patterns - May 2019  Testing Smart Contracts Mocha, Asserts, and More Testing  Screen share: https://hangouts.google.com/call/4a1qojIuldm-irS98avjAEEE   Smart Contract Essentials - May 2019  Deeper Dive into Solidity Introduction to Vyper Inheritance - Solidity Exam Review  </description>
+    </item>
+    
+    <item>
+      <title>Looking Forward Moving Back</title>
+      <link>https://nataliechin80.github.io/post/looking-forward-moving-back/</link>
+      <pubDate>Thu, 06 Dec 2018 00:00:16 -0400</pubDate>
+      
+      <guid>https://nataliechin80.github.io/post/looking-forward-moving-back/</guid>
+      <description>&lt;p&gt;This is a part of a previous series that I started while  at STK to honour females in tech.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Automated Eth Wrapping</title>
+      <link>https://nataliechin80.github.io/post/automated-eth-wrapping/</link>
+      <pubDate>Fri, 21 Sep 2018 23:53:13 -0400</pubDate>
+      
+      <guid>https://nataliechin80.github.io/post/automated-eth-wrapping/</guid>
+      <description>&lt;p&gt;How to make a contract auto wrap and unwrap ETH&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Smart Contract Security</title>
+      <link>https://nataliechin80.github.io/post/smart-contract-security/</link>
+      <pubDate>Tue, 31 Jul 2018 23:42:24 -0400</pubDate>
+      
+      <guid>https://nataliechin80.github.io/post/smart-contract-security/</guid>
+      <description>&lt;p&gt;Storing your cryptocurrency in a private wallet vs a smart contract wallet&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://nataliechin80.github.io/testingsmartcontracts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nataliechin80.github.io/testingsmartcontracts/</guid>
+      <description> Testing Smart Contracts Agenda  Testing Principles Embark Mocha Setup  TESTING: Primary purpose of Software Developer VERY LITTLE TIME SPENT ON WRITING SOLIDITY/VYPER COMPARED TO WRITING TESTS Test Driven Development  Understand business requirements Created automated tests that meet said requirement Create code logic that implements feature Once the tests pass, the code logic is complete Refactor code for readability and maintainability, and rerun tests to ensure you did not break anything  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://nataliechin80.github.io/slideshow/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nataliechin80.github.io/slideshow/</guid>
+      <description>Testing Smart Contractsbody {font-family: &#34;Helvetica Neue&#34;, Helvetica, Arial, sans-serif;}h1, h2, h3 {font-weight: 400;margin-bottom: 0;}.remark-slide-content h1 { font-size: 3em; }.remark-slide-content h2 { font-size: 2em; }.remark-slide-content h3 { font-size: 1.6em; }.footnote {position: absolute;bottom: 3em;}li p { line-height: 1.25em; }.red { color: #fa0000; }.large { font-size: 2em; }a, a  code {color: rgb(249, 38, 114);text-decoration: none;}code {background: none repeat scroll 0 0 #F8F8FF;border: 1px solid #DEDEDE;border-radius: 3px ;padding: 0 0.</description>
+    </item>
+    
+  </channel>
+</rss>
