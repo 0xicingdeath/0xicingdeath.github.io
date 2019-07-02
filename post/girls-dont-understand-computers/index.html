@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
 
   
-  <title>Smart Contract Security</title>
+  <title>Girls Don&#39;t Understand Computers</title>
 
   
   
@@ -26,25 +26,25 @@
 
   
   <meta name="author" content="Natalie Chin">
-  <meta name="description" content="Storing your cryptocurrency in a private wallet vs a smart contract wallet.
+  <meta name="description" content="There will always be people in the world who try to bring you down. It&amp;rsquo;s about who&amp;rsquo;s there to help you get back up, and how you keep going that matters.
 ">
 
   
   
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@NatalieChin7">
-    <meta name="twitter:title" content="Smart Contract Security">
-    <meta name="twitter:description" content="Storing your cryptocurrency in a private wallet vs a smart contract wallet.
+    <meta name="twitter:title" content="Girls Don&#39;t Understand Computers">
+    <meta name="twitter:description" content="There will always be people in the world who try to bring you down. It&amp;rsquo;s about who&amp;rsquo;s there to help you get back up, and how you keep going that matters.
 ">
     <meta name="twitter:image" content="/images/blah.jpg">
   
 
   
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Smart Contract Security">
-  <meta property="og:description" content="Storing your cryptocurrency in a private wallet vs a smart contract wallet.
+  <meta property="og:title" content="Girls Don&#39;t Understand Computers">
+  <meta property="og:description" content="There will always be people in the world who try to bring you down. It&amp;rsquo;s about who&amp;rsquo;s there to help you get back up, and how you keep going that matters.
 ">
-  <meta property="og:url" content="https://nataliechin80.github.io/post/smart-contract-security/">
+  <meta property="og:url" content="https://nataliechin80.github.io/post/girls-dont-understand-computers/">
   <meta property="og:image" content="/images/blah.jpg">
 
 
@@ -53,7 +53,7 @@
 <meta name="generator" content="Hugo 0.55.6">
 
 
-<link rel="canonical" href="https://nataliechin80.github.io/post/smart-contract-security/">
+<link rel="canonical" href="https://nataliechin80.github.io/post/girls-dont-understand-computers/">
 
 <meta name="renderer" content="webkit">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -220,50 +220,42 @@
 
   <section class="main post-detail">
     <header class="post-header">
-      <h1 class="post-title">Smart Contract Security</h1>
-      <p class="post-meta">@Natalie Chin · Jul 31, 2018 · 4 min read</p>
+      <h1 class="post-title">Girls Don&#39;t Understand Computers</h1>
+      <p class="post-meta">@Natalie Chin · Nov 9, 2018 · 4 min read</p>
     </header>
-    <article class="post-content"><p>Storing your cryptocurrency in a private wallet vs a smart contract wallet.</p>
+    <article class="post-content"><p>There will always be people in the world who try to bring you down. It&rsquo;s about who&rsquo;s there to help you get back up, and how you keep going that matters.</p>
 
-<h1 id="storing-crypto-in-a-wallet-vs-a-smart-contract">Storing Crypto in a Wallet vs a Smart Contract</h1>
+<p>When I was in third grade, I was the fastest typer in my class. I knew how to speed-read, so that helped with “googling.” And I knew my way around computers. My dad would often bring home broken hard drives, and I’d take apart the heads and platters, only to put them back together just for fun.</p>
 
-<p>A crypto wallet is always generated using a private/public key pair. In other words, when you sign up for a new address with something like MyEtherWallet, you will get a “safety package” — containing your private key that you should be keeping safe. With MetaMask, you would have the mnemonic with the 12 seed words. If you forget these, you lose access entirely to your account. If you accidentally make your private key accessible to someone else, this person has full control over your funds.</p>
+<p>One day during computer class, my third grade teacher said to the entire class:</p>
 
-<p>A smart contract, on the other hand, is different. There is no explicit private/public key differentiation — the address of the contract is the contract’s public key, but the private key is never made available. Unlike a crypto wallet, a smart contract does what its assigned to do, through code. For instance, our STK-smart-contracts is set to interact with only STK tokens. If other ERC20 tokens are sent to the smart contract, they are lost. This contract does not accept ETH transfers — so, if a customer accidentally transfers Ether to the smart contract, our contract will explicitly refuse it and refund it back. The only thing a user would lose is the gas fees for execution of said operation. Our smart contract also specifies that only STACK and User’s address can settle a channel. The settle function controls the movement of STK Tokens through a payment channel. Due to the restriction of changing the state of the channel, once an IOU has been submitted to change the state of a channel, no one can control the refund or transfers of tokens except yourself. The cryptocurrency you own is completely within your control.</p>
+<blockquote>
+<p>“Girls don’t understand computers. They shouldn’t be building things on them.”</p>
+</blockquote>
 
-<h1 id="transactions-are-safer-with-state-channels">Transactions are safer with state channels</h1>
+<p>I can&rsquo;t even begin to describe and explain what it felt like as a young female, interested in computers. It felt like my dreams of opening hard drives in the future would be squashed. It felt as though being the fastest typer in class didn&rsquo;t mean anything, just because I was a girl. It felt as though all that time taking apart pens and hard drives were useless, just because I&rsquo;m a girl. All the times using Google to find the things I was curious about - nil.</p>
 
-<p>In the initialization of a state channel, there are a few addresses that we make use of:</p>
+<p>I, well, I was lucky. I felt beaten down by what the teacher said, but I didn&rsquo;t believe it for long enough that I had likely forgotten what she had said the next day, mainly because computers were all I had, and all I had ever known.</p>
 
-<ul>
-<li>user address: the address of the wallet in which your funds are stored. When a channel is settled and the funds are returned back to the user, the tokens/ETH will be returned to this address.</li>
-<li>signer address: the private and public key pair generated on your device for signing purposes*</li>
-<li>recipient address: the address of the STACK’s wallet. When a channel is settled, the IOU amount will be transferred to STACK.</li>
-<li>channel address: the address of your personal state channel. When you deposit funds, this is where your funds are stored.</li>
-<li>For you to sign transactions, the app automatically generates private and public key pairs. All transactions (IOU’s) are signed with this private key. These are only ever used to sign transactions that are sent to the smart contract. STACK never interacts with your signer’s private key. Notice your signer’s key never holds funds. Its only purpose is to sign off-chain transactions.</li>
-</ul>
+<p>I think it&rsquo;s incredibly important to show and teach young children - regardless male, female, whatever, that it&rsquo;s great to be interested in anything. It&rsquo;s awesome to be curious, to learn from your mistakes. It&rsquo;s okay to try again. It&rsquo;s okay to ask for help and for advice. And gender should never play a role in any of these. Life is hard enough as is.</p>
 
-<p>With the following setup, transactions are safer with state channels, because there is no single point of failure. No matter what tokens there are in our payment channel, the funds inside it are always safe. Even if STK’s backend or database fails or goes down, the user is in complete control of the funds within the state channel.</p>
+<p>It&rsquo;s important to really acknowledge the people who have tried to kill the fire, shut me up, stop me from doing what I wanted to do - whether intentionally or unintentionally - and frankly, it doesn&rsquo;t really matter.</p>
 
-<h1 id="network-congestion">Network Congestion</h1>
+<p>As a female developer, I used to read a lot of resources on how to succeed in a male dominant field. I found a ton of resources that said - &ldquo;Look for other female mentors that can help you navigate the confusing world of tech.&rdquo; That goes without saying; we want someone who can speak our language, and someone we can connect with. Some developers take this quite literally, and never find mentors outside of &ldquo;their space.&rdquo; I would argue that there are so many people who can help you grow in the world  - never limit yourself based on male, female, same program, different program, whatever.</p>
 
-<p>Back in December of last year, when Cryptokitties was released officially, the sheer number of transactions on the Ethereum Network skyrocketed and caused complete congestion. A few people in the Reddit AMA asked about the effects of network congestion on our state channels.</p>
+<p>I am currently an Ethereum Developer, as I fully fleshed out and built a state channel to fully support ERC20 tokens and ETH. The code I wrote has just gone through security audits, and is now main-net ready. I have learnt so much about the tech, but also about interacting with colleagues, pitching projects, learning from experience, and learning by listening and watching. I have written multiple Ethereum Development resources, including Reducing Gas Fees and State Channel Wallets. Many developers reached out to me, thanking me for compiling and writing them. I’m co-running Stackathon (applications close on Novembe, anr 14th!) at work, inviting around 20–30 people into the office for a 24-hour hackathon which is also completely female run. I am also giving back to my former high school, by doing short blockchain tutorials to introduce high school students to blockchain tech. I cannot even hope to list the list of things that I have learnt on the job — but I’m really proud of how far I’ve come. This process never would have been possible without STK’s support to help me grow, and all the different role models I’ve had — all across the company.</p>
 
-<p>We sign the IOU’s off chain with the signer’s public and private key pair. These do not need to interact with the network. When you decide to settle a channel, these transactions will be pushed on-chain. During the settle period, you have the option to transfer any unused tokens back to your address. Your transaction amount will also be transferred to STACK. In other words, the end user is not affected by congestion on the network. This is ultimately safer for customers, because they are not affected by the volatility and the ever-changing block times on the network. To read more about how the IOU and signing off-chain transactions work, check this out.</p>
-
-<p>If you’re intrigued, feel free to check out our crypto beta demo located here: <a href="https://www.youtube.com/watch?v=Yhmjks3eFIA">https://www.youtube.com/watch?v=Yhmjks3eFIA</a>, where we go through a live purchase at a local coffee shop.</p></article>
+<p>Over the series of a few articles, I’m going to talk specifics of the journey of women in tech, and how much of an impact they had on me. Some of my mentors were there to catch me when I fell and help me back up. At times, they listened and provided advice on how to keep going. At times, I failed them — or they failed me. But these experiences taught me a lot about finding mentors, listening, and learning from them. All of these mentors brought me to where I am now. And I think it’s important to share.</p></article>
     <footer class="post-footer">
       
       <ul class="post-tags">
         
-          <li><a href="../../tags/ethereum"><span class="tag">Ethereum</span></a></li>
-        
-          <li><a href="../../tags/solidity"><span class="tag">Solidity</span></a></li>
+          <li><a href="../../tags/women-in-tech"><span class="tag">Women in Tech</span></a></li>
         
       </ul>
       
       <p class="post-copyright">
-        This post was published <strong>334</strong> days ago, content in the post may be inaccurate, even wrong now, please take risk yourself.
+        This post was published <strong>234</strong> days ago, content in the post may be inaccurate, even wrong now, please take risk yourself.
       </p>
     </footer>
     
