@@ -1,0 +1,189 @@
+<html>
+  <head>
+    
+    <style type="text/css">
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      .remark-code, .remark-inline-code { 
+        font-family: 'Ubuntu Mono';
+        background-color: black;
+      }
+      ul,li { 
+        padding-top: 8px;
+        padding-bottom: 8px;
+      } 
+      h3 { 
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: bold;
+        font-size: 800%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: rgb(236, 115, 117);
+      } 
+      h2 { 
+        margin: auto;
+        text-align: center;
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: bold;
+        font-size: 1000%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: rgb(236, 115, 117);
+      } 
+      h1 {
+        margin: auto;
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: bold
+        font-size: 10000%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+        vertical-align: middle;
+        height: 90px;
+        line-height: 90px;
+        color: rgb(84, 177, 208);
+      }
+      body { 
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-family: 'Droid Serif'; 
+        background-color: black;
+        font-size: 400%;
+        color: rgb(249,220,130);
+      }
+      .remark-slide-content{ 
+        background-color: black;
+      } 
+    </style>
+  </head>
+  <body bgcolor="black">
+    <textarea id="source" class="slide">
+      
+class: center, middle
+background-image: url(bg.jpeg)
+
+# Testing: Mocha and Asserts
+
+---
+background-image: url(bg.jpeg)
+
+## Agenda
+
+1. Mocha Basics 
+2. Chai Basics 
+3. Introduction to Web3 
+4. More in depth: Testing Smart Contracts
+
+---
+background-image: url(bg.jpeg)
+
+## Mocha Basics
+
+### Introduction 
+  
+ - Mocha is used for setting up tests 
+ - Embark and Truffle have Mocha built in
+
+---
+background-image: url(bg.jpeg)
+
+## Mocha Hooks 
+  - suite callbacks (`describe`, `contract`)
+  - before hook [suite] 
+  - beforeEach [test] 
+  - test callbacks (`it`)
+  - afterEach [test]
+  - after hook [suite]
+
+---
+background-image: url(bg.jpeg)
+
+## Mocha Async 
+
+ - For async callbacks, you can use the keyword `done()` 
+ - Using done twice will error out
+ - A lot of calls in smart contracts are asynchronous 
+ - Mocha can be used with promises, async/await, done, and callbacks
+
+---
+background-image: url(bg.jpeg)
+
+##  Chai Basics
+
+- Test Driven Development - `assert` 
+ - Behaviour Driven Development - `expect, should`
+
+---
+background-image: url(bg.jpeg)
+
+## Chai Basics
+
+### Assert
+
+```javascript 
+assert (expression, message);
+```
+
+The expression above should evaluate to something that is true or false. 
+
+### Assert Strict Equal 
+
+
+```javascript 
+assert.strictEqual (actual, expected, message);
+```
+
+The above tests strict equality between two inputs.
+
+---
+background-image: url(bg.jpeg)
+
+## Assert OK
+
+```javascript 
+assert.ok(value, message);
+```
+
+The above automatically evaluates to the value being true.
+
+---
+background-image: url(bg.jpeg)
+
+## Basic Web 3 Syntax
+
+### Invoking Methods
+
+`contractName.methods.methodName().call();`
+`contractName.methods.varName().call();`
+
+ - call is always used for data that is being read from the blockchain - for public variables and calling view functions.
+
+`contractName.methods.methodName().send();`
+
+- to send, we have to send arguments for web3 to determine how to make a call 
+- `.send( { from: address } );` is an example
+---
+background-image: url(bg.jpeg)
+
+## Testing Requires
+ - Wrap your call in a try-catch statement 
+ - Catch the error, and save the error message 
+ - Compare it to what you expect it should fail with
+
+---
+background-image: url(bg.jpeg)
+
+## Lab
+
+ - Create a simple smart contract that uses a msg.sender verification pattern 
+ - Test the positive and the negative cases, ensuring to assert on all tests that are expected to revert
+
+    </textarea>
+    <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js"></script>
+    <script>
+      var slideshow = remark.create({});
+    </script>
+  </body>
+</html>

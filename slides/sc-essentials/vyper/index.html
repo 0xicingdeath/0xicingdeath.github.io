@@ -1,0 +1,262 @@
+<html>
+  <head>
+    
+    <style type="text/css">
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      .remark-code, .remark-inline-code { 
+        font-family: 'Ubuntu Mono';
+        background-color: black;
+      }
+      ul,li { 
+        padding-top: 8px;
+        padding-bottom: 8px;
+      } 
+      h3 { 
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: bold;
+        font-size: 800%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: rgb(236, 115, 117);
+      } 
+      h2 { 
+        margin: auto;
+        text-align: center;
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: bold;
+        font-size: 1000%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: rgb(236, 115, 117);
+      } 
+      h1 {
+        margin: auto;
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: bold
+        font-size: 10000%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+        vertical-align: middle;
+        height: 90px;
+        line-height: 90px;
+        color: rgb(84, 177, 208);
+      }
+      body { 
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-family: 'Droid Serif'; 
+        background-color: black;
+        font-size: 400%;
+        color: rgb(249,220,130);
+      }
+      .remark-slide-content{ 
+        background-color: black;
+      } 
+    </style>
+  </head>
+  <body bgcolor="black">
+    <textarea id="source" class="slide">
+      
+class: center, middle
+background-image: url(bg.jpeg)
+
+# Vyper
+
+---
+class: left
+background-image: url(bg.jpeg)
+## Agenda
+
+1. Course Expectations
+2. Vyper Types 
+3. Using Vyper Structures
+4. Comparing and Contrasting Vyper and Solidity 
+
+---
+background-image: url(bg.jpeg)
+class: center, middle
+
+## Course Expectations
+
+- All course submissions are subject to the [Plagiarism Academic Honesty](https://coned.georgebrown.ca/policies/plagiarism-academic-honesty/) at George Brown College 
+- In addition to copying from the internet, this includes lecture slides and all code demos that are provided by professors 
+- Plaigiarized assignments will be given a mark of 0% 
+
+---
+background-image: url(bg.jpeg)
+
+### Deploying a Vyper Contract
+
+ - Use vyper.online, which provides the ABI and Bytecode of your vyper code 
+ - Use MyEtherWallet or MyCrypto to deploy
+
+---
+background-image: url(bg.jpeg)
+
+### Types
+
+- boolean 
+- signed integer 
+- unsigned integer 
+- decimal 
+- address
+- uint types - time, wei, custom-defined by developer
+- bytes32 array
+- fixed bytesize array
+- fixed string size
+- fixed size lists 
+- structs
+- mappings
+ 
+---
+background-image: url(bg.jpeg)
+
+## Defining Variables
+
+### Solidity
+```javascript 
+type accessControl varName
+address public voter
+```
+
+### Vyper
+```python
+varName: accessControl ( type ) 
+voter: public ( address ) 
+```
+
+#### Defining Variables: A Demo
+
+---
+background-image: url(bg.jpeg)
+
+## Declaring Constructors
+
+### Solidity 
+```javascript
+constructor () public { ... } 
+```
+
+### Vyper 
+```python
+@public 
+def __init__()
+```
+
+#### Defining Constructors: A Demo
+---
+background-image: url(bg.jpeg)
+
+## Defining Functions
+
+### Solidity 
+```javascript
+function functionName() public { ... } 
+```
+
+### Vyper 
+```python
+@public 
+def functionName(): 
+  ...
+  ...
+```
+
+#### Defining Functions: A Demo
+---
+background-image: url(bg.jpeg)
+
+## Defining Functions with Arguments
+
+### Solidity 
+```javascript
+function functionName (type varName) public { ... } 
+```
+
+### Vyper 
+```python
+@public 
+def functionName(_varName: type): 
+  ...
+  ...
+```
+
+#### Defining Functions with Arguments: A Demo
+---
+background-image: url(bg.jpeg)
+
+## Defining Payable Functions
+
+### Solidity 
+```javascript
+function functionname() public payable { ... } 
+```
+
+### Vyper 
+```python
+@public 
+@payable
+def functionName(_varName: type): 
+  ...
+  ...
+```
+
+#### Defining Payhable Functions: A Demo
+---
+background-image: url(bg.jpeg)
+
+## Require
+
+### Solidity 
+```javascript
+require( some boolean operation, &#34;message&#34;);
+```
+
+### Vyper 
+```python
+assert (some boolean operation)
+```
+
+#### Using Require Statements
+---
+background-image: url(bg.jpeg)
+
+## Self
+ - Required to be able to assign variables in vyper 
+ - Omitting the self will not actually assign anything
+
+---
+background-image: url(bg.jpeg)
+
+## Vyper vs Solidity
+
+### Similarities 
+- Both allow us to control operations on the blockchain
+
+### Differences 
+ - Syntactical difference (Solidity - JS; Vyper - Python) 
+
+---
+background-image: url(bg.jpeg)
+
+## Lab: Vyper Contract
+
+Write a smart contract in Vyper to address a use case of your choice. Use the following structures: 
+ - 4 functions 
+ - state variables 
+ - at least 1 event 
+ - deploy the contract onto a public testnet
+
+**Due - By the end of class** 
+
+    </textarea>
+    <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js"></script>
+    <script>
+      var slideshow = remark.create({});
+    </script>
+  </body>
+</html>

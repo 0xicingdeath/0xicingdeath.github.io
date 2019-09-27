@@ -1,0 +1,184 @@
+<html>
+  <head>
+    
+    <style type="text/css">
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      .remark-code, .remark-inline-code { 
+        font-family: 'Ubuntu Mono';
+        background-color: black;
+      }
+      ul,li { 
+        padding-top: 8px;
+        padding-bottom: 8px;
+      } 
+      h3 { 
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: bold;
+        font-size: 800%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: rgb(236, 115, 117);
+      } 
+      h2 { 
+        margin: auto;
+        text-align: center;
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: bold;
+        font-size: 1000%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: rgb(236, 115, 117);
+      } 
+      h1 {
+        margin: auto;
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: bold
+        font-size: 10000%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+        vertical-align: middle;
+        height: 90px;
+        line-height: 90px;
+        color: rgb(84, 177, 208);
+      }
+      body { 
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-family: 'Droid Serif'; 
+        background-color: black;
+        font-size: 400%;
+        color: rgb(249,220,130);
+      }
+      .remark-slide-content{ 
+        background-color: black;
+      } 
+    </style>
+  </head>
+  <body bgcolor="black">
+    <textarea id="source" class="slide">
+      
+
+# WETH
+
+---
+
+## Agenda
+
+1. Study of EVM languages 
+2. Benefits and drawbacks of such languages 
+3. Introduction to Wrapped ETH 
+4. Implementing a Contract Rejecting Tokens
+
+---
+
+##  Study of EVM Languages
+
+### Available Languages on the EVM 
+ - Solidity
+ - Vyper 
+ - LLL 
+ - Flint 
+ - Yul
+
+---
+
+## Solidity
+- Most common language 
+- Similar to Javascript and C 
+- Downsides? Benefits? 
+
+## Vyper 
+ - Second-most popular language after solidity 
+ - Aimed at being more readable to reduce the chance of bugs
+
+---
+
+## Solidity vs Vyper
+
+ - No modifiers
+ - No inheritance 
+ - No functional and operational overloading
+ - No inline assembly
+
+---
+
+## Yul
+
+ - Intermediate language that compiles to different EVM 
+ - Supports switch, function, block, var, literal, loop, if, expression, and variables
+
+## LLL 
+
+ - Assembly like code with keywords 
+ - Manipulation of data and bytes individually 
+---
+
+## Currencies on the Blockchain
+
+ - Ether 
+ - ERC20 Tokens 
+ - Multitude of other standardized tokens
+
+### What are the differences and similarities betwen ETH and other tokens? 
+
+---
+
+## Syntactical Differences - ERC and ERC20 Tokens
+
+ - Sending ETH requires: 
+   - Payable address 
+   - Calling transfer amount on the address
+ - Sending ERC 20 Tokens requires: 
+   - An ERC20 token to exist 
+   - Invoke functions on a specific contract with parameters containing address and amount
+
+### A dapp that wants to support ERC20 and ETH has to support both functionalities
+
+---
+
+## Exercise
+
+In groups of 2-3, answer the following questions: 
+
+ - How would you build a smart contract that supports both ERC20 and ETH? 
+ - What steps would a user have to take to use your Dapp? 
+ - What will you smart contract need to do? 
+---
+
+## Concept of a Safe Transfer 
+
+ - Sending ETH to a contract that has no payable function will reject your ETH 
+ - You *lose* the gas costs that you paid to execute 
+ - Transaction will revert and any ETH you sent will be sent back 
+
+ - ERC20 tokens do not have a safe transfer functionality 
+ - Tokens sent to an address that does not yet exist or a contrat does not reject it 
+ - What are something we can do to protect end-users in our dapp? 
+---
+
+## Exercise - Architecting Solution 
+
+In your groups, architect a solution that would support **safe** transfer of ERC20 tokens.
+
+This means that if a user sends ERC20 tokens to an address that does not exist, it get rejected.
+
+---
+## Lab - Submitting your Contract 
+
+Submit a smart contract that demonstrates: 
+
+ - How you would handle ERC20 and ETH transactions
+ - Handling safe transfer of tokens 
+ - Explanation of how your implementation is safer than native solidity
+
+    </textarea>
+    <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js"></script>
+    <script>
+      var slideshow = remark.create({});
+    </script>
+  </body>
+</html>

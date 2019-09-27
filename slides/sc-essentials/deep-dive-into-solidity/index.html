@@ -1,0 +1,254 @@
+<html>
+  <head>
+    
+    <style type="text/css">
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      .remark-code, .remark-inline-code { 
+        font-family: 'Ubuntu Mono';
+        background-color: black;
+      }
+      ul,li { 
+        padding-top: 8px;
+        padding-bottom: 8px;
+      } 
+      h3 { 
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: bold;
+        font-size: 800%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: rgb(236, 115, 117);
+      } 
+      h2 { 
+        margin: auto;
+        text-align: center;
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: bold;
+        font-size: 1000%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: rgb(236, 115, 117);
+      } 
+      h1 {
+        margin: auto;
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: bold
+        font-size: 10000%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+        vertical-align: middle;
+        height: 90px;
+        line-height: 90px;
+        color: rgb(84, 177, 208);
+      }
+      body { 
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-family: 'Droid Serif'; 
+        background-color: black;
+        font-size: 400%;
+        color: rgb(249,220,130);
+      }
+      .remark-slide-content{ 
+        background-color: black;
+      } 
+    </style>
+  </head>
+  <body bgcolor="black">
+    <textarea id="source" class="slide">
+      
+class: center, middle
+background-image: url(../.bg.jpeg)
+
+# Deep Dive Into Solidity 
+
+---
+background-image: url(../.bg.jpeg)
+
+## Agenda
+
+1. Brief Review of Solidity 
+2. Mapping
+3. Structs
+4. Enums
+5. Events
+
+---
+background-image: url(../.bg.jpeg)
+class: center, middle
+## Solidity Review
+
+---
+background-image: url(../.bg.jpeg)
+
+### Default Types 
+
+ - uint
+ - bytes
+ - string 
+ - boolean 
+ - mapping
+
+---
+background-image: url(../.bg.jpeg)
+
+ ### Control Structures
+ 
+  - Modifiers 
+  - Functions 
+  - If statements 
+  - Require statements
+
+---
+background-image: url(../.bg.jpeg)
+
+## Property of Solidity Functions
+
+ - public 
+ - private 
+ - return value 
+ - use of modifiers
+
+## Purpose of Modifiers 
+
+- providing access control for functions
+
+---
+background-image: url(../.bg.jpeg)
+
+## Mappings
+ - allow developers to &#34;map&#34; a unique identifier to x 
+ - `x` can be of any type 
+ - useful for uniquely identifying users in smart contract
+ - always of the form `{key: value}` pair 
+   - `key` is always unique 
+   - `value` is always contains information mapping to a respective key
+
+---
+background-image: url(../.bg.jpeg)
+
+## Mappings - An Example 
+
+`{ key: value }`
+
+ - `key`: address 
+ - `value`: characteristics
+
+---
+background-image: url(../.bg.jpeg)
+
+## Mappings: A Demonstration
+
+---
+background-image: url(../.bg.jpeg)
+
+## State Representation
+ - Examples 
+  - Token/Voting Contract - OPEN, PAUSED, CLOSED
+  - Game Contract: IN PROGRESS, TIE, WIN 
+
+---
+background-image: url(../.bg.jpeg)
+
+## Enums
+ - short and sweet way to define a finite amount of state
+
+### Enums Demo  
+
+---
+background-image: url(../.bg.jpeg)
+
+## Mapping and Enums 
+
+ - Persisting data while the contract is in a certain date 
+ - Rejecting certain state changes depending on requirements of a contract 
+
+ ### Mappings and Enums: A Demo 
+
+---
+background-image: url(../.bg.jpeg)
+
+## Lab 3 - Enums 
+
+ - Create a smart contract that has at least 3 states 
+ - Create f unction that allows the state to change 
+ - Save some persistent data that is relevant to the state on the blockchain
+
+---
+background-image: url(../.bg.jpeg)
+
+## Keeping Track of User Information 
+
+ ### Voting Contract 
+
+ - Assume: We have a contract that supports community voting. 
+ - What are some waysthat we can make sure a user cannot vote twice? 
+
+---
+background-image: url(../.bg.jpeg)
+
+## Structs 
+
+ - Allows developers to keep duplicate data structures for some number of users 
+ - Are allowed to be customly named 
+ - Internal of the structs must be finite and defined by the developera
+
+## Use Case 
+
+ - Game Contract: persisting information about a player such as their address or their scares
+ - Voting: Persistent information about a voter
+
+---
+background-image: url(../.bg.jpeg)
+
+## Structs and Mappings 
+
+ - Useful to have the `value` of a mapping as a struct
+ - Allows a contract to store more information 
+---
+background-image: url(../.bg.jpeg)
+
+## Events 
+
+ - similar to `console.log()` in Javascript 
+ - logs are almost always associated with block number
+
+### Why do we need events? 
+
+ - Blockchain = list of transactions 
+ - Events = at x transaction, SOMETHING happened 
+ - Example: Transfer events being emitted once tokens are transferred
+---
+background-image: url(../.bg.jpeg)
+
+## Usefulness of Events 
+
+ - Web3 and Ethers Integration 
+   - Events are the most important aspect in terms of integrating your smart contract with an application
+ - Etherscan Integration 
+   - Allows eherscan to keep track of money movements
+ - Testing
+
+---
+background-image: url(../.bg.jpeg)
+
+## Lab: Structs, Mappings, Events
+
+Determine a business use case and create a smart contract that meets the following criteria: 
+ - Uses structs 
+ - Uses Mappings 
+ - Emits at least 3 events 
+
+Explain your use case and your solution to a TA or the professor. 
+
+    </textarea>
+    <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js"></script>
+    <script>
+      var slideshow = remark.create({});
+    </script>
+  </body>
+</html>

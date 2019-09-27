@@ -1,0 +1,216 @@
+<html>
+  <head>
+    
+    <style type="text/css">
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      .remark-code, .remark-inline-code { 
+        font-family: 'Ubuntu Mono';
+        background-color: black;
+      }
+      ul,li { 
+        padding-top: 8px;
+        padding-bottom: 8px;
+      } 
+      h3 { 
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: bold;
+        font-size: 800%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: rgb(236, 115, 117);
+      } 
+      h2 { 
+        margin: auto;
+        text-align: center;
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: bold;
+        font-size: 1000%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: rgb(236, 115, 117);
+      } 
+      h1 {
+        margin: auto;
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: bold
+        font-size: 10000%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+        vertical-align: middle;
+        height: 90px;
+        line-height: 90px;
+        color: rgb(84, 177, 208);
+      }
+      body { 
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-family: 'Droid Serif'; 
+        background-color: black;
+        font-size: 400%;
+        color: rgb(249,220,130);
+      }
+      .remark-slide-content{ 
+        background-color: black;
+      } 
+    </style>
+  </head>
+  <body bgcolor="black">
+    <textarea id="source" class="slide">
+      
+class: center, middle
+background-image: url(bg.jpeg)
+
+# Smart Contract Inheritance
+
+---
+class: left
+background-image: url(bg.jpeg)
+## Agenda
+
+1. Contract Inheritance
+2. Abstract Classes 
+3. Interfaces
+
+---
+background-image: url(bg.jpeg)
+
+## Contract Inheritance
+
+ - Contract inheriting from another contract
+ - Two different kinds - abstract and interface 
+ - Inheritance is useful for code that is frequently used 
+ - Allows a single contract to be deployed and used by many other contracts 
+ - Separation of concerns in actual contract logic and contract that&#39;s using it
+
+---
+background-image: url(bg.jpeg)
+
+## Inheritance: Syntax
+
+```javascript 
+contract ContractName is Parent1 { 
+...
+} 
+```
+- This is telling ContractName to use Parent1
+
+### Inheritance: Rules 
+
+- A contract can inherit from as many contracts as you want 
+
+---
+background-image: url(bg.jpeg)
+
+## Limitation
+
+**NO CIRCULAR INHERITANCE**
+
+### What is Circular Inheritance? 
+
+```javascript 
+contract Contract1 is Contract2 { ... } 
+contract Contract2 is Contract3 { ... } 
+contract Contract3 is Contract1 { ...} 
+```
+
+In the above example, Contract1 and Contract3 cause a circular reference
+ 
+---
+background-image: url(bg.jpeg)
+
+## Inheritng Parts of Contract
+
+ - Public variables are available in the inherited contract
+ - Modifiers in the parent contract are accessible in the child contract
+
+### Demonstration
+
+ - What about functions? Or events?   
+
+---
+background-image: url(bg.jpeg)
+
+## Contructors with Arugments
+
+- If a parent constructor takes in parameters, the derived contract has to specify those exact parameters
+
+### Example
+
+---
+background-image: url(bg.jpeg)
+
+## Abstract Contracts
+
+- Contains a function that lacks implementation 
+- Solely used for describing implementations 
+- Allows you to describe implementation in the parent, and change it in the child
+- Useful for defining properties for the children contract to implement
+
+```javascript 
+function foo() public { 
+  owner = msg.sender
+}
+function abstractFoo();
+```
+
+---
+background-image: url(bg.jpeg)
+
+## Interfaces
+
+- Similar to abstract contracts, but there is no implementation 
+- Interfaces are unable to inherit from other contracts 
+- All functions in an inherited contract are to be external 
+- Interfaces do not have any variables, constructors, or any storage
+- Interfaces are limited to whatever a smart contract ABI can output 
+- Allows a developer to define properties that other contracts can make use of 
+- Traditionally, prefixed with letter &#39;i&#39; in front of contract name 
+
+```javascript 
+interface Token { 
+} 
+
+---
+background-image: url(bg.jpeg)
+
+### Demo: IERC20 Token
+```
+
+---
+background-image: url(bg.jpeg)
+
+## Interface vs Abstract
+
+- Interfaces are significantly stricter on guidelines 
+- Abstract classes only specify that 1 function is unimplemented
+
+---
+background-image: url(bg.jpeg)
+
+## Naming 
+- Be careful while naming
+- Any duplicated function, modifier, and event with the same name is going to cause problems in your code 
+
+---
+background-image: url(bg.jpeg)
+
+## Lab
+
+Create at least three smart contracts that inherit from one another. They must meet the following criteria: 
+ - Creates at least 1 contract 
+ - Uses interfaces 
+ - Uses abstract classes 
+
+Explain to a professor or a TA how your code works. This is an individual assignment.
+
+    </textarea>
+    <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js"></script>
+    <script>
+      var slideshow = remark.create({});
+    </script>
+  </body>
+</html>
