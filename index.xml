@@ -41,11 +41,20 @@ I was first introduced to Blockchain at ETHWaterloo, where I built a P2P System 
     </item>
     
     <item>
-      <title>More Testing</title>
-      <link>https://nataliechin80.github.io/slides/dp/more-testing/</link>
+      <title>Case Study of Audits</title>
+      <link>https://nataliechin80.github.io/slides/adv-sc/study-of-audits/</link>
       <pubDate>Tue, 25 Sep 2018 16:43:02 -0400</pubDate>
       
-      <guid>https://nataliechin80.github.io/slides/dp/more-testing/</guid>
+      <guid>https://nataliechin80.github.io/slides/adv-sc/study-of-audits/</guid>
+      <description>Case Study of Audits Agenda  Audits  Code Security Design Decisions and Architecture Code Quality  Competition: Case Study of Contracts  Goals of an Audit  Code Security Code Architecture Code Quality  Audit Process Auditing Companies  Quantstamp Trail of Bits ChainSecurity Hosho Open Zeppelin  Audit Handoff  Most recent version of code Explanation of how code is supposed to work Description of particular areas of code that are complex  Source Code: ZIP file on Blackboard Exercise - Introduction to Code Throughout this lecture, we will be facilitating an end-to-end audit of this audit code in production.</description>
+    </item>
+    
+    <item>
+      <title>Testing - Mocha and Asserts</title>
+      <link>https://nataliechin80.github.io/slides/dp/testing-mocha-asserts/</link>
+      <pubDate>Tue, 25 Sep 2018 16:43:02 -0400</pubDate>
+      
+      <guid>https://nataliechin80.github.io/slides/dp/testing-mocha-asserts/</guid>
       <description>Testing: Mocha and Asserts background-image: url(bg.jpeg)
 Agenda  Mocha Basics Chai Basics Introduction to Web3 More in depth: Testing Smart Contracts  background-image: url(bg.jpeg)
 Mocha Basics Introduction  Mocha is used for setting up tests Embark and Truffle have Mocha built in  background-image: url(bg.jpeg)
@@ -54,11 +63,11 @@ Mocha Async  For async callbacks, you can use the keyword done() Using done twic
     </item>
     
     <item>
-      <title>Testing</title>
-      <link>https://nataliechin80.github.io/slides/dp/testing/</link>
+      <title>Testing - Smart Contracts</title>
+      <link>https://nataliechin80.github.io/slides/dp/testing-smart-contracts/</link>
       <pubDate>Tue, 25 Sep 2018 16:43:02 -0400</pubDate>
       
-      <guid>https://nataliechin80.github.io/slides/dp/testing/</guid>
+      <guid>https://nataliechin80.github.io/slides/dp/testing-smart-contracts/</guid>
       <description>Testing Smart Contracts class: left background-image: url(bg.jpeg)
 Agenda  Testing Principles Embark and Mocha Tests Do it yourself  background-image: url(bg.jpeg)
 “Testing is the primary purpose of a Smart Contract Developer” Very little time is spent writing code compared to the time writing tests background-image: url(bg.jpeg)
@@ -90,15 +99,6 @@ Test Driven Development  Understand the business requirement Created automated t
       
       <guid>https://nataliechin80.github.io/post/smart-contract-security/</guid>
       <description>&lt;p&gt;Storing your cryptocurrency in a private wallet vs a smart contract wallet&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://nataliechin80.github.io/testingsmartcontracts/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://nataliechin80.github.io/testingsmartcontracts/</guid>
-      <description> Testing Smart Contracts Agenda  Testing Principles Embark Mocha Setup  TESTING: Primary purpose of Software Developer VERY LITTLE TIME SPENT ON WRITING SOLIDITY/VYPER COMPARED TO WRITING TESTS Test Driven Development  Understand business requirements Created automated tests that meet said requirement Create code logic that implements feature Once the tests pass, the code logic is complete Refactor code for readability and maintainability, and rerun tests to ensure you did not break anything  </description>
     </item>
     
     <item>

@@ -1,0 +1,172 @@
+<html>
+  <head>
+    
+    <style type="text/css">
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      .remark-code, .remark-inline-code { 
+        font-family: 'Ubuntu Mono';
+        background-color: black;
+      }
+      ul,li { 
+        padding-top: 8px;
+        padding-bottom: 8px;
+      } 
+      h3 { 
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: bold;
+        font-size: 800%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: rgb(236, 115, 117);
+      } 
+      h2 { 
+        margin: auto;
+        text-align: center;
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: bold;
+        font-size: 1000%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: rgb(236, 115, 117);
+      } 
+      h1 {
+        margin: auto;
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: bold
+        font-size: 10000%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+        vertical-align: middle;
+        height: 90px;
+        line-height: 90px;
+        color: rgb(84, 177, 208);
+      }
+      body { 
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-family: 'Droid Serif'; 
+        background-color: black;
+        font-size: 400%;
+        color: rgb(249,220,130);
+      }
+      .remark-slide-content{ 
+        background-color: black;
+      } 
+    </style>
+  </head>
+  <body bgcolor="black">
+    <textarea id="source" class="slide">
+      
+# Case Study of Audits 
+
+---
+
+## Agenda
+
+1. Audits 
+ - Code Security 
+ - Design Decisions and Architecture 
+ - Code Quality
+2. Competition: Case Study of Contracts
+
+---
+
+## Goals of an Audit
+
+ - Code Security 
+ - Code Architecture 
+ - Code Quality
+
+---
+
+## Audit Process 
+
+### Auditing Companies 
+
+ - Quantstamp
+ - Trail of Bits 
+ - ChainSecurity
+ - Hosho
+ - Open Zeppelin
+
+---
+
+## Audit Handoff
+
+- Most recent version of code
+- Explanation of how code is supposed to work 
+- Description of particular areas of code that are complex
+
+---
+
+# Source Code: ZIP file on Blackboard
+
+---
+
+##  Exercise - Introduction to Code
+
+Throughout this lecture, we will be facilitating an end-to-end audit of this audit code in production. In groups, answer the following: 
+ - Who are the parties involved? 
+ - What are the states in the contract? 
+
+---
+
+## Security of Code 
+
+Common smart contract vulnerabilities include: 
+
+- Arithmetic Overflow/Underflow 
+- Mismatched visibility modifiers on certain functions 
+- Re-entrancy attacks 
+- Misuse of tx.origin and msg.sender 
+- Force-sending funds into a contract
+- Reliance on external libraries 
+- Exceptions not handled correctly
+- Incorrect authorization on a contract
+
+---
+
+## Exercise - Auditing Contracts
+
+In groups of 2-3, identify security problems in the codebase. 
+
+- For each problem, identify potential solutions
+- From your solutions, choose the “best” one
+
+### Code Walkthrough
+---
+
+## Architecture/Design
+
+**What are some benefits of decentralized technologies over centralized technologies?**
+
+**What are things we need to be careful of?**
+
+---
+
+## Guidelines
+
+- Never store private key
+- Never change state of a contract without proper permission 
+- Ensure all parties of a smart contract have equal rights
+
+---
+## Lab - Submitting your Contract 
+
+Submit a smart contract that demonstrates: 
+
+ - How you would handle ERC20 and ETH transactions
+ - Handling safe transfer of tokens 
+ - Explanation of how your implementation is safer than native solidity
+
+    </textarea>
+    <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js"></script>
+    <script>
+      var slideshow = remark.create({});
+    </script>
+  </body>
+</html>

@@ -48,7 +48,7 @@
   </url>
   
   <url>
-    <loc>https://nataliechin80.github.io/slides/dp/more-testing/</loc>
+    <loc>https://nataliechin80.github.io/slides/adv-sc/study-of-audits/</loc>
     <lastmod>2018-09-25T16:43:02-04:00</lastmod>
   </url>
   
@@ -59,7 +59,12 @@
   </url>
   
   <url>
-    <loc>https://nataliechin80.github.io/slides/dp/testing/</loc>
+    <loc>https://nataliechin80.github.io/slides/dp/testing-mocha-asserts/</loc>
+    <lastmod>2018-09-25T16:43:02-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nataliechin80.github.io/slides/dp/testing-smart-contracts/</loc>
     <lastmod>2018-09-25T16:43:02-04:00</lastmod>
   </url>
   
@@ -106,11 +111,6 @@
   <url>
     <loc>https://nataliechin80.github.io/post/smart-contract-security/</loc>
     <lastmod>2018-07-31T23:42:24-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nataliechin80.github.io/testingsmartcontracts/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
