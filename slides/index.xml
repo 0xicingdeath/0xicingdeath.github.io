@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Creating Beautiful Presentations with Story on Natalie Chin</title>
+    <title>Slides on Natalie Chin</title>
     <link>https://nataliechin80.github.io/slides/</link>
-    <description>Recent content in Creating Beautiful Presentations with Story on Natalie Chin</description>
+    <description>Recent content in Slides on Natalie Chin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 Apr 2018 09:50:00 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 25 Sep 2018 16:43:02 -0400</lastBuildDate>
     
 	<atom:link href="https://nataliechin80.github.io/slides/index.xml" rel="self" type="application/rss+xml" />
     
@@ -17,11 +17,11 @@
       <pubDate>Tue, 25 Sep 2018 16:43:02 -0400</pubDate>
       
       <guid>https://nataliechin80.github.io/slides/dp/more-testing/</guid>
-      <description>class: center, middle background-image: url(bg.jpeg)
-Testing: Mocha and Asserts background-image: url(bg.jpeg)
+      <description>Testing: Mocha and Asserts background-image: url(bg.jpeg)
 Agenda  Mocha Basics Chai Basics Introduction to Web3 More in depth: Testing Smart Contracts  background-image: url(bg.jpeg)
 Mocha Basics Introduction  Mocha is used for setting up tests Embark and Truffle have Mocha built in  background-image: url(bg.jpeg)
-Mocha Hooks  suite callbacks (describe, contract) before hook [suite] beforeEach [test] test callbacks (it) afterEach [test] after hook [suite]  background-image: url(bg.</description>
+Mocha Hooks  suite callbacks (describe, contract) before hook [suite] beforeEach [test] test callbacks (it) afterEach [test] after hook [suite]  background-image: url(bg.jpeg)
+Mocha Async  For async callbacks, you can use the keyword done() Using done twice will error out A lot of calls in smart contracts are asynchronous Mocha can be used with promises, async/await, done, and callbacks  background-image: url(bg.</description>
     </item>
     
     <item>
@@ -30,11 +30,10 @@ Mocha Hooks  suite callbacks (describe, contract) before hook [suite] beforeEach
       <pubDate>Tue, 25 Sep 2018 16:43:02 -0400</pubDate>
       
       <guid>https://nataliechin80.github.io/slides/dp/testing/</guid>
-      <description>class: center, middle background-image: url(bg.jpeg)
-Testing Smart Contracts class: left background-image: url(bg.jpeg)
+      <description>Testing Smart Contracts class: left background-image: url(bg.jpeg)
 Agenda  Testing Principles Embark and Mocha Tests Do it yourself  background-image: url(bg.jpeg)
 “Testing is the primary purpose of a Smart Contract Developer” Very little time is spent writing code compared to the time writing tests background-image: url(bg.jpeg)
-Test Driven Development  Understand the business requirement Created automated tests meeting said requirement Run the test. It should fail.</description>
+Test Driven Development  Understand the business requirement Created automated tests meeting said requirement Run the test. It should fail. Create code logic implementing the functionality Run the test again.</description>
     </item>
     
     <item>
@@ -47,24 +46,12 @@ Test Driven Development  Understand the business requirement Created automated t
     </item>
     
     <item>
-      <title>Creating Beautiful Presentations with Story</title>
-      <link>https://nataliechin80.github.io/slides/adirondack/</link>
-      <pubDate>Wed, 25 Apr 2018 09:50:00 -0700</pubDate>
-      
-      <guid>https://nataliechin80.github.io/slides/adirondack/</guid>
-      <description>class: title, smokescreen, shelf, no-footer background-image: url(leo-serrat-533922-unsplash.jpg)
-Creating Beautiful Presentations With Remark, Apron, Adirondack, and Descartes The Story Remark Themes Story offers helper themes for creating beautiful presentations with Remark, using simple Markdown to create slide layouts.
- Apron defines the layouts&amp;rsquo; structure and size. Adirondack adds typography, theme colors, and helpful features. Descartes provides element and image positioning and colors.  Story has a design goal of clean, simple Markdown content.</description>
-    </item>
-    
-    <item>
       <title>Deep Dive Into Solidity</title>
       <link>https://nataliechin80.github.io/slides/sc-essentials/deep-dive-into-solidity/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://nataliechin80.github.io/slides/sc-essentials/deep-dive-into-solidity/</guid>
-      <description>class: center, middle background-image: url(../.bg.jpeg)
-Deep Dive Into Solidity background-image: url(../.bg.jpeg)
+      <description>Deep Dive Into Solidity background-image: url(../.bg.jpeg)
 Agenda  Brief Review of Solidity Mapping Structs Enums Events  background-image: url(../.bg.jpeg) class: center, middle
 Solidity Review background-image: url(../.bg.jpeg)
 Default Types  uint bytes string boolean mapping  background-image: url(../.bg.jpeg)
@@ -79,10 +66,9 @@ Property of Solidity Functions  public private return value use of modifiers  Pu
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://nataliechin80.github.io/slides/sc-essentials/inheritance/</guid>
-      <description>class: center, middle background-image: url(bg.jpeg)
-Smart Contract Inheritance class: left background-image: url(bg.jpeg)
+      <description>Smart Contract Inheritance class: left background-image: url(bg.jpeg)
 Agenda  Contract Inheritance Abstract Classes Interfaces  background-image: url(bg.jpeg)
-Contract Inheritance  Contract inheriting from another contract Two different kinds - abstract and interface Inheritance is useful for code that is frequently used Allows a single contract to be deployed and used by many other contracts Separation of concerns in actual contract logic and contract that&amp;rsquo;s using it  background-image: url(bg.</description>
+Contract Inheritance  Contract inheriting from another contract Two different kinds - abstract and interface Inheritance is useful for code that is frequently used Allows a single contract to be deployed and used by many other contracts Separation of concerns in actual contract logic and contract that&amp;rsquo;s using it  background-image: url(bg.jpeg)</description>
     </item>
     
     <item>
@@ -91,8 +77,7 @@ Contract Inheritance  Contract inheriting from another contract Two different ki
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://nataliechin80.github.io/slides/sc-essentials/vyper/</guid>
-      <description>class: center, middle background-image: url(bg.jpeg)
-Vyper class: left background-image: url(bg.jpeg)
+      <description>Vyper class: left background-image: url(bg.jpeg)
 Agenda  Course Expectations Vyper Types Using Vyper Structures Comparing and Contrasting Vyper and Solidity  background-image: url(bg.jpeg) class: center, middle
 Course Expectations  All course submissions are subject to the Plagiarism Academic Honesty at George Brown College In addition to copying from the internet, this includes lecture slides and all code demos that are provided by professors Plaigiarized assignments will be given a mark of 0%  background-image: url(bg.</description>
     </item>

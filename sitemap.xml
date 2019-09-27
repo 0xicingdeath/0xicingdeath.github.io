@@ -8,48 +8,26 @@
   </url>
   
   <url>
-    <loc>https://nataliechin80.github.io/george-brown/</loc>
-    <lastmod>2019-05-27T21:20:33-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nataliechin80.github.io/post/hello/hello/</loc>
-    <lastmod>2019-09-25T23:42:24-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://nataliechin80.github.io/</loc>
-    <lastmod>2019-09-25T23:42:24-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nataliechin80.github.io/post/</loc>
-    <lastmod>2019-09-25T23:42:24-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nataliechin80.github.io/tags/</loc>
-    <lastmod>2019-09-25T23:42:24-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nataliechin80.github.io/tags/ethereum/</loc>
-    <lastmod>2019-09-25T23:42:24-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nataliechin80.github.io/tags/solidity/</loc>
-    <lastmod>2019-09-25T23:42:24-04:00</lastmod>
+    <lastmod>2019-05-26T15:17:50-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://nataliechin80.github.io/post/looking-forward-moving-back/</loc>
     <lastmod>2018-12-06T00:00:16-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nataliechin80.github.io/post/</loc>
+    <lastmod>2018-12-06T00:00:16-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nataliechin80.github.io/tags/</loc>
+    <lastmod>2018-12-06T00:00:16-04:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -75,6 +53,12 @@
   </url>
   
   <url>
+    <loc>https://nataliechin80.github.io/slides/</loc>
+    <lastmod>2018-09-25T16:43:02-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://nataliechin80.github.io/slides/dp/testing/</loc>
     <lastmod>2018-09-25T16:43:02-04:00</lastmod>
   </url>
@@ -96,6 +80,18 @@
   </url>
   
   <url>
+    <loc>https://nataliechin80.github.io/tags/ethereum/</loc>
+    <lastmod>2018-09-21T23:53:13-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nataliechin80.github.io/tags/solidity/</loc>
+    <lastmod>2018-09-21T23:53:13-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://nataliechin80.github.io/tags/state-channels/</loc>
     <lastmod>2018-09-21T23:53:13-04:00</lastmod>
     <priority>0</priority>
@@ -110,27 +106,6 @@
   <url>
     <loc>https://nataliechin80.github.io/post/smart-contract-security/</loc>
     <lastmod>2018-07-31T23:42:24-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nataliechin80.github.io/slides/demo-slideshow/</loc>
-    <lastmod>2018-06-02T16:43:02-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nataliechin80.github.io/slides/demo-slideshow/</loc>
-    <lastmod>2018-06-02T16:43:02-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nataliechin80.github.io/slides/</loc>
-    <lastmod>2018-04-25T09:50:00-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nataliechin80.github.io/slides/adirondack/</loc>
-    <lastmod>2018-04-25T09:50:00-07:00</lastmod>
   </url>
   
   <url>
