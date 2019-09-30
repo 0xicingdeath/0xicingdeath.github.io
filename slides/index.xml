@@ -17,7 +17,34 @@
       <pubDate>Tue, 25 Sep 2018 16:43:02 -0400</pubDate>
       
       <guid>https://nataliechin80.github.io/slides/adv-sc/study-of-audits/</guid>
-      <description>Case Study of Audits Agenda  Audits  Code Security Design Decisions and Architecture Code Quality  Competition: Case Study of Contracts  Goals of an Audit  Code Security Code Architecture Code Quality  Audit Process Auditing Companies  Quantstamp Trail of Bits ChainSecurity Hosho Open Zeppelin  Audit Handoff  Most recent version of code Explanation of how code is supposed to work Description of particular areas of code that are complex  Source Code: ZIP file on Blackboard Exercise - Introduction to Code Throughout this lecture, we will be facilitating an end-to-end audit of this audit code in production.</description>
+      <description>class: title
+Case Study of Audits Agenda  Audits  Code Security Design Decisions and Architecture Code Quality  Competition: Case Study of Contracts  Goals of an Audit  Code Security Code Architecture Code Quality  Audit Process Auditing Companies  Quantstamp Trail of Bits ChainSecurity Hosho Open Zeppelin  Audit Handoff  Most recent version of code Explanation of how code is supposed to work Description of particular areas of code that are complex  class: title</description>
+    </item>
+    
+    <item>
+      <title>Hands on State Channel</title>
+      <link>https://nataliechin80.github.io/slides/adv-sc/intro-to-state-channel/</link>
+      <pubDate>Tue, 25 Sep 2018 16:43:02 -0400</pubDate>
+      
+      <guid>https://nataliechin80.github.io/slides/adv-sc/intro-to-state-channel/</guid>
+      <description>class: title
+Introduction to State Channels Outline  &amp;ldquo;State&amp;rdquo; and the concept of state Blockchain vs Centralized Solutions Role o Smart Contract What goes on-chain and stays off-chain  class: title
+State class: img-caption
+State are (Heads, Tails) usually maps to one person (Winning, Losing)
+class: img-caption State in a Tic Tac Toe game can be [Started, Playing, Won, Loss, Tie]
+State Channel Characteristics  Members allowed to interact with it Rules of the game Changing of state Disputing changing state  class: title</description>
+    </item>
+    
+    <item>
+      <title>Hands on State Channels</title>
+      <link>https://nataliechin80.github.io/slides/adv-sc/hands-on-state-channel/</link>
+      <pubDate>Tue, 25 Sep 2018 16:43:02 -0400</pubDate>
+      
+      <guid>https://nataliechin80.github.io/slides/adv-sc/hands-on-state-channel/</guid>
+      <description>class: title
+Hands on State Channels Agenda  State Channel Review Defining State Adding Rules Adding Members Escrow Signing  class: title
+State Channel Review Defining State  Definition - What is State? Different methods of representing state &amp;mdash; class: title  Demo: Adding State to Contract Exercise - Adding State We&amp;rsquo;re going to build the state channel that you architected last time.
+Implement the following: - Initialization of State - Ability to change state</description>
     </item>
     
     <item>
@@ -26,11 +53,8 @@
       <pubDate>Tue, 25 Sep 2018 16:43:02 -0400</pubDate>
       
       <guid>https://nataliechin80.github.io/slides/dp/testing-mocha-asserts/</guid>
-      <description>Testing: Mocha and Asserts background-image: url(bg.jpeg)
-Agenda  Mocha Basics Chai Basics Introduction to Web3 More in depth: Testing Smart Contracts  background-image: url(bg.jpeg)
-Mocha Basics Introduction  Mocha is used for setting up tests Embark and Truffle have Mocha built in  background-image: url(bg.jpeg)
-Mocha Hooks  suite callbacks (describe, contract) before hook [suite] beforeEach [test] test callbacks (it) afterEach [test] after hook [suite]  background-image: url(bg.jpeg)
-Mocha Async  For async callbacks, you can use the keyword done() Using done twice will error out A lot of calls in smart contracts are asynchronous Mocha can be used with promises, async/await, done, and callbacks  background-image: url(bg.</description>
+      <description>class: title
+Testing: Mocha and Asserts Agenda  Mocha Basics Chai Basics Introduction to Web3 More in depth: Testing Smart Contracts  Mocha Basics Introduction  Mocha is used for setting up tests Embark and Truffle have Mocha built in  Mocha Hooks  suite callbacks (describe, contract) before hook [suite] beforeEach [test] test callbacks (it) afterEach [test] after hook [suite]  Mocha Async  For async callbacks, you can use the keyword done() Using done twice will error out A lot of calls in smart contracts are asynchronous Mocha can be used with promises, async/await, done, and callbacks  Chai Basics  Test Driven Development - assert  Behaviour Driven Development - expect, should   Chai Basics Assert assert (expression, message);  The expression above should evaluate to something that is true or false.</description>
     </item>
     
     <item>
@@ -39,10 +63,9 @@ Mocha Async  For async callbacks, you can use the keyword done() Using done twic
       <pubDate>Tue, 25 Sep 2018 16:43:02 -0400</pubDate>
       
       <guid>https://nataliechin80.github.io/slides/dp/testing-smart-contracts/</guid>
-      <description>Testing Smart Contracts class: left background-image: url(bg.jpeg)
-Agenda  Testing Principles Embark and Mocha Tests Do it yourself  background-image: url(bg.jpeg)
-“Testing is the primary purpose of a Smart Contract Developer” Very little time is spent writing code compared to the time writing tests background-image: url(bg.jpeg)
-Test Driven Development  Understand the business requirement Created automated tests meeting said requirement Run the test. It should fail. Create code logic implementing the functionality Run the test again.</description>
+      <description>class: title
+Testing Smart Contracts class: left
+Agenda  Testing Principles Embark and Mocha Tests Do it yourself  “Testing is the primary purpose of a Smart Contract Developer” Very little time is spent writing code compared to the time writing tests Test Driven Development  Understand the business requirement Created automated tests meeting said requirement Run the test. It should fail. Create code logic implementing the functionality Run the test again.</description>
     </item>
     
     <item>
@@ -51,7 +74,8 @@ Test Driven Development  Understand the business requirement Created automated t
       <pubDate>Tue, 25 Sep 2018 16:43:02 -0400</pubDate>
       
       <guid>https://nataliechin80.github.io/slides/adv-sc/weth/</guid>
-      <description>WETH Agenda  Study of EVM languages Benefits and drawbacks of such languages Introduction to Wrapped ETH Implementing a Contract Rejecting Tokens  Study of EVM Languages Available Languages on the EVM  Solidity Vyper LLL Flint Yul  Solidity  Most common language Similar to Javascript and C Downsides? Benefits?  Vyper  Second-most popular language after solidity Aimed at being more readable to reduce the chance of bugs  Solidity vs Vyper  No modifiers No inheritance No functional and operational overloading No inline assembly  Yul  Intermediate language that compiles to different EVM Supports switch, function, block, var, literal, loop, if, expression, and variables  LLL  Assembly like code with keywords Manipulation of data and bytes individually &amp;mdash;  Currencies on the Blockchain  Ether ERC20 Tokens Multitude of other standardized tokens  What are the differences and similarities betwen ETH and other tokens?</description>
+      <description>class: title
+WETH Agenda  Study of EVM languages Benefits and drawbacks of such languages Introduction to Wrapped ETH Implementing a Contract Rejecting Tokens  Study of EVM Languages Available Languages on the EVM  Solidity Vyper LLL Flint Yul  Solidity  Most common language Similar to Javascript and C Downsides? Benefits?  Vyper  Second-most popular language after solidity Aimed at being more readable to reduce the chance of bugs  Solidity vs Vyper  No modifiers No inheritance No functional and operational overloading No inline assembly  Yul  Intermediate language that compiles to different EVM Supports switch, function, block, var, literal, loop, if, expression, and variables  LLL  Assembly like code with keywords Manipulation of data and bytes individually &amp;mdash;  Currencies on the Blockchain  Ether ERC20 Tokens Multitude of other standardized tokens  What are the differences and similarities betwen ETH and other tokens?</description>
     </item>
     
     <item>
@@ -60,8 +84,9 @@ Test Driven Development  Understand the business requirement Created automated t
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://nataliechin80.github.io/slides/sc-essentials/deep-dive-into-solidity/</guid>
-      <description>Deep Dive Into Solidity background-image: url(../.bg.jpeg)
-Agenda  Brief Review of Solidity Mapping Structs Enums Events  background-image: url(../.bg.jpeg) class: center, middle
+      <description>class: title
+Deep Dive Into Solidity background-image: url(../.bg.jpeg)
+Agenda  Brief Review of Solidity Mapping Structs Enums Events  class: title
 Solidity Review background-image: url(../.bg.jpeg)
 Default Types  uint bytes string boolean mapping  background-image: url(../.bg.jpeg)
 ### Control Structures
@@ -75,9 +100,10 @@ Property of Solidity Functions  public private return value use of modifiers  Pu
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://nataliechin80.github.io/slides/sc-essentials/inheritance/</guid>
-      <description>Smart Contract Inheritance class: left background-image: url(bg.jpeg)
+      <description>class: title
+Smart Contract Inheritance class: left background-image: url(bg.jpeg)
 Agenda  Contract Inheritance Abstract Classes Interfaces  background-image: url(bg.jpeg)
-Contract Inheritance  Contract inheriting from another contract Two different kinds - abstract and interface Inheritance is useful for code that is frequently used Allows a single contract to be deployed and used by many other contracts Separation of concerns in actual contract logic and contract that&amp;rsquo;s using it  background-image: url(bg.jpeg)</description>
+Contract Inheritance  Contract inheriting from another contract Two different kinds - abstract and interface Inheritance is useful for code that is frequently used Allows a single contract to be deployed and used by many other contracts Separation of concerns in actual contract logic and contract that&amp;rsquo;s using it  background-image: url(bg.</description>
     </item>
     
     <item>
@@ -86,8 +112,9 @@ Contract Inheritance  Contract inheriting from another contract Two different ki
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://nataliechin80.github.io/slides/sc-essentials/vyper/</guid>
-      <description>Vyper class: left background-image: url(bg.jpeg)
-Agenda  Course Expectations Vyper Types Using Vyper Structures Comparing and Contrasting Vyper and Solidity  background-image: url(bg.jpeg) class: center, middle
+      <description>class: title
+Vyper background-image: url(bg.jpeg)
+Agenda  Course Expectations Vyper Types Using Vyper Structures Comparing and Contrasting Vyper and Solidity  background-image: url(bg.jpeg)
 Course Expectations  All course submissions are subject to the Plagiarism Academic Honesty at George Brown College In addition to copying from the internet, this includes lecture slides and all code demos that are provided by professors Plaigiarized assignments will be given a mark of 0%  background-image: url(bg.</description>
     </item>
     

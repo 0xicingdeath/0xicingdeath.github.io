@@ -1,151 +1,308 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Natalie Chin</title>
-    <link>https://nataliechin80.github.io/</link>
-    <description>Recent content on Natalie Chin</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 26 May 2019 15:17:50 -0400</lastBuildDate>
-    
-	<atom:link href="https://nataliechin80.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>About Me</title>
-      <link>https://nataliechin80.github.io/about/</link>
-      <pubDate>Sun, 26 May 2019 15:17:50 -0400</pubDate>
-      
-      <guid>https://nataliechin80.github.io/about/</guid>
-      <description>Hey there! My name is Natalie.
-I&amp;rsquo;m a blockchain developer, and I love it. I&amp;rsquo;m also a blogger - and at times, have a passion for writing (other times, I&amp;rsquo;ve just got a brick wall that I can&amp;rsquo;t get past).
-I was first introduced to Blockchain at ETHWaterloo, where I built a P2P System where I learnt a whole lot about the blockchain space. I became passionate about learning more and understanding more about the technology.</description>
-    </item>
-    
-    <item>
-      <title>Looking Forward Moving Back</title>
-      <link>https://nataliechin80.github.io/post/looking-forward-moving-back/</link>
-      <pubDate>Thu, 06 Dec 2018 00:00:16 -0400</pubDate>
-      
-      <guid>https://nataliechin80.github.io/post/looking-forward-moving-back/</guid>
-      <description>&lt;p&gt;This is a part of a previous series that I started while  at STK to honour females in tech.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Girls Don&#39;t Understand Computers</title>
-      <link>https://nataliechin80.github.io/post/girls-dont-understand-computers/</link>
-      <pubDate>Fri, 09 Nov 2018 22:08:27 -0400</pubDate>
-      
-      <guid>https://nataliechin80.github.io/post/girls-dont-understand-computers/</guid>
-      <description>&lt;p&gt;There will always be people in the world who try to bring you down. It&amp;rsquo;s about who&amp;rsquo;s there to help you get back up, and how you keep going that matters.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Case Study of Audits</title>
-      <link>https://nataliechin80.github.io/slides/adv-sc/study-of-audits/</link>
-      <pubDate>Tue, 25 Sep 2018 16:43:02 -0400</pubDate>
-      
-      <guid>https://nataliechin80.github.io/slides/adv-sc/study-of-audits/</guid>
-      <description>Case Study of Audits Agenda  Audits  Code Security Design Decisions and Architecture Code Quality  Competition: Case Study of Contracts  Goals of an Audit  Code Security Code Architecture Code Quality  Audit Process Auditing Companies  Quantstamp Trail of Bits ChainSecurity Hosho Open Zeppelin  Audit Handoff  Most recent version of code Explanation of how code is supposed to work Description of particular areas of code that are complex  Source Code: ZIP file on Blackboard Exercise - Introduction to Code Throughout this lecture, we will be facilitating an end-to-end audit of this audit code in production.</description>
-    </item>
-    
-    <item>
-      <title>Testing - Mocha and Asserts</title>
-      <link>https://nataliechin80.github.io/slides/dp/testing-mocha-asserts/</link>
-      <pubDate>Tue, 25 Sep 2018 16:43:02 -0400</pubDate>
-      
-      <guid>https://nataliechin80.github.io/slides/dp/testing-mocha-asserts/</guid>
-      <description>Testing: Mocha and Asserts background-image: url(bg.jpeg)
-Agenda  Mocha Basics Chai Basics Introduction to Web3 More in depth: Testing Smart Contracts  background-image: url(bg.jpeg)
-Mocha Basics Introduction  Mocha is used for setting up tests Embark and Truffle have Mocha built in  background-image: url(bg.jpeg)
-Mocha Hooks  suite callbacks (describe, contract) before hook [suite] beforeEach [test] test callbacks (it) afterEach [test] after hook [suite]  background-image: url(bg.jpeg)
-Mocha Async  For async callbacks, you can use the keyword done() Using done twice will error out A lot of calls in smart contracts are asynchronous Mocha can be used with promises, async/await, done, and callbacks  background-image: url(bg.</description>
-    </item>
-    
-    <item>
-      <title>Testing - Smart Contracts</title>
-      <link>https://nataliechin80.github.io/slides/dp/testing-smart-contracts/</link>
-      <pubDate>Tue, 25 Sep 2018 16:43:02 -0400</pubDate>
-      
-      <guid>https://nataliechin80.github.io/slides/dp/testing-smart-contracts/</guid>
-      <description>Testing Smart Contracts class: left background-image: url(bg.jpeg)
-Agenda  Testing Principles Embark and Mocha Tests Do it yourself  background-image: url(bg.jpeg)
-“Testing is the primary purpose of a Smart Contract Developer” Very little time is spent writing code compared to the time writing tests background-image: url(bg.jpeg)
-Test Driven Development  Understand the business requirement Created automated tests meeting said requirement Run the test. It should fail. Create code logic implementing the functionality Run the test again.</description>
-    </item>
-    
-    <item>
-      <title>WETH</title>
-      <link>https://nataliechin80.github.io/slides/adv-sc/weth/</link>
-      <pubDate>Tue, 25 Sep 2018 16:43:02 -0400</pubDate>
-      
-      <guid>https://nataliechin80.github.io/slides/adv-sc/weth/</guid>
-      <description>WETH Agenda  Study of EVM languages Benefits and drawbacks of such languages Introduction to Wrapped ETH Implementing a Contract Rejecting Tokens  Study of EVM Languages Available Languages on the EVM  Solidity Vyper LLL Flint Yul  Solidity  Most common language Similar to Javascript and C Downsides? Benefits?  Vyper  Second-most popular language after solidity Aimed at being more readable to reduce the chance of bugs  Solidity vs Vyper  No modifiers No inheritance No functional and operational overloading No inline assembly  Yul  Intermediate language that compiles to different EVM Supports switch, function, block, var, literal, loop, if, expression, and variables  LLL  Assembly like code with keywords Manipulation of data and bytes individually &amp;mdash;  Currencies on the Blockchain  Ether ERC20 Tokens Multitude of other standardized tokens  What are the differences and similarities betwen ETH and other tokens?</description>
-    </item>
-    
-    <item>
-      <title>Automated Eth Wrapping</title>
-      <link>https://nataliechin80.github.io/post/automated-eth-wrapping/</link>
-      <pubDate>Fri, 21 Sep 2018 23:53:13 -0400</pubDate>
-      
-      <guid>https://nataliechin80.github.io/post/automated-eth-wrapping/</guid>
-      <description>&lt;p&gt;How to make a contract auto wrap and unwrap ETH&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Smart Contract Security</title>
-      <link>https://nataliechin80.github.io/post/smart-contract-security/</link>
-      <pubDate>Tue, 31 Jul 2018 23:42:24 -0400</pubDate>
-      
-      <guid>https://nataliechin80.github.io/post/smart-contract-security/</guid>
-      <description>&lt;p&gt;Storing your cryptocurrency in a private wallet vs a smart contract wallet&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://nataliechin80.github.io/post/role-model-order/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://nataliechin80.github.io/post/role-model-order/</guid>
-      <description> Role Models  Dad Ryk Dr. Christopher Anand Janelle Alic   </description>
-    </item>
-    
-    <item>
-      <title>Deep Dive Into Solidity</title>
-      <link>https://nataliechin80.github.io/slides/sc-essentials/deep-dive-into-solidity/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://nataliechin80.github.io/slides/sc-essentials/deep-dive-into-solidity/</guid>
-      <description>Deep Dive Into Solidity background-image: url(../.bg.jpeg)
-Agenda  Brief Review of Solidity Mapping Structs Enums Events  background-image: url(../.bg.jpeg) class: center, middle
-Solidity Review background-image: url(../.bg.jpeg)
-Default Types  uint bytes string boolean mapping  background-image: url(../.bg.jpeg)
-### Control Structures
- Modifiers Functions If statements Require statements  background-image: url(../.bg.jpeg)
-Property of Solidity Functions  public private return value use of modifiers  Purpose of Modifiers  providing access control for functions  background-image: url(.</description>
-    </item>
-    
-    <item>
-      <title>Inheritance</title>
-      <link>https://nataliechin80.github.io/slides/sc-essentials/inheritance/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://nataliechin80.github.io/slides/sc-essentials/inheritance/</guid>
-      <description>Smart Contract Inheritance class: left background-image: url(bg.jpeg)
-Agenda  Contract Inheritance Abstract Classes Interfaces  background-image: url(bg.jpeg)
-Contract Inheritance  Contract inheriting from another contract Two different kinds - abstract and interface Inheritance is useful for code that is frequently used Allows a single contract to be deployed and used by many other contracts Separation of concerns in actual contract logic and contract that&amp;rsquo;s using it  background-image: url(bg.jpeg)</description>
-    </item>
-    
-    <item>
-      <title>Vyper</title>
-      <link>https://nataliechin80.github.io/slides/sc-essentials/vyper/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://nataliechin80.github.io/slides/sc-essentials/vyper/</guid>
-      <description>Vyper class: left background-image: url(bg.jpeg)
-Agenda  Course Expectations Vyper Types Using Vyper Structures Comparing and Contrasting Vyper and Solidity  background-image: url(bg.jpeg) class: center, middle
-Course Expectations  All course submissions are subject to the Plagiarism Academic Honesty at George Brown College In addition to copying from the internet, this includes lecture slides and all code demos that are provided by professors Plaigiarized assignments will be given a mark of 0%  background-image: url(bg.</description>
-    </item>
-    
-  </channel>
+	<channel>
+		<title>Natalie Chin </title>
+		<link>https://nataliechin80.github.io/</link>
+		<generator>Hugo -- gohugo.io</generator>
+		<language>en-us</language>
+		<author>Natalie Chin</author>
+		<rights>Copyright (c) 2019</rights>
+		<updated>2019-10-08 00:00:00 &#43;0000 UTC</updated>
+		
+		<item>
+			<title>Introduction to Smart Contracts</title>
+			<link>https://nataliechin80.github.io/talks/introduction-to-smart-contracts/</link>
+			<pubDate>Wed, 12 Jun 2019 00:00:00 UTC</pubDate>
+			<author>Natalie Chin</author>
+			<guid>https://nataliechin80.github.io/talks/introduction-to-smart-contracts/</guid>
+			<media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://nataliechin80.github.io/img/talks/wwc-blockchain.png" medium="image" type="image/jpg" width="100" height="100" />
+			<description>&lt;p&gt;Tune into www.womenwhocode.com/blockchain to sign up for the webinar!&lt;/p&gt;</description>
+		</item>
+		
+		<item>
+			<title>Kickass Blockchain Developer Journeys</title>
+			<link>https://nataliechin80.github.io/talks/kickass-blockchain-developer-journeys/</link>
+			<pubDate>Sat, 27 Apr 2019 00:00:00 UTC</pubDate>
+			<author>Natalie Chin</author>
+			<guid>https://nataliechin80.github.io/talks/kickass-blockchain-developer-journeys/</guid>
+			<media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://nataliechin80.github.io/img/default-header-img.tn-500x500.jpg" medium="image" type="image/jpg" width="100" height="100" />
+			<description>&lt;p&gt;Join me and a few other professors at George Brown discussing our journeys of how we got into blockchain.&lt;/p&gt;</description>
+		</item>
+		
+		<item>
+			<title>Looking Forward Moving Back</title>
+			<link>https://nataliechin80.github.io/post/looking-forward-moving-back/</link>
+			<pubDate>Thu, 06 Dec 2018 00:00:16 -0400</pubDate>
+			<author>Natalie Chin</author>
+			<guid>https://nataliechin80.github.io/post/looking-forward-moving-back/</guid>
+			<media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://nataliechin80.github.io/img/looking-back.png" medium="image" type="image/jpg" width="100" height="100" />
+			<description>&lt;p&gt;This is a part of a previous series that I started while  at STK to honour females in tech.&lt;/p&gt;
+
+&lt;p&gt;29 years ago today, Marc Lépine entered École Polytechnique in Montreal, with a rifle and a hunting knife. He ran into a classroom, separating the men and the women. He let all the men go, but shot directly 9 of the women in the room. He moved throughout the building, shooting at only women. 20 minutes later, he turned the gun on himself, committing suicide. In his suicide note, he claims that “feminists” had ruined his life. He includes a list of women that he wanted to kill. He killed 14 women that day, marking the deadliest shooting in Canada’s history. It was later discovered that Lépine had previously applied for a program at École Polytechnique, been rejected due to missing credits, and was upset that women had taken up roles that used to be male-dominant. In Canada, December 6th is now known as the National Day of Remembrance and Action on Violence Against Women.&lt;/p&gt;
+
+&lt;p&gt;These fourteen women whose lives were cut short — Geneviève Bergeron, Hélène Colgan, Nathalie Croteau, Barbara Daigneault, Anne-Marie Edward, Maud Haviernick, Barbara Klucznik Widajewicz, Maryse Laganière, Maryse Leclair, Anne-Marie Lemay, Sonia Pelletier, Michèle Richard, Annie St-Arneault and Annie Turcotte were trailblazers in the field of Engineering. In 1989, only about 12% of engineering students at school were female, and these women would have been revolutionary in inspiring the next female engineers. 14 lives were tragically cut short that day.&lt;/p&gt;
+
+&lt;p&gt;One survivor, Nathalie Provost, tells her story of seeing Marc Lépine storming into her classroom screaming insults about females in the field. She said directly to the perpetuator, “We’re just women who study engineering, we don’t fight to prove we are women, we don’t fight to prove that we are the best of the men.” Nathalie explains that maybe Lépine had responded, but she was not able to hear it, as he had begun shooting. She was shot in foot, the leg, and the temple — though luckily, none of the bullets hit bone. She now works as an engineer in the field. After the shooting, she told people “I ask every woman in the world who wants to be an engineer to keep this idea in mind.”&lt;/p&gt;
+
+&lt;p&gt;In memory of the 14 women who lost their lives, along with all the people affected by the Polytechnique massacre, we dedicate this article to them.&lt;/p&gt;
+
+&lt;h1 id=&#34;ursula-franklin&#34;&gt;Ursula Franklin&lt;/h1&gt;
+
+&lt;p&gt;Five hours away, there was another trailblazer in equal rights and gender equality in Toronto. Once news spread about the feminism massacre in Montreal, Ursula Franklin and her family knew that if Lépine had targeted Toronto instead of Montreal, Ursula would have been at the very top of his list. This never stopped Ursula and her push for gender equality.&lt;/p&gt;
+
+&lt;p&gt;Ursula Franklin was born in Munich, Germany in 1921. Her family friend had inspired her interest in science and technology as the laws of nature were immutable, compared to the laws of the state. In 1940, she moved to Berlin to study science at University.&lt;/p&gt;
+
+&lt;p&gt;In 1943, she was forced to drop out of university and was imprisoned in a labour camp. Though she doesn’t share much of what happened during her experience, she says that she spent majority of her time repairing damaged buildings, often in cold weather, which she developed frostbite in much of her extremities. Once World War 2 ended, she went back to school, gaining her degree in 1946.&lt;/p&gt;
+
+&lt;p&gt;In 1949, she moved to Toronto to start a post-doctorate degree in physics and metallurgy, the study of metals. This is when she also started to work at Ontario Research Foundation, where she worked at for 15 years. She made amazing discoveries here. Her scientific findings on the negative effects of nuclear weapon testing, and discovery of radioactive metals in children’s teeth played a major role in the Partial Test Ban Treaty of 1963, which was signed by 135 countries.&lt;/p&gt;
+
+&lt;p&gt;While at the Ontario Research Foundation, she had gotten married and had two children. She speaks about her experience in the field, especially on getting married and having 2 children while working:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;I was in there from the university, respected, and the fact that I was a woman was probably not a big deal. Then I got married. It was a bit of a social rumble — ‘she, I mean, she got married?” Okay, I got married.
+But then, two years later, I got pregnant and we expected our first child. At the outset, I decided to tell them quite early and say look: I am expecting a child. I would like to continue working. I can be in the lab fifty percent of the time — two and a half days. My mother is here; she’ll look after the baby. The other two and a half days, I will work at home, because much of my work — the writing and calculations and report-writing — it was possible to have the data for, and I could take my reports to work.
+And they were stunned — because it had never happened.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Ursula was able to prove not only that women would be able to work in the workplace, but also that it was more than possible for a married women, and pregnant women to work as well.&lt;/p&gt;
+
+&lt;p&gt;In 1967, Ursula joined the University of Toronto Department of Metallurgy where she developed the field of archaeological analysis using metals. She began teaching at the university. By 1973, she became a University Professor, the highest level of professor one could have reached at the university. She explains her experience being a women in science and education then:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;“[Working as a female professor of engineering] was pretty lonely. The real difficulty is to protect and advance your women students, and to see that they are in a hassle-free environment. When I came to university, I’d been long enough to know that I wasn’t one of the gang, and I never would be. I didn’t have a desire to be one of the boys. But the great wish — to give my women students a hassle-free, happy learning environment — that’s what’s difficult. The culture of engineering is not a culture of acceptance and understanding of anything that is female — at the time — equal.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Inherent in her lectures and transcripts, Ursula always had a vision and a focus for the future of women in the workplace. She knew what it was to work in an environment that was male dominant, and put her foot down, and explicitly stated that she didn’t want to be a “typical” person in the field. She was comfortable enough with herself to stand out.&lt;/p&gt;
+
+&lt;p&gt;In 1989, Ursula had just released her Massey Lectures on the Real World of Technology. She discusses the effect of technology on our everyday lives. After the Industrial Revolution, she says that the technological developments caused people to be overly-compliant, recommending people to trust their instincts and not censor their imaginations blinded by technology. She was one of the world leading interdisciplinary scholars.&lt;/p&gt;
+
+&lt;p&gt;From Ursula’s Massey Lessons, Ursula started to realize a larger purpose. She wanted to take her experience in education and apply it elsewhere. She dreamt of a school built on strong values, in the early 1990s. The school, named Ursula Franklin Academy, opened its doors in 1995, at 90 Croatia Street around Dufferin Station in Toronto. On the opening day of the academy, Ursula says:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;“Here are the three wishes that I have for the new academy: First of all, I hope that the school will be an exciting place of learning, where students will discover the joys and challenges of gaining knowledge and understanding. Then, I hope that the school will become a place for building lasting friendships among students, parents and teachers. And, finally, I hope that the endeavours being made in the school to build knowledge and understanding will extend out into the broader community and that the community, in turn, will enrich and support the goals and dreams of the school.” — Dr. Ursula Franklin, 1995&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nataliechin80.github.io/img/posts/ufa-2015.jpeg&#34; alt=&#34;Ursula Franklin Academy in 2015&#34; /&gt;
+&lt;em&gt;Ursula Franklin Academy in Toronto from 2015&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Moving to current-day, Ursula Franklin Academy now has 500 students, and has moved to the core of High Park, sharing its quarters with Western Tech and The Student School. The school still maintains values that Ursula Franklin herself instilled. While Ursula Franklin Academy (usually called UFA, for short) has a few unique aspects:&lt;/p&gt;
+
+&lt;p&gt;All incoming students have to go through an application process to get accepted.
+ - All students at this school must wear uniform.
+ - Students from all grades get to interact with one another through Wednesday Enrichment Program, where teachers or students run sessions based on extracurriculars (Programming for Competitions, etc)
+ - Students call their teachers by their first name, promoting a greater sense of community and connection.
+ - Emphasis on learning that is connected to the real world, based in inquiry-based learning.&lt;/p&gt;
+
+&lt;p&gt;Ursula’s push for gender equality in the workplace was incredibly motivating. During her term at the Ontario Research Foundation, she proved that it was possible for married women, and women who had children to work in the workplace. During her term as a Professor at the University of Toronto, she fought incredibly hard for fighting for a hassle-free learning environment, which very few workplaces had back then. She managed to see applicability of technology aside from them being just machines; while also maintaining a human aspect of our lives. Through UFA, her values have inspired students attending the school for 23 years. Unfortunately, Ursula passed away on July 22, 2016 when she was 94. The lives she touched and the people she inspired live on and fight in her memory.&lt;/p&gt;
+
+&lt;h1 id=&#34;an-excerpt-from-an-ufa-grad&#34;&gt;An Excerpt from an UFA Grad&lt;/h1&gt;
+
+&lt;p&gt;I’m Nat. I’m a blockchain developer at STK. I organized DeltaHacks, a hackathon for change at McMaster University, and Stackathon, a blockchain hackathon at STK. I love tech, rock climbing, my fluffy dog, and fandoms (Star Wars, Pokémon, Doctor Who, Harry Potter — I could go on, so I’ll stop there).&lt;/p&gt;
+
+&lt;p&gt;I’ve always been a big fan of computers. My dad got me a Garfield Typing Pal game to help me learn typing when I was young — it was the first game I ever played. I started when I was around 4. The length of my hand was barely long enough to stretch across half of the keyboard. It was as if I was the Doctor in his control room running around the controls, except with my fingers:&lt;/p&gt;
+
+&lt;p&gt;I spent much of my childhood taking things apart, and putting them back together, just to see how it all worked. I’ve taken apart a ton of things, from broken hard drives, pens, computers, and everything in between.&lt;/p&gt;
+
+&lt;p&gt;I was lucky enough to have attended Ursula Franklin Academy, from grade 9 to 12. Ursula’s values are prevalent throughout the entire school, most obviously as a community to learn, and apply the knowledge we learn at school to the outside world.&lt;/p&gt;
+
+&lt;p&gt;UFA had a course called the Real World of Technology, named after Ursula’s books and lectures. Whilst in my second year, I learnt how to write a grant proposal — which I ended up convincing the school administration to get a class-set (30) of Kobo eReader devices. I facilitated pilot testing through classes, which led the principal to get a grade set (125) eReaders. I learnt a lot about the management of such a large project, and all the work that goes into changing how things are done. But most of all, I learnt the applicability of schooling on the real world. While it didn’t feel as significant back then, looking back on it, I changed the school in a small way. It makes me feel as though I could change another part of the world in a small way. And I think we all have the potential to do it.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nataliechin80.github.io/img/posts/ufa-ea.png&#34; alt=&#34;Running Environmental Alliance in 2013&#34; /&gt;
+&lt;em&gt;Running Environemntal Alliance at UFA in 2013&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The Wednesday Sessions at UFA are unlike any other school in Toronto. Every month, we were able to choose what “sessions” we wanted to learn about; some were student run and some were teacher run. Attendance marks would be taken during these sessions, which gets added to each course at the end of the school year. I was a part of Tech Support, leading the eReader pilot through the Wednesday Sessions. UFA was extremely supportive of student-run sessions — I led Environmental Alliance for 3.5 years. Through the cumulative experience of combining extracurriculars with Wednesday Sessions, I learnt problem solving, pair programming, leadership, and so much more. But I think the most important thing I learnt was to never forget the importance of doing something outside of school. You get to discover what you like doing and what you don’t. You get to know people who can help you excel, and help mentor you in navigating a field.&lt;/p&gt;
+
+&lt;p&gt;I found that this was applicable throughout university and beyond. As a Computer Science student, a degree can teach you about the theory and getting a basic understanding of the requirements of the field you’re about to enter. It doesn’t necessarily matter what language you are using, so long as you have a high-level understanding of how it works. But it’s up to us, as members of society, to find out how it relates to the outside world. That’s where hackathons, conferences, meetups, networking events and job fairs come in. Hackathons are the perfect opportunity to take what you’ve learnt in school and apply it hands-on. Conferences, meetups, and job fairs are a great way to get to speak with people who are interacting with the technology day-to-day.&lt;/p&gt;
+
+&lt;p&gt;I would never have learnt this if it wasn’t for UFA. Ursula visited our school many times and have spoken to her on many occasions. I went back to visit the year after I graduated. I talked to Ursula for a few minutes in the lobby, thanking her for sharing her values and being an inspiration for so many of us. UFA students graduate with not only the technical knowledge — but with a greater purpose — a purpose to help the world. She told me she wanted me to share what I learnt at UFA through helping the greater community. I promised I would. This was the last conversation I had with her before she passed away.&lt;/p&gt;
+
+&lt;p&gt;But I remember the promise. And I continue to hold on. It’s why I ran DeltaHacks twice at school, recruiting mentors and judges to be able to help beginners get started. It’s also why I started Stackathon, a hackathon in Toronto to get new developers interested in learning blockchain tech. In it’s own way, hackathons inspire participants to learn. After Stackathon, I was a guest lecturer for UFA’s Computer Science class, teaching them introductory blockchain. Inspiring others is a beautiful thing.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nataliechin80.github.io/img/posts/ufa-front-view.png&#34; alt=&#34;UFA Frontal View&#34; /&gt;
+&lt;em&gt;Front view of UFA, 2015&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Author’s Note: UFA Staff and Administration have always made an effort to recognize and honour the 14 women, through candlelight vigils, announcements, and discussions throughout my time there. They would have likely planned to do the same thing today, but the building is currently under lockdown, following the sighting of a man with a handgun. I hope the UFA community stays safe. My thoughts are with all the students, staff, administration, and families affected.&lt;/p&gt;</description>
+		</item>
+		
+		<item>
+			<title>Girls Don&#39;t Understand Computers</title>
+			<link>https://nataliechin80.github.io/post/girls-dont-understand-computers/</link>
+			<pubDate>Fri, 09 Nov 2018 22:08:27 -0400</pubDate>
+			<author>Natalie Chin</author>
+			<guid>https://nataliechin80.github.io/post/girls-dont-understand-computers/</guid>
+			<media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://nataliechin80.github.io/img/code.jpeg" medium="image" type="image/jpg" width="100" height="100" />
+			<description>&lt;p&gt;There will always be people in the world who try to bring you down. It&amp;rsquo;s about who&amp;rsquo;s there to help you get back up, and how you keep going that matters.&lt;/p&gt;
+
+&lt;p&gt;When I was in third grade, I was the fastest typer in my class. I knew how to speed-read, so that helped with “googling.” And I knew my way around computers. My dad would often bring home broken hard drives, and I’d take apart the heads and platters, only to put them back together just for fun.&lt;/p&gt;
+
+&lt;p&gt;One day during computer class, my third grade teacher said to the entire class:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;“Girls don’t understand computers. They shouldn’t be building things on them.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I can&amp;rsquo;t even begin to describe and explain what it felt like as a young female, interested in computers. It felt like my dreams of opening hard drives in the future would be squashed. It felt as though being the fastest typer in class didn&amp;rsquo;t mean anything, just because I was a girl. It felt as though all that time taking apart pens and hard drives were useless, just because I&amp;rsquo;m a girl. All the times using Google to find the things I was curious about - nil.&lt;/p&gt;
+
+&lt;p&gt;I, well, I was lucky. I felt beaten down by what the teacher said, but I didn&amp;rsquo;t believe it for long enough that I had likely forgotten what she had said the next day, mainly because computers were all I had, and all I had ever known.&lt;/p&gt;
+
+&lt;p&gt;I think it&amp;rsquo;s incredibly important to show and teach young children - regardless male, female, whatever, that it&amp;rsquo;s great to be interested in anything. It&amp;rsquo;s awesome to be curious, to learn from your mistakes. It&amp;rsquo;s okay to try again. It&amp;rsquo;s okay to ask for help and for advice. And gender should never play a role in any of these. Life is hard enough as is.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s important to really acknowledge the people who have tried to kill the fire, shut me up, stop me from doing what I wanted to do - whether intentionally or unintentionally - and frankly, it doesn&amp;rsquo;t really matter.&lt;/p&gt;
+
+&lt;p&gt;As a female developer, I used to read a lot of resources on how to succeed in a male dominant field. I found a ton of resources that said - &amp;ldquo;Look for other female mentors that can help you navigate the confusing world of tech.&amp;rdquo; That goes without saying; we want someone who can speak our language, and someone we can connect with. Some developers take this quite literally, and never find mentors outside of &amp;ldquo;their space.&amp;rdquo; I would argue that there are so many people who can help you grow in the world  - never limit yourself based on male, female, same program, different program, whatever.&lt;/p&gt;
+
+&lt;p&gt;I am currently an Ethereum Developer, as I fully fleshed out and built a state channel to fully support ERC20 tokens and ETH. The code I wrote has just gone through security audits, and is now main-net ready. I have learnt so much about the tech, but also about interacting with colleagues, pitching projects, learning from experience, and learning by listening and watching. I have written multiple Ethereum Development resources, including Reducing Gas Fees and State Channel Wallets. Many developers reached out to me, thanking me for compiling and writing them. I’m co-running Stackathon (applications close on Novembe, anr 14th!) at work, inviting around 20–30 people into the office for a 24-hour hackathon which is also completely female run. I am also giving back to my former high school, by doing short blockchain tutorials to introduce high school students to blockchain tech. I cannot even hope to list the list of things that I have learnt on the job — but I’m really proud of how far I’ve come. This process never would have been possible without STK’s support to help me grow, and all the different role models I’ve had — all across the company.&lt;/p&gt;
+
+&lt;p&gt;Over the series of a few articles, I’m going to talk specifics of the journey of women in tech, and how much of an impact they had on me. Some of my mentors were there to catch me when I fell and help me back up. At times, they listened and provided advice on how to keep going. At times, I failed them — or they failed me. But these experiences taught me a lot about finding mentors, listening, and learning from them. All of these mentors brought me to where I am now. And I think it’s important to share.&lt;/p&gt;</description>
+		</item>
+		
+		<item>
+			<title>Automated Eth Wrapping</title>
+			<link>https://nataliechin80.github.io/post/automated-eth-wrapping/</link>
+			<pubDate>Fri, 21 Sep 2018 23:53:13 EDT</pubDate>
+			<author>Natalie Chin</author>
+			<guid>https://nataliechin80.github.io/post/automated-eth-wrapping/</guid>
+			<media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://nataliechin80.github.io/img/eth-wrapping.jpeg" medium="image" type="image/jpg" width="100" height="100" />
+			<description>&lt;p&gt;How to make a contract auto wrap and unwrap ETH&lt;/p&gt;
+
+&lt;h1 id=&#34;the-user-experience-effect-on-a-multi-token-payment-channel&#34;&gt;The User Experience Effect on a Multi-token Payment Channel&lt;/h1&gt;
+
+&lt;p&gt;Back in August, when we released our Multi-token Payment Channel, it allowed dynamic instantiation of any ERC20 tokens. For all intents and purposes, this functionality allowed us to reuse the channel for any number of tokens as needed. Considering most of the tokens followed the ERC20 standard, this would sufficiently cover our needs. Implementing such a channel not only ensured reduced gas costs, but ensured a uniform and consistent user experience, as the underlying contracts would remain unchanged.&lt;/p&gt;
+
+&lt;p&gt;There was one need, however, that was not met: ETH.&lt;/p&gt;
+
+&lt;p&gt;With the existing codebase, the contract would reject any ETH sent to it. A user would not be able to transact and exchange with ETH, due to the syntactical difference in transfer functions.&lt;/p&gt;
+
+&lt;p&gt;To transfer ERC20 tokens between addresses, the syntax is: tokenAddress.transfer(dstAddress, amountToSend). Contrarily, to transfer ETH to another address, the syntax is: dstAddress.transfer(amountToSend). This website goes into a bit more detail on the nonconformity of ETH — but here’s the point:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;ETH DOESN’T CONFORM TO ITS OWN ERC20 STANDARD.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Due to the underlying difference, updating state to an ETH channel would not be able to use the same functions as an ERC20 token channel would.&lt;/p&gt;
+
+&lt;p&gt;Even though a unified token standard exists, ETH does not meet these standards. As a developer, working within these bounds is very limiting.&lt;/p&gt;
+
+&lt;p&gt;From a user perspective, I find this overly tedious. To use decentralized exchanges, the exchange will take you through a series of steps in order to ensure that you can then trade your ETH for ERC20 tokens.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Send your ETH into a contract which will convert it into WETH and assign it to the your address&lt;/li&gt;
+&lt;li&gt;Send WETH to decentralized exchange address to trade other tokens&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Given the number of additional steps to be able to simply convert ETH to WETH and use it in a Dex, the user experience is often awkward and cumbersome. The additional number of steps just to make ETH conform to ERC20 specifications is over-the-top. Not to mention, the complex number of steps required to convert and send increases the chance of human error.&lt;/p&gt;
+
+&lt;h1 id=&#34;achieving-automated-wrapping-and-unwrapping-of-weth&#34;&gt;Achieving Automated Wrapping and Unwrapping of WETH&lt;/h1&gt;
+
+&lt;p&gt;Note: These set of smart contracts are still undergoing audits, thus are not guaranteed to be safe. Use at your own risk.&lt;/p&gt;
+
+&lt;p&gt;This is why STK started to look into wrapping tokens on behalf of the user. Instead of having to manually convert WETH, or make the user do it, it can be done through functions in the contract. This allowed us to simplify the process:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;A user can send funds into the contract at any time they wish through a fallback payable function&lt;/li&gt;
+&lt;li&gt;At any point after ETH has been sent into the contract, call deposit() to tokenize ETH to WETH&lt;/li&gt;
+&lt;li&gt;The close, contest, and settle functionality is identical due to the wrapped ETH being an ERC20 token&lt;/li&gt;
+&lt;li&gt;In the settle, it uses the WETH version of transfer, which decreases the balance of the channel, and sends ETH.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Our new smart contract redesign abstracts the entirety of the wrapping experience, so from a user standpoint, transacting with an ERC20 token and ETH is the exact same.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+    function transfer(address _to, uint256 _value) public returns (bool success) {
+        if (balances[msg.sender] &amp;gt;= _value &amp;amp;&amp;amp; _value &amp;gt; 0) {
+            balances[msg.sender] -= _value;
+            balances[_to] += _value;
+            emit Transfer(msg.sender, _to, _value);
+            return true;
+        } else { return false; }
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Similarly, in our WETH contract, when the contract calls WETH.transfer(dst,amount), it makes use of the following transfer token function. This functionality is essentially the unwrapping of wrapped ETH to ETH. The function reduces the balance of WETH tokens the smart contract owns, and sends out ETH to the destination address.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  function transfer(address dst, uint wad) public returns(bool) {
+    send(msg.sender,dst,wad);
+    return true;
+  }
+
+  function send(address src, address dst, uint wad) public returns(bool) {
+    require(msg.sender == src)
+    require(balances[src]&amp;gt;=wad);
+    balances[src] -= wad;
+    dst.transfer(wad);
+    return true;
+  }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;That way, in our settle function, the code for transferring tokens can remain the same. It was not necessary to update anything specifically for a WETH channel functionality. If Solidity detected the function being non-existent, the fallback would be invoked; but if it detected a transfer() function present, it would execute the function of the code in the respective contract address.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    function settle(MultiChannelData storage data, address _channelAddress)
+    public
+    channelAlreadyClosed(data)
+    timeoutOver(data)
+    callerIsChannelParticipant(data)
+    isSufficientBalance(data, data.amountOwed_, _channelAddress) {
+        uint balance = data.token_.balanceOf(_channelAddress);
+        uint owedAmount = data.amountOwed_;
+        uint returnToUserAmount = balance.minus(owedAmount);
+
+        data.amountOwed_ = 0;
+
+        data.closedBlock_ = 0;
+
+        if (owedAmount &amp;gt; 0) {
+            require(data.token_.transfer(data.recipientAddress_,owedAmount));
+        }
+
+        if (returnToUserAmount &amp;gt; 0 &amp;amp;&amp;amp; data.shouldReturn_) {
+            require(data.token_.transfer(data.userAddress_, returnToUserAmount));
+        }
+
+        emit LogChannelSettled(block.number, owedAmount);
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Thirdly, a user would never have to worry about the process of unwrapping and wrapping ETH. From a user standpoint, loading a wallet with ETH is the same thing as any ERC20 token. The contract performs the entirety of the wrapping and unwrapping process, thus is not subject to human error throughout its execution.&lt;/p&gt;
+
+&lt;p&gt;There’s a wrap to our latest development in our smart contracts — with Multi-token Payment Channels with Automatic Wrapping and Unwrapping of WETH! If you’d like to check out our code in its entirety, visit us here: &lt;a href=&#34;https://github.com/STKtoken/Multi-Token-smart-contracts!&#34;&gt;https://github.com/STKtoken/Multi-Token-smart-contracts!&lt;/a&gt;&lt;/p&gt;</description>
+		</item>
+		
+		<item>
+			<title>Smart Contract Security</title>
+			<link>https://nataliechin80.github.io/post/smart-contract-security/</link>
+			<pubDate>Tue, 31 Jul 2018 23:42:24 EDT</pubDate>
+			<author>Natalie Chin</author>
+			<guid>https://nataliechin80.github.io/post/smart-contract-security/</guid>
+			<media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://nataliechin80.github.io/img/smart-contract-security.jpeg" medium="image" type="image/jpg" width="100" height="100" />
+			<description>&lt;p&gt;Storing your cryptocurrency in a private wallet vs a smart contract wallet&lt;/p&gt;
+
+&lt;h1 id=&#34;storing-crypto-in-a-wallet-vs-a-smart-contract&#34;&gt;Storing Crypto in a Wallet vs a Smart Contract&lt;/h1&gt;
+
+&lt;p&gt;A crypto wallet is always generated using a private/public key pair. In other words, when you sign up for a new address with something like MyEtherWallet, you will get a “safety package” — containing your private key that you should be keeping safe. With MetaMask, you would have the mnemonic with the 12 seed words. If you forget these, you lose access entirely to your account. If you accidentally make your private key accessible to someone else, this person has full control over your funds.&lt;/p&gt;
+
+&lt;p&gt;A smart contract, on the other hand, is different. There is no explicit private/public key differentiation — the address of the contract is the contract’s public key, but the private key is never made available. Unlike a crypto wallet, a smart contract does what its assigned to do, through code. For instance, our STK-smart-contracts is set to interact with only STK tokens. If other ERC20 tokens are sent to the smart contract, they are lost. This contract does not accept ETH transfers — so, if a customer accidentally transfers Ether to the smart contract, our contract will explicitly refuse it and refund it back. The only thing a user would lose is the gas fees for execution of said operation. Our smart contract also specifies that only STACK and User’s address can settle a channel. The settle function controls the movement of STK Tokens through a payment channel. Due to the restriction of changing the state of the channel, once an IOU has been submitted to change the state of a channel, no one can control the refund or transfers of tokens except yourself. The cryptocurrency you own is completely within your control.&lt;/p&gt;
+
+&lt;h1 id=&#34;transactions-are-safer-with-state-channels&#34;&gt;Transactions are safer with state channels&lt;/h1&gt;
+
+&lt;p&gt;In the initialization of a state channel, there are a few addresses that we make use of:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;user address: the address of the wallet in which your funds are stored. When a channel is settled and the funds are returned back to the user, the tokens/ETH will be returned to this address.&lt;/li&gt;
+&lt;li&gt;signer address: the private and public key pair generated on your device for signing purposes*&lt;/li&gt;
+&lt;li&gt;recipient address: the address of the STACK’s wallet. When a channel is settled, the IOU amount will be transferred to STACK.&lt;/li&gt;
+&lt;li&gt;channel address: the address of your personal state channel. When you deposit funds, this is where your funds are stored.&lt;/li&gt;
+&lt;li&gt;For you to sign transactions, the app automatically generates private and public key pairs. All transactions (IOU’s) are signed with this private key. These are only ever used to sign transactions that are sent to the smart contract. STACK never interacts with your signer’s private key. Notice your signer’s key never holds funds. Its only purpose is to sign off-chain transactions.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;With the following setup, transactions are safer with state channels, because there is no single point of failure. No matter what tokens there are in our payment channel, the funds inside it are always safe. Even if STK’s backend or database fails or goes down, the user is in complete control of the funds within the state channel.&lt;/p&gt;
+
+&lt;h1 id=&#34;network-congestion&#34;&gt;Network Congestion&lt;/h1&gt;
+
+&lt;p&gt;Back in December of last year, when Cryptokitties was released officially, the sheer number of transactions on the Ethereum Network skyrocketed and caused complete congestion. A few people in the Reddit AMA asked about the effects of network congestion on our state channels.&lt;/p&gt;
+
+&lt;p&gt;We sign the IOU’s off chain with the signer’s public and private key pair. These do not need to interact with the network. When you decide to settle a channel, these transactions will be pushed on-chain. During the settle period, you have the option to transfer any unused tokens back to your address. Your transaction amount will also be transferred to STACK. In other words, the end user is not affected by congestion on the network. This is ultimately safer for customers, because they are not affected by the volatility and the ever-changing block times on the network. To read more about how the IOU and signing off-chain transactions work, check this out.&lt;/p&gt;
+
+&lt;p&gt;If you’re intrigued, feel free to check out our crypto beta demo located here: &lt;a href=&#34;https://www.youtube.com/watch?v=Yhmjks3eFIA&#34;&gt;https://www.youtube.com/watch?v=Yhmjks3eFIA&lt;/a&gt;, where we go through a live purchase at a local coffee shop.&lt;/p&gt;</description>
+		</item>
+		
+	</channel>
 </rss>
