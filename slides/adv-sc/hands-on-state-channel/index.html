@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Hands on State Channels</title>
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="https://nataliechin80.github.io/index.xml">
+		<link rel="canonical" href="https://nataliechin80.github.io/slides/adv-sc/hands-on-state-channel/">
+		
+		<link rel="shortcut icon" type="image/png" href="https://nataliechin80.github.io/apple-touch-icon-precomposed.png">
+		
+		
+		<meta name="generator" content="Hugo 0.55.6" />
+
+		
+		<meta property="og:title" content="Hands on State Channels" />
+		<meta property="og:type" content="article" />
+		<meta property="og:image" content="https://nataliechin80.github.io" />
+		<meta property="og:description" content="" />
+		<meta property="og:url" content="https://nataliechin80.github.io/slides/adv-sc/hands-on-state-channel/" />
+		<meta property="og:site_name" content="Hands on State Channels" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@NatalieChin7" />
+
+
+		
+					<link rel="stylesheet" type="text/css" href="https://nataliechin80.github.io/css/apron.css"></style>
+					<link rel="stylesheet" type="text/css" href="https://nataliechin80.github.io/css/descartes.css"></style>
+					<link rel="stylesheet" type="text/css" href="https://nataliechin80.github.io/css/adirondack.css"></style><style type="text/css">
+		 
+		@page {
+				  size:  1216px 684px; 
+				  margin: 0;
+		}
+		</style>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700,700i|Quattrocento:400,700|Spectral:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
+
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		
+		<script src="https://nataliechin80.github.io/js/story.js"></script>
+
+	</head>
+	<body class="ma0 bg-white section-slides page-kind-page is-page-true ">
+		
+  
+
+		<main role="main">
+		
+    <textarea id="source">class: title
+# Hands on State Channels 
+
+---
+
+# Agenda
+
+ - State Channel Review
+ - Defining State 
+ - Adding Rules 
+ - Adding Members 
+ - Escrow
+ - Signing
+
+---
+class: title
+# State Channel Review
+
+---
+# Defining State
+ - Definition - What is State? 
+ - Different methods of representing state
+---
+class: title
+
+## Demo: Adding State to Contract
+
+---
+## Exercise - Adding State 
+
+We&#39;re going to build the state channel that you architected last time. 
+
+Implement the following: 
+ - Initialization of State 
+ - Ability to change state
+
+---
+class: title
+#  Start Game Functionality
+
+---
+# Exercise - Build Functions 
+
+Create a struct that will represent the data in your state channel. 
+
+Set up the basic functionality to do the following: 
+ - Initialize the contract 
+ - Set up a new instance
+---
+class: title
+# Members of a State Channel
+
+---
+class: title
+## Demo: Implementing members in a state channel
+
+---
+## Exercise - Architecting Members
+
+When a user creates a state channel, you should define the following: 
+ - Parties involved in your state channel 
+ - Ensure only allowed parties can interact with it
+---
+class: title
+# Smart Contract Escrow
+
+---
+class: title
+## Demo: Building an Escrow Contract
+
+---
+
+##  Exercise - Escrow Assurance
+
+ - Build escrow functionality into your contract. 
+ - Ensure users are unable to change the state without putting in escrow
+
+---
+class: title
+# Signing Transactions
+
+---
+# Signing Transactions
+
+Signing offers:
+ - Integrity of data 
+ - Authenticity of the sender
+
+--
+
+Putting signatures onto the blockchain can happen in two ways: 
+ - Signing a message 
+ - Signing hash of a message
+
+---
+class: title
+# Dispute Period 
+
+---
+class: title 
+# Demo: Implementing Dispute Period 
+
+---
+# Lab 
+
+Build a state channel that has the following implementations: 
+ - Encompasses a basic state 
+ - Allows you to create instances of a contract
+ - Implements required checks to change state 
+ - Has a dispute period
+</textarea>
+    <script type="text/javascript" src="https://nataliechin80.github.io/js/qrcode.js"></script>
+    <script src="https://nataliechin80.github.io/js/remark.js"></script>
+    <script>
+      var slideshow = remark.create({
+          ratio: "16:9", 
+         navigation: {
+            scroll: false
+         },
+         countIncrementalSlides: false,
+         slideNumberFormat: '%current%',
+			highlightLanguage: "xaprb",
+			placeholder: "dummy value to end the list without a comma"
+      });
+
+		
+		
+		$(".remark-slide-content.fit-h1 h1").each(function(i, e) {
+			var $e = $(e);
+			var $p = $e.closest('div.remark-slide-container');
+			var needsToggle = !$p.hasClass('remark-visible');
+			if ( needsToggle ) $p.toggleClass('remark-visible');
+			while (e.scrollHeight > e.clientHeight + 1 && $e.css('font-size') != '1px') {
+				$e.css('font-size', (parseInt($e.css('font-size')) - 1) + "px");
+				
+				
+			}
+			if ( needsToggle ) $p.toggleClass('remark-visible');
+		});
+
+		$( function() {
+			if ( $( "body.feature-qrcode:not(.feature-noqrcode)" ).length ) {
+				if ( $( ".qrcode" ).length ) {
+					new QRCode($(".qrcode")[0], {
+						"useSVG": true,
+						"text": window.location.href.replace(/#\d*$/, "")
+					});
+				}
+			}
+		});
+
+    </script>
+
+		</main>
+		
+  
+
+		
+		
+  
+
+	
+	
+	</body>
+</html>

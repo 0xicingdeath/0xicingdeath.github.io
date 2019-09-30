@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Hands on State Channel</title>
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="https://nataliechin80.github.io/index.xml">
+		<link rel="canonical" href="https://nataliechin80.github.io/slides/adv-sc/intro-to-state-channel/">
+		
+		<link rel="shortcut icon" type="image/png" href="https://nataliechin80.github.io/apple-touch-icon-precomposed.png">
+		
+		
+		<meta name="generator" content="Hugo 0.55.6" />
+
+		
+		<meta property="og:title" content="Hands on State Channel" />
+		<meta property="og:type" content="article" />
+		<meta property="og:image" content="https://nataliechin80.github.io" />
+		<meta property="og:description" content="" />
+		<meta property="og:url" content="https://nataliechin80.github.io/slides/adv-sc/intro-to-state-channel/" />
+		<meta property="og:site_name" content="Hands on State Channel" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@NatalieChin7" />
+
+
+		
+					<link rel="stylesheet" type="text/css" href="https://nataliechin80.github.io/css/apron.css"></style>
+					<link rel="stylesheet" type="text/css" href="https://nataliechin80.github.io/css/descartes.css"></style>
+					<link rel="stylesheet" type="text/css" href="https://nataliechin80.github.io/css/adirondack.css"></style><style type="text/css">
+		 
+		@page {
+				  size:  1216px 684px; 
+				  margin: 0;
+		}
+		</style>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700,700i|Quattrocento:400,700|Spectral:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
+
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		
+		<script src="https://nataliechin80.github.io/js/story.js"></script>
+
+	</head>
+	<body class="ma0 bg-white section-slides page-kind-page is-page-true ">
+		
+  
+
+		<main role="main">
+		
+    <textarea id="source">class: title
+# Introduction to State Channels
+
+---
+# Outline
+
+ - &#34;State&#34; and the concept of state
+ - Blockchain vs Centralized Solutions 
+ - Role o Smart Contract 
+ - What goes on-chain and stays off-chain
+
+---
+class: title
+# State
+
+---
+class: img-caption
+
+![cointoss](cointoss.jpeg)
+State are (Heads, Tails) usually maps to one person (Winning, Losing)
+
+---
+class: img-caption
+![tictactoe](tictactoe.png)
+State in a Tic Tac Toe game can be [Started, Playing, Won, Loss, Tie]
+
+---
+# State Channel Characteristics
+
+ - Members allowed to interact with it 
+ - Rules of the game 
+ - Changing of state 
+ - Disputing changing state
+
+---
+class: title 
+# Discussion: Tic Tac Toe on State Channels
+
+---
+
+##  Exercise - Architecture
+
+ - What are the states required to play Tic Tac Toe on the blockchain? 
+ - What about off-chain? 
+---
+class: title
+# Members of a State Channel
+
+---
+class: img-caption
+
+![cointoss](cointoss.jpeg)
+Members of a coin-toss game are the two members who are betting on either Heads/Tails.
+
+---
+class: img-caption
+![tictactoe](tictactoe.png)
+Members of a tic-tac-toe game are the two members who are making the X O moves.
+
+---
+# Rules of Tic Tac Toe 
+
+ - Once player A plays, it&#39;s player B&#39;s turn 
+ - A Player wins when there are three consecutive letters in one direction 
+ - It is not necessary for a game to have a winner
+---
+# State Channel Smart Contract
+
+ - State channels is the third party arbitrator 
+ - Defines the rules of the game 
+ - Handles paymets, if necesssary
+---
+class: title
+# Discussion: How do smart contracts verify information? 
+
+---
+# Signatures
+ - Assumption: Owner of the private key is the owner of the account 
+ - Signs data using the private key
+ - Like an unfforgeable signature on an important letter
+---
+class: title
+# The state of a state channel should NEVER change without a dispute period.
+
+---
+# Dispute Period 
+
+ - A finite amount of time where both parties are allowed to provide updated signatures 
+ - Failsafe: In case a party tries to replay an old signature
+
+---
+# Lab 
+
+Architect your smart contract by defining the following interface: 
+
+ - List your public methods 
+ - Have at least 3 states 
+ - Identify parameters/arguments/return values of functions 
+ - One function has to take signatures 
+ - Identify where you would need a dispute period
+</textarea>
+    <script type="text/javascript" src="https://nataliechin80.github.io/js/qrcode.js"></script>
+    <script src="https://nataliechin80.github.io/js/remark.js"></script>
+    <script>
+      var slideshow = remark.create({
+          ratio: "16:9", 
+         navigation: {
+            scroll: false
+         },
+         countIncrementalSlides: false,
+         slideNumberFormat: '%current%',
+			highlightLanguage: "xaprb",
+			placeholder: "dummy value to end the list without a comma"
+      });
+
+		
+		
+		$(".remark-slide-content.fit-h1 h1").each(function(i, e) {
+			var $e = $(e);
+			var $p = $e.closest('div.remark-slide-container');
+			var needsToggle = !$p.hasClass('remark-visible');
+			if ( needsToggle ) $p.toggleClass('remark-visible');
+			while (e.scrollHeight > e.clientHeight + 1 && $e.css('font-size') != '1px') {
+				$e.css('font-size', (parseInt($e.css('font-size')) - 1) + "px");
+				
+				
+			}
+			if ( needsToggle ) $p.toggleClass('remark-visible');
+		});
+
+		$( function() {
+			if ( $( "body.feature-qrcode:not(.feature-noqrcode)" ).length ) {
+				if ( $( ".qrcode" ).length ) {
+					new QRCode($(".qrcode")[0], {
+						"useSVG": true,
+						"text": window.location.href.replace(/#\d*$/, "")
+					});
+				}
+			}
+		});
+
+    </script>
+
+		</main>
+		
+  
+
+		
+		
+  
+
+	
+	
+	</body>
+</html>

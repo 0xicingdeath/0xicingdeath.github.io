@@ -1,66 +1,54 @@
-<html>
-  <head>
-    
-    <style type="text/css">
-      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
-      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
-      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Deep Dive Into Solidity</title>
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="https://nataliechin80.github.io/index.xml">
+		<link rel="canonical" href="https://nataliechin80.github.io/slides/sc-essentials/deep-dive-into-solidity/">
+		
+		<link rel="shortcut icon" type="image/png" href="https://nataliechin80.github.io/apple-touch-icon-precomposed.png">
+		
+		
+		<meta name="generator" content="Hugo 0.55.6" />
 
-      .remark-code, .remark-inline-code { 
-        font-family: 'Ubuntu Mono';
-        background-color: black;
-      }
-      ul,li { 
-        padding-top: 8px;
-        padding-bottom: 8px;
-      } 
-      h3 { 
-        font-family: 'Yanone Kaffeesatz';
-        font-weight: bold;
-        font-size: 800%;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        color: rgb(236, 115, 117);
-      } 
-      h2 { 
-        margin: auto;
-        text-align: center;
-        font-family: 'Yanone Kaffeesatz';
-        font-weight: bold;
-        font-size: 1000%;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        color: rgb(236, 115, 117);
-      } 
-      h1 {
-        margin: auto;
-        font-family: 'Yanone Kaffeesatz';
-        font-weight: bold
-        font-size: 10000%;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        text-align: center;
-        vertical-align: middle;
-        height: 90px;
-        line-height: 90px;
-        color: rgb(84, 177, 208);
-      }
-      body { 
-        padding-top: 5px;
-        padding-bottom: 5px;
-        font-family: 'Droid Serif'; 
-        background-color: black;
-        font-size: 400%;
-        color: rgb(249,220,130);
-      }
-      .remark-slide-content{ 
-        background-color: black;
-      } 
-    </style>
-  </head>
-  <body bgcolor="black">
-    <textarea id="source" class="slide">
-      
+		
+		<meta property="og:title" content="Deep Dive Into Solidity" />
+		<meta property="og:type" content="article" />
+		<meta property="og:image" content="https://nataliechin80.github.io" />
+		<meta property="og:description" content="" />
+		<meta property="og:url" content="https://nataliechin80.github.io/slides/sc-essentials/deep-dive-into-solidity/" />
+		<meta property="og:site_name" content="Deep Dive Into Solidity" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@NatalieChin7" />
+
+
+		
+					<link rel="stylesheet" type="text/css" href="https://nataliechin80.github.io/css/apron.css"></style>
+					<link rel="stylesheet" type="text/css" href="https://nataliechin80.github.io/css/descartes.css"></style>
+					<link rel="stylesheet" type="text/css" href="https://nataliechin80.github.io/css/adirondack.css"></style><style type="text/css">
+		 
+		@page {
+				  size:  1216px 684px; 
+				  margin: 0;
+		}
+		</style>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700,700i|Quattrocento:400,700|Spectral:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
+
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		
+		<script src="https://nataliechin80.github.io/js/story.js"></script>
+
+	</head>
+	<body class="ma0 bg-white section-slides page-kind-page is-page-true ">
+		
+  
+
+		<main role="main">
+		
+    <textarea id="source">class: title
 # Deep Dive Into Solidity 
 
 ---
@@ -75,8 +63,7 @@ background-image: url(../.bg.jpeg)
 5. Events
 
 ---
-background-image: url(../.bg.jpeg)
-class: center, middle
+class: title
 ## Solidity Review
 
 ---
@@ -136,6 +123,7 @@ background-image: url(../.bg.jpeg)
  - `value`: characteristics
 
 ---
+class: title
 background-image: url(../.bg.jpeg)
 
 ## Mappings: A Demonstration
@@ -241,11 +229,58 @@ Determine a business use case and create a smart contract that meets the followi
  - Emits at least 3 events 
 
 Explain your use case and your solution to a TA or the professor. 
-
-    </textarea>
-    <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js"></script>
+</textarea>
+    <script type="text/javascript" src="https://nataliechin80.github.io/js/qrcode.js"></script>
+    <script src="https://nataliechin80.github.io/js/remark.js"></script>
     <script>
-      var slideshow = remark.create({});
+      var slideshow = remark.create({
+          ratio: "16:9", 
+         navigation: {
+            scroll: false
+         },
+         countIncrementalSlides: false,
+         slideNumberFormat: '%current%',
+			highlightLanguage: "xaprb",
+			placeholder: "dummy value to end the list without a comma"
+      });
+
+		
+		
+		$(".remark-slide-content.fit-h1 h1").each(function(i, e) {
+			var $e = $(e);
+			var $p = $e.closest('div.remark-slide-container');
+			var needsToggle = !$p.hasClass('remark-visible');
+			if ( needsToggle ) $p.toggleClass('remark-visible');
+			while (e.scrollHeight > e.clientHeight + 1 && $e.css('font-size') != '1px') {
+				$e.css('font-size', (parseInt($e.css('font-size')) - 1) + "px");
+				
+				
+			}
+			if ( needsToggle ) $p.toggleClass('remark-visible');
+		});
+
+		$( function() {
+			if ( $( "body.feature-qrcode:not(.feature-noqrcode)" ).length ) {
+				if ( $( ".qrcode" ).length ) {
+					new QRCode($(".qrcode")[0], {
+						"useSVG": true,
+						"text": window.location.href.replace(/#\d*$/, "")
+					});
+				}
+			}
+		});
+
     </script>
-  </body>
+
+		</main>
+		
+  
+
+		
+		
+  
+
+	
+	
+	</body>
 </html>
