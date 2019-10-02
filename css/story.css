@@ -423,6 +423,7 @@ img[src~="3dbook"] {
 .hljs-link {
   text-decoration: underline;
 }
-.f2 {
-  text-align: center
+.f2, .f3-l {
+  text-align: center;
+  font-weight: bold; 
 }
