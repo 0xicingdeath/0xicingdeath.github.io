@@ -6,10 +6,23 @@
     <description>Recent content in Slides on Natalie Chin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 25 Sep 2018 16:43:02 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 03 Oct 2019 19:26:39 -0400</lastBuildDate>
     
 	<atom:link href="https://nataliechin80.github.io/slides/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hacking Imposter Syndrome</title>
+      <link>https://nataliechin80.github.io/slides/hacking-imposter-syndrome/</link>
+      <pubDate>Thu, 03 Oct 2019 19:26:39 -0400</pubDate>
+      
+      <guid>https://nataliechin80.github.io/slides/hacking-imposter-syndrome/</guid>
+      <description>class: title
+Hacking Imposter Syndrome Natalie Chin About Me  Blockchain Professor at George Brown College Former Blockchain Developer at STK Former Software Developer at Intelliware Nerd  class: img-caption
+&amp;ldquo;Imposter Syndrome&amp;rdquo;  Feeling that someone else will find out we&amp;rsquo;re a fraud Any successes were due to luck  class: img-caption
+There is very little discussion on how to deal with Imposter Syndrome. class: title
+Takeaway: Don&amp;rsquo;t get stuck at the start line.</description>
+    </item>
     
     <item>
       <title>Case Study of Audits</title>
@@ -85,13 +98,9 @@ WETH Agenda  Study of EVM languages Benefits and drawbacks of such languages Int
       
       <guid>https://nataliechin80.github.io/slides/sc-essentials/deep-dive-into-solidity/</guid>
       <description>class: title
-Deep Dive Into Solidity background-image: url(../.bg.jpeg)
-Agenda  Brief Review of Solidity Mapping Structs Enums Events  class: title
-Solidity Review background-image: url(../.bg.jpeg)
-Default Types  uint bytes string boolean mapping  background-image: url(../.bg.jpeg)
-### Control Structures
- Modifiers Functions If statements Require statements  background-image: url(../.bg.jpeg)
-Property of Solidity Functions  public private return value use of modifiers  Purpose of Modifiers  providing access control for functions  background-image: url(.</description>
+Deep Dive Into Solidity Agenda  Brief Review of Solidity Mapping Structs Enums Events  class: title
+Solidity Review Default Types  uint bytes string boolean mapping  ### Control Structures
+ Modifiers Functions If statements Require statements  Property of Solidity Functions  public private return value use of modifiers  Purpose of Modifiers  providing access control for functions  Mappings  allow developers to &amp;ldquo;map&amp;rdquo; a unique identifier to x x can be of any type useful for uniquely identifying users in smart contract always of the form {key: value} pair  key is always unique value is always contains information mapping to a respective key   Mappings - An Example { key: value }</description>
     </item>
     
     <item>
