@@ -3,175 +3,175 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>natchineth.com/talk/hacking-imposter-syndrome/</loc>
+    <loc>https://nataliechin80.github.io/talk/hacking-imposter-syndrome/</loc>
     <lastmod>2019-10-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>natchineth.com/</loc>
+    <loc>https://nataliechin80.github.io/</loc>
     <lastmod>2019-10-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>natchineth.com/talks/</loc>
+    <loc>https://nataliechin80.github.io/talks/</loc>
     <lastmod>2019-10-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>natchineth.com/slides/hacking-imposter-syndrome/</loc>
+    <loc>https://nataliechin80.github.io/slides/hacking-imposter-syndrome/</loc>
     <lastmod>2019-10-03T19:26:39-04:00</lastmod>
   </url>
   
   <url>
-    <loc>natchineth.com/slides/</loc>
+    <loc>https://nataliechin80.github.io/slides/</loc>
     <lastmod>2019-10-03T19:26:39-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>natchineth.com/talks/introduction-to-smart-contracts/</loc>
+    <loc>https://nataliechin80.github.io/talks/introduction-to-smart-contracts/</loc>
     <lastmod>2019-06-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>natchineth.com/talks/kickass-blockchain-developer-journeys/</loc>
+    <loc>https://nataliechin80.github.io/talks/kickass-blockchain-developer-journeys/</loc>
     <lastmod>2019-04-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>natchineth.com/talks/introduction-to-solidity/</loc>
+    <loc>https://nataliechin80.github.io/talks/introduction-to-solidity/</loc>
     <lastmod>2019-03-08T09:22:29-04:00</lastmod>
   </url>
   
   <url>
-    <loc>natchineth.com/talks/introduction-to-blockchain/</loc>
+    <loc>https://nataliechin80.github.io/talks/introduction-to-blockchain/</loc>
     <lastmod>2019-01-26T09:23:44-04:00</lastmod>
   </url>
   
   <url>
-    <loc>natchineth.com/post/looking-forward-moving-back/</loc>
+    <loc>https://nataliechin80.github.io/post/looking-forward-moving-back/</loc>
     <lastmod>2018-12-06T00:00:16-04:00</lastmod>
   </url>
   
   <url>
-    <loc>natchineth.com/post/</loc>
-    <lastmod>2018-12-06T00:00:16-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>natchineth.com/tags/</loc>
+    <loc>https://nataliechin80.github.io/post/</loc>
     <lastmod>2018-12-06T00:00:16-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>natchineth.com/tags/women-in-science/</loc>
+    <loc>https://nataliechin80.github.io/tags/</loc>
     <lastmod>2018-12-06T00:00:16-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>natchineth.com/tags/women-in-tech/</loc>
+    <loc>https://nataliechin80.github.io/tags/women-in-science/</loc>
     <lastmod>2018-12-06T00:00:16-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>natchineth.com/post/girls-dont-understand-computers/</loc>
+    <loc>https://nataliechin80.github.io/tags/women-in-tech/</loc>
+    <lastmod>2018-12-06T00:00:16-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nataliechin80.github.io/post/girls-dont-understand-computers/</loc>
     <lastmod>2018-11-09T22:08:27-04:00</lastmod>
   </url>
   
   <url>
-    <loc>natchineth.com/slides/adv-sc/study-of-audits/</loc>
+    <loc>https://nataliechin80.github.io/slides/adv-sc/study-of-audits/</loc>
     <lastmod>2018-09-25T16:43:02-04:00</lastmod>
   </url>
   
   <url>
-    <loc>natchineth.com/slides/adv-sc/intro-to-state-channel/</loc>
+    <loc>https://nataliechin80.github.io/slides/adv-sc/intro-to-state-channel/</loc>
     <lastmod>2018-09-25T16:43:02-04:00</lastmod>
   </url>
   
   <url>
-    <loc>natchineth.com/slides/adv-sc/hands-on-state-channel/</loc>
+    <loc>https://nataliechin80.github.io/slides/adv-sc/hands-on-state-channel/</loc>
     <lastmod>2018-09-25T16:43:02-04:00</lastmod>
   </url>
   
   <url>
-    <loc>natchineth.com/slides/dp/testing-mocha-asserts/</loc>
+    <loc>https://nataliechin80.github.io/slides/dp/testing-mocha-asserts/</loc>
     <lastmod>2018-09-25T16:43:02-04:00</lastmod>
   </url>
   
   <url>
-    <loc>natchineth.com/slides/dp/testing-smart-contracts/</loc>
+    <loc>https://nataliechin80.github.io/slides/dp/testing-smart-contracts/</loc>
     <lastmod>2018-09-25T16:43:02-04:00</lastmod>
   </url>
   
   <url>
-    <loc>natchineth.com/slides/adv-sc/weth/</loc>
+    <loc>https://nataliechin80.github.io/slides/adv-sc/weth/</loc>
     <lastmod>2018-09-25T16:43:02-04:00</lastmod>
   </url>
   
   <url>
-    <loc>natchineth.com/post/automated-eth-wrapping/</loc>
+    <loc>https://nataliechin80.github.io/post/automated-eth-wrapping/</loc>
     <lastmod>2018-09-21T23:53:13-04:00</lastmod>
   </url>
   
   <url>
-    <loc>natchineth.com/tags/eth/</loc>
-    <lastmod>2018-09-21T23:53:13-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>natchineth.com/tags/ethereum/</loc>
+    <loc>https://nataliechin80.github.io/tags/eth/</loc>
     <lastmod>2018-09-21T23:53:13-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>natchineth.com/tags/solidity/</loc>
+    <loc>https://nataliechin80.github.io/tags/ethereum/</loc>
     <lastmod>2018-09-21T23:53:13-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>natchineth.com/tags/state-channels/</loc>
+    <loc>https://nataliechin80.github.io/tags/solidity/</loc>
     <lastmod>2018-09-21T23:53:13-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>natchineth.com/tags/weth/</loc>
+    <loc>https://nataliechin80.github.io/tags/state-channels/</loc>
     <lastmod>2018-09-21T23:53:13-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>natchineth.com/post/smart-contract-security/</loc>
+    <loc>https://nataliechin80.github.io/tags/weth/</loc>
+    <lastmod>2018-09-21T23:53:13-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nataliechin80.github.io/post/smart-contract-security/</loc>
     <lastmod>2018-07-31T23:42:24-04:00</lastmod>
   </url>
   
   <url>
-    <loc>natchineth.com/categories/</loc>
+    <loc>https://nataliechin80.github.io/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>natchineth.com/slides/sc-essentials/deep-dive-into-solidity/</loc>
+    <loc>https://nataliechin80.github.io/slides/sc-essentials/deep-dive-into-solidity/</loc>
   </url>
   
   <url>
-    <loc>natchineth.com/slides/sc-essentials/inheritance/</loc>
+    <loc>https://nataliechin80.github.io/slides/sc-essentials/inheritance/</loc>
   </url>
   
   <url>
-    <loc>natchineth.com/search/</loc>
+    <loc>https://nataliechin80.github.io/search/</loc>
   </url>
   
   <url>
-    <loc>natchineth.com/slides/sc-essentials/vyper/</loc>
+    <loc>https://nataliechin80.github.io/slides/sc-essentials/vyper/</loc>
   </url>
   
 </urlset>

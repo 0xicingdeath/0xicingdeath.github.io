@@ -1,7 +1,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Natalie Chin </title>
-		<link>natchineth.com/</link>
+		<link>https://nataliechin80.github.io/</link>
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<author>Natalie Chin</author>
@@ -10,11 +10,11 @@
 		
 		<item>
 			<title>Hacking Imposter Syndrome</title>
-			<link>natchineth.com/talk/hacking-imposter-syndrome/</link>
+			<link>https://nataliechin80.github.io/talk/hacking-imposter-syndrome/</link>
 			<pubDate>Tue, 08 Oct 2019 00:00:00 UTC</pubDate>
 			<author>Natalie Chin</author>
-			<guid>natchineth.com/talk/hacking-imposter-syndrome/</guid>
-			<media:content xmlns:media="http://search.yahoo.com/mrss/" url="natchineth.com/img/talks/imposter-syndrome.jpeg" medium="image" type="image/jpg" width="100" height="100" />
+			<guid>https://nataliechin80.github.io/talk/hacking-imposter-syndrome/</guid>
+			<media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://nataliechin80.github.io/img/talks/imposter-syndrome.jpeg" medium="image" type="image/jpg" width="100" height="100" />
 			<description>&lt;p&gt;70% of people have experienced some form of imposter syndrome at least once in their lives. It is this nagging feeling that we think someone else might find out that we&amp;rsquo;re a &amp;lsquo;fake&amp;rsquo; - that our achievements are solely due to luck, and nothing to do with skill, talent, or our effort.&lt;/p&gt;
 
 &lt;p&gt;Luckily, in recent years, people have started to become more vocal about experiencing Imposter Syndrome - but I think there&amp;rsquo;s a lot more to be done. Being vocal is only the start. We need to start sharing experiences and strategies to deal with it. Otherwise, it&amp;rsquo;s not going to get better.&lt;/p&gt;
@@ -26,31 +26,31 @@
 		
 		<item>
 			<title>Introduction to Smart Contracts</title>
-			<link>natchineth.com/talks/introduction-to-smart-contracts/</link>
+			<link>https://nataliechin80.github.io/talks/introduction-to-smart-contracts/</link>
 			<pubDate>Wed, 12 Jun 2019 00:00:00 UTC</pubDate>
 			<author>Natalie Chin</author>
-			<guid>natchineth.com/talks/introduction-to-smart-contracts/</guid>
-			<media:content xmlns:media="http://search.yahoo.com/mrss/" url="natchineth.com/img/default-header-img.tn-500x500.jpg" medium="image" type="image/jpg" width="100" height="100" />
+			<guid>https://nataliechin80.github.io/talks/introduction-to-smart-contracts/</guid>
+			<media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://nataliechin80.github.io/img/default-header-img.tn-500x500.jpg" medium="image" type="image/jpg" width="100" height="100" />
 			<description>&lt;p&gt;Tune into www.womenwhocode.com/blockchain to sign up for the webinar!&lt;/p&gt;</description>
 		</item>
 		
 		<item>
 			<title>Kickass Blockchain Developer Journeys</title>
-			<link>natchineth.com/talks/kickass-blockchain-developer-journeys/</link>
+			<link>https://nataliechin80.github.io/talks/kickass-blockchain-developer-journeys/</link>
 			<pubDate>Sat, 27 Apr 2019 00:00:00 UTC</pubDate>
 			<author>Natalie Chin</author>
-			<guid>natchineth.com/talks/kickass-blockchain-developer-journeys/</guid>
-			<media:content xmlns:media="http://search.yahoo.com/mrss/" url="natchineth.com/img/default-header-img.tn-500x500.jpg" medium="image" type="image/jpg" width="100" height="100" />
+			<guid>https://nataliechin80.github.io/talks/kickass-blockchain-developer-journeys/</guid>
+			<media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://nataliechin80.github.io/img/default-header-img.tn-500x500.jpg" medium="image" type="image/jpg" width="100" height="100" />
 			<description>&lt;p&gt;Join me and a few other professors at George Brown discussing our journeys of how we got into blockchain.&lt;/p&gt;</description>
 		</item>
 		
 		<item>
 			<title>Introduction to Solidity</title>
-			<link>natchineth.com/talks/introduction-to-solidity/</link>
+			<link>https://nataliechin80.github.io/talks/introduction-to-solidity/</link>
 			<pubDate>Fri, 08 Mar 2019 09:22:29 -0400</pubDate>
 			<author>Natalie Chin</author>
-			<guid>natchineth.com/talks/introduction-to-solidity/</guid>
-			<media:content xmlns:media="http://search.yahoo.com/mrss/" url="natchineth.com/img/default-header-img.tn-500x500.jpg" medium="image" type="image/jpg" width="100" height="100" />
+			<guid>https://nataliechin80.github.io/talks/introduction-to-solidity/</guid>
+			<media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://nataliechin80.github.io/img/default-header-img.tn-500x500.jpg" medium="image" type="image/jpg" width="100" height="100" />
 			<description>&lt;p&gt;Happy International Women’s Day! Excited to end the day with an Introduction to Solidity talk at ETH U of T from 8-9pm!&lt;/p&gt;
 
 &lt;p&gt;The significance of this day has brought me to reflect on the progression of the past year. Days before starting my first coop, I remember admitting to Alic how I thought my skills were inadequate to be a blockchain developer. He told me to trust myself, and that I’m smarter than I think I am. Never would have thought that would lead to state channels or teaching at George Brown.&lt;/p&gt;
@@ -63,11 +63,11 @@
 		
 		<item>
 			<title>Introduction to Blockchain</title>
-			<link>natchineth.com/talks/introduction-to-blockchain/</link>
+			<link>https://nataliechin80.github.io/talks/introduction-to-blockchain/</link>
 			<pubDate>Sat, 26 Jan 2019 09:23:44 -0400</pubDate>
 			<author>Natalie Chin</author>
-			<guid>natchineth.com/talks/introduction-to-blockchain/</guid>
-			<media:content xmlns:media="http://search.yahoo.com/mrss/" url="natchineth.com/img/talks/dh5.jpeg" medium="image" type="image/jpg" width="100" height="100" />
+			<guid>https://nataliechin80.github.io/talks/introduction-to-blockchain/</guid>
+			<media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://nataliechin80.github.io/img/talks/dh5.jpeg" medium="image" type="image/jpg" width="100" height="100" />
 			<description>&lt;p&gt;After a few years of organizing McMaster&amp;rsquo;s annual DeltaHacks, super happy to be back as a speaker and mentor this coming weekend. I&amp;rsquo;ll be going into a Deep Dive of Blockchain, discussing how it works, its business use case, how to set up development environments, and live coding examples. I&amp;rsquo;m also epically excited to see the team again! Keep going guys - it&amp;rsquo;s the last stretch! 🎉&lt;/p&gt;
 
 &lt;p&gt;Who: 👋 🙃&lt;/p&gt;
@@ -82,11 +82,11 @@
 		
 		<item>
 			<title>Looking Forward Moving Back</title>
-			<link>natchineth.com/post/looking-forward-moving-back/</link>
+			<link>https://nataliechin80.github.io/post/looking-forward-moving-back/</link>
 			<pubDate>Thu, 06 Dec 2018 00:00:16 -0400</pubDate>
 			<author>Natalie Chin</author>
-			<guid>natchineth.com/post/looking-forward-moving-back/</guid>
-			<media:content xmlns:media="http://search.yahoo.com/mrss/" url="natchineth.com/img/looking-back.png" medium="image" type="image/jpg" width="100" height="100" />
+			<guid>https://nataliechin80.github.io/post/looking-forward-moving-back/</guid>
+			<media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://nataliechin80.github.io/img/looking-back.png" medium="image" type="image/jpg" width="100" height="100" />
 			<description>&lt;p&gt;This is a part of a previous series that I started while  at STK to honour females in tech.&lt;/p&gt;
 
 &lt;p&gt;29 years ago today, Marc Lépine entered École Polytechnique in Montreal, with a rifle and a hunting knife. He ran into a classroom, separating the men and the women. He let all the men go, but shot directly 9 of the women in the room. He moved throughout the building, shooting at only women. 20 minutes later, he turned the gun on himself, committing suicide. In his suicide note, he claims that “feminists” had ruined his life. He includes a list of women that he wanted to kill. He killed 14 women that day, marking the deadliest shooting in Canada’s history. It was later discovered that Lépine had previously applied for a program at École Polytechnique, been rejected due to missing credits, and was upset that women had taken up roles that used to be male-dominant. In Canada, December 6th is now known as the National Day of Remembrance and Action on Violence Against Women.&lt;/p&gt;
@@ -133,7 +133,7 @@ And they were stunned — because it had never happened.&lt;/p&gt;
 &lt;p&gt;“Here are the three wishes that I have for the new academy: First of all, I hope that the school will be an exciting place of learning, where students will discover the joys and challenges of gaining knowledge and understanding. Then, I hope that the school will become a place for building lasting friendships among students, parents and teachers. And, finally, I hope that the endeavours being made in the school to build knowledge and understanding will extend out into the broader community and that the community, in turn, will enrich and support the goals and dreams of the school.” — Dr. Ursula Franklin, 1995&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;img src=&#34;natchineth.com/img/posts/ufa-2015.jpeg&#34; alt=&#34;Ursula Franklin Academy in 2015&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;https://nataliechin80.github.io/img/posts/ufa-2015.jpeg&#34; alt=&#34;Ursula Franklin Academy in 2015&#34; /&gt;
 &lt;em&gt;Ursula Franklin Academy in Toronto from 2015&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Moving to current-day, Ursula Franklin Academy now has 500 students, and has moved to the core of High Park, sharing its quarters with Western Tech and The Student School. The school still maintains values that Ursula Franklin herself instilled. While Ursula Franklin Academy (usually called UFA, for short) has a few unique aspects:&lt;/p&gt;
@@ -158,7 +158,7 @@ And they were stunned — because it had never happened.&lt;/p&gt;
 
 &lt;p&gt;UFA had a course called the Real World of Technology, named after Ursula’s books and lectures. Whilst in my second year, I learnt how to write a grant proposal — which I ended up convincing the school administration to get a class-set (30) of Kobo eReader devices. I facilitated pilot testing through classes, which led the principal to get a grade set (125) eReaders. I learnt a lot about the management of such a large project, and all the work that goes into changing how things are done. But most of all, I learnt the applicability of schooling on the real world. While it didn’t feel as significant back then, looking back on it, I changed the school in a small way. It makes me feel as though I could change another part of the world in a small way. And I think we all have the potential to do it.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;natchineth.com/img/posts/ufa-ea.png&#34; alt=&#34;Running Environmental Alliance in 2013&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;https://nataliechin80.github.io/img/posts/ufa-ea.png&#34; alt=&#34;Running Environmental Alliance in 2013&#34; /&gt;
 &lt;em&gt;Running Environemntal Alliance at UFA in 2013&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;The Wednesday Sessions at UFA are unlike any other school in Toronto. Every month, we were able to choose what “sessions” we wanted to learn about; some were student run and some were teacher run. Attendance marks would be taken during these sessions, which gets added to each course at the end of the school year. I was a part of Tech Support, leading the eReader pilot through the Wednesday Sessions. UFA was extremely supportive of student-run sessions — I led Environmental Alliance for 3.5 years. Through the cumulative experience of combining extracurriculars with Wednesday Sessions, I learnt problem solving, pair programming, leadership, and so much more. But I think the most important thing I learnt was to never forget the importance of doing something outside of school. You get to discover what you like doing and what you don’t. You get to know people who can help you excel, and help mentor you in navigating a field.&lt;/p&gt;
@@ -169,7 +169,7 @@ And they were stunned — because it had never happened.&lt;/p&gt;
 
 &lt;p&gt;But I remember the promise. And I continue to hold on. It’s why I ran DeltaHacks twice at school, recruiting mentors and judges to be able to help beginners get started. It’s also why I started Stackathon, a hackathon in Toronto to get new developers interested in learning blockchain tech. In it’s own way, hackathons inspire participants to learn. After Stackathon, I was a guest lecturer for UFA’s Computer Science class, teaching them introductory blockchain. Inspiring others is a beautiful thing.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;natchineth.com/img/posts/ufa-front-view.png&#34; alt=&#34;UFA Frontal View&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;https://nataliechin80.github.io/img/posts/ufa-front-view.png&#34; alt=&#34;UFA Frontal View&#34; /&gt;
 &lt;em&gt;Front view of UFA, 2015&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Author’s Note: UFA Staff and Administration have always made an effort to recognize and honour the 14 women, through candlelight vigils, announcements, and discussions throughout my time there. They would have likely planned to do the same thing today, but the building is currently under lockdown, following the sighting of a man with a handgun. I hope the UFA community stays safe. My thoughts are with all the students, staff, administration, and families affected.&lt;/p&gt;</description>
@@ -177,11 +177,11 @@ And they were stunned — because it had never happened.&lt;/p&gt;
 		
 		<item>
 			<title>Girls Don&#39;t Understand Computers</title>
-			<link>natchineth.com/post/girls-dont-understand-computers/</link>
+			<link>https://nataliechin80.github.io/post/girls-dont-understand-computers/</link>
 			<pubDate>Fri, 09 Nov 2018 22:08:27 -0400</pubDate>
 			<author>Natalie Chin</author>
-			<guid>natchineth.com/post/girls-dont-understand-computers/</guid>
-			<media:content xmlns:media="http://search.yahoo.com/mrss/" url="natchineth.com/img/code.jpeg" medium="image" type="image/jpg" width="100" height="100" />
+			<guid>https://nataliechin80.github.io/post/girls-dont-understand-computers/</guid>
+			<media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://nataliechin80.github.io/img/code.jpeg" medium="image" type="image/jpg" width="100" height="100" />
 			<description>&lt;p&gt;There will always be people in the world who try to bring you down. It&amp;rsquo;s about who&amp;rsquo;s there to help you get back up, and how you keep going that matters.&lt;/p&gt;
 
 &lt;p&gt;When I was in third grade, I was the fastest typer in my class. I knew how to speed-read, so that helped with “googling.” And I knew my way around computers. My dad would often bring home broken hard drives, and I’d take apart the heads and platters, only to put them back together just for fun.&lt;/p&gt;
@@ -209,11 +209,11 @@ And they were stunned — because it had never happened.&lt;/p&gt;
 		
 		<item>
 			<title>Automated Eth Wrapping</title>
-			<link>natchineth.com/post/automated-eth-wrapping/</link>
+			<link>https://nataliechin80.github.io/post/automated-eth-wrapping/</link>
 			<pubDate>Fri, 21 Sep 2018 23:53:13 EDT</pubDate>
 			<author>Natalie Chin</author>
-			<guid>natchineth.com/post/automated-eth-wrapping/</guid>
-			<media:content xmlns:media="http://search.yahoo.com/mrss/" url="natchineth.com/img/eth-wrapping.jpeg" medium="image" type="image/jpg" width="100" height="100" />
+			<guid>https://nataliechin80.github.io/post/automated-eth-wrapping/</guid>
+			<media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://nataliechin80.github.io/img/eth-wrapping.jpeg" medium="image" type="image/jpg" width="100" height="100" />
 			<description>&lt;p&gt;How to make a contract auto wrap and unwrap ETH&lt;/p&gt;
 
 &lt;h1 id=&#34;the-user-experience-effect-on-a-multi-token-payment-channel&#34;&gt;The User Experience Effect on a Multi-token Payment Channel&lt;/h1&gt;
@@ -320,11 +320,11 @@ And they were stunned — because it had never happened.&lt;/p&gt;
 		
 		<item>
 			<title>Smart Contract Security</title>
-			<link>natchineth.com/post/smart-contract-security/</link>
+			<link>https://nataliechin80.github.io/post/smart-contract-security/</link>
 			<pubDate>Tue, 31 Jul 2018 23:42:24 EDT</pubDate>
 			<author>Natalie Chin</author>
-			<guid>natchineth.com/post/smart-contract-security/</guid>
-			<media:content xmlns:media="http://search.yahoo.com/mrss/" url="natchineth.com/img/smart-contract-security.jpeg" medium="image" type="image/jpg" width="100" height="100" />
+			<guid>https://nataliechin80.github.io/post/smart-contract-security/</guid>
+			<media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://nataliechin80.github.io/img/smart-contract-security.jpeg" medium="image" type="image/jpg" width="100" height="100" />
 			<description>&lt;p&gt;Storing your cryptocurrency in a private wallet vs a smart contract wallet&lt;/p&gt;
 
 &lt;h1 id=&#34;storing-crypto-in-a-wallet-vs-a-smart-contract&#34;&gt;Storing Crypto in a Wallet vs a Smart Contract&lt;/h1&gt;

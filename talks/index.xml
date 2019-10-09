@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Talks on Natalie Chin</title>
-    <link>natchineth.com/talks/</link>
+    <link>https://nataliechin80.github.io/talks/</link>
     <description>Recent content in Talks on Natalie Chin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 08 Oct 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="natchineth.com/talks/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nataliechin80.github.io/talks/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hacking Imposter Syndrome</title>
-      <link>natchineth.com/talk/hacking-imposter-syndrome/</link>
+      <link>https://nataliechin80.github.io/talk/hacking-imposter-syndrome/</link>
       <pubDate>Tue, 08 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>natchineth.com/talk/hacking-imposter-syndrome/</guid>
+      <guid>https://nataliechin80.github.io/talk/hacking-imposter-syndrome/</guid>
       <description>&lt;p&gt;70% of people have experienced some form of imposter syndrome at least once in their lives. It is this nagging feeling that we think someone else might find out that we&amp;rsquo;re a &amp;lsquo;fake&amp;rsquo; - that our achievements are solely due to luck, and nothing to do with skill, talent, or our effort.&lt;/p&gt;
 
 &lt;p&gt;Luckily, in recent years, people have started to become more vocal about experiencing Imposter Syndrome - but I think there&amp;rsquo;s a lot more to be done. Being vocal is only the start. We need to start sharing experiences and strategies to deal with it. Otherwise, it&amp;rsquo;s not going to get better.&lt;/p&gt;
@@ -28,38 +28,38 @@
     
     <item>
       <title>Introduction to Smart Contracts</title>
-      <link>natchineth.com/talks/introduction-to-smart-contracts/</link>
+      <link>https://nataliechin80.github.io/talks/introduction-to-smart-contracts/</link>
       <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>natchineth.com/talks/introduction-to-smart-contracts/</guid>
+      <guid>https://nataliechin80.github.io/talks/introduction-to-smart-contracts/</guid>
       <description>&lt;p&gt;Tune into www.womenwhocode.com/blockchain to sign up for the webinar!&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Kickass Blockchain Developer Journeys</title>
-      <link>natchineth.com/talks/kickass-blockchain-developer-journeys/</link>
+      <link>https://nataliechin80.github.io/talks/kickass-blockchain-developer-journeys/</link>
       <pubDate>Sat, 27 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>natchineth.com/talks/kickass-blockchain-developer-journeys/</guid>
+      <guid>https://nataliechin80.github.io/talks/kickass-blockchain-developer-journeys/</guid>
       <description>&lt;p&gt;Join me and a few other professors at George Brown discussing our journeys of how we got into blockchain.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Introduction to Solidity</title>
-      <link>natchineth.com/talks/introduction-to-solidity/</link>
+      <link>https://nataliechin80.github.io/talks/introduction-to-solidity/</link>
       <pubDate>Fri, 08 Mar 2019 09:22:29 -0400</pubDate>
       
-      <guid>natchineth.com/talks/introduction-to-solidity/</guid>
+      <guid>https://nataliechin80.github.io/talks/introduction-to-solidity/</guid>
       <description>Happy International Women’s Day! Excited to end the day with an Introduction to Solidity talk at ETH U of T from 8-9pm!
 The significance of this day has brought me to reflect on the progression of the past year. Days before starting my first coop, I remember admitting to Alic how I thought my skills were inadequate to be a blockchain developer. He told me to trust myself, and that I’m smarter than I think I am.</description>
     </item>
     
     <item>
       <title>Introduction to Blockchain</title>
-      <link>natchineth.com/talks/introduction-to-blockchain/</link>
+      <link>https://nataliechin80.github.io/talks/introduction-to-blockchain/</link>
       <pubDate>Sat, 26 Jan 2019 09:23:44 -0400</pubDate>
       
-      <guid>natchineth.com/talks/introduction-to-blockchain/</guid>
+      <guid>https://nataliechin80.github.io/talks/introduction-to-blockchain/</guid>
       <description>After a few years of organizing McMaster&amp;rsquo;s annual DeltaHacks, super happy to be back as a speaker and mentor this coming weekend. I&amp;rsquo;ll be going into a Deep Dive of Blockchain, discussing how it works, its business use case, how to set up development environments, and live coding examples. I&amp;rsquo;m also epically excited to see the team again! Keep going guys - it&amp;rsquo;s the last stretch! 🎉
 Who: 👋 🙃</description>
     </item>
