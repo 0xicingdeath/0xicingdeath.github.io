@@ -3,12 +3,23 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://nataliechin80.github.io/talk/hacking-imposter-syndrome/</loc>
-    <lastmod>2019-10-08T00:00:00+00:00</lastmod>
+    <loc>https://nataliechin80.github.io/post/giving-back/</loc>
+    <lastmod>2020-04-15T19:46:35-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://nataliechin80.github.io/</loc>
+    <lastmod>2020-04-15T19:46:35-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nataliechin80.github.io/post/</loc>
+    <lastmod>2020-04-15T19:46:35-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nataliechin80.github.io/talk/hacking-imposter-syndrome/</loc>
     <lastmod>2019-10-08T00:00:00+00:00</lastmod>
   </url>
   
@@ -52,12 +63,6 @@
   <url>
     <loc>https://nataliechin80.github.io/post/looking-forward-moving-back/</loc>
     <lastmod>2018-12-06T00:00:16-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nataliechin80.github.io/post/</loc>
-    <lastmod>2018-12-06T00:00:16-04:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
