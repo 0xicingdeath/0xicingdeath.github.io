@@ -5,30 +5,8 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<author>Natalie Chin</author>
-		<rights>Copyright (c) 2020</rights>
-		<updated>2020-04-15 19:46:35 -0400 EDT</updated>
-		
-		<item>
-			<title>Giving Back</title>
-			<link>https://nataliechin80.github.io/post/giving-back/</link>
-			<pubDate>Wed, 15 Apr 2020 19:46:35 EDT</pubDate>
-			<author>Natalie Chin</author>
-			<guid>https://nataliechin80.github.io/post/giving-back/</guid>
-			<media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://nataliechin80.github.io/img/default-header-img.tn-500x500.jpg" medium="image" type="image/jpg" width="100" height="100" />
-			<description>&lt;p&gt;In many ways, 2018 to 2019 was my defining - first, full real experience in the real world. I was incredibly lucky to have found out about blockchain early on, while I was still in school - and to find something that I&amp;rsquo;m really passionate about. I have been to countless hackathons, meetup events and a variety of workshop events to talk about Introduction to Blockchain, Overcoming Imposter Syndrome and overall, have been giving back.&lt;/p&gt;
-
-&lt;p&gt;90% of my talks in the past two years have always involved a brief introduction about myself - I worked on a solution where I built a multi-token automated WETH-conversion payment channel, which if it&amp;rsquo;s not a blockchain audience, gets simplified into - built a platform that would allow users to spend cryptocurrency on a Mastercard - like they would any normal cash. Except they&amp;rsquo;re spending cryptocurrency. I &lt;strong&gt;could&lt;/strong&gt; go into everything that I learnt - about myself, abuot what I prioritize in a company that I want to work for and about all the technologies that I learnt. I lucked out joining a company that was so open to do everything. After that, I left - almost slightly reluctantly, onto an 8 month internship in Software Development, where I &lt;strong&gt;finally&lt;/strong&gt; gained the much needed experience of ReactJS and Redux Sagas, something I had been wanting to learn for a very long time. As a blockchain developer, I understood the code that went into building smart contracts - and as a full stack developer, I was able to fill in the gaps between the code features.&lt;/p&gt;
-
-&lt;p&gt;I have been involved in teaching and education since my second year of university. I started out as a Teaching Assistant for the first computer science course that students enter in university. Like many universities in the GTA, this means starting with a functional programming language, which is likely very different from the type that anyone learnt in high school - and in some ways, equalizes the first-years all on neutral ground. I was a Teaching Assistant in this class for three consecutive years after that, hosting tutorials, holding office hours, and helping students with their projects.&lt;/p&gt;
-
-&lt;p&gt;I have organized DeltaHacks 3, DeltaHacks 4, and Stackathon - the latter of which, I ended up creating specific prize categories for blockchain, inviting some of the most well-known mentors in the space, and taught blockchain to attendees. Stackathon, which was a female-run two-person-organizing team hackathon was the first time during my time that I could feel the invigorating rush of teaching blockchain to a new group of developers who have no prior experience at all. The difference of teaching blockchain to developers was that everyone started out on the exact same blank slate - and as a developer, you give them the pencil, the colours, the skills to draw out the idea of this technology for them. As a speaker, I could pick up on the audience&amp;rsquo;s facial expressions - picking up on when I should go through things slower or faster. But the most amazing feeling in the world is being able to tell that someone is confused, trying to explain and clear their confusions, and then boom - it&amp;rsquo;s like a lightbulb that goes off, their face brightens, and suddenly their confusion is replace with curiosity. It takes a &lt;strong&gt;long&lt;/strong&gt; time to get to this stage - and it may take multiple iterations of explaining and teaching. But these are the moments that make it so worth it - that make it so incredibly worth it to get out and teach again.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;I have done at least 15 talks about Introduction to Blockchain, at a variety of meetup events, workshops, webinars and hackathons. People say that it should get easier each time as I keep doing it cause I am used to doing it - but I disagree with this entirely. Yes, perhaps the public speaking may get easier - just the bit about talking in front of crowds and not having to imagine that your audience is a bunch of monkeys wearing diapers. But every time I do a blockchain talk, something slightly different changes for code demo or descriptions of certain topics that make it easier for users to understand. No, it does not always produce the desired result and sometimes the talks that I do are far worse than other ones, despite having an almost-perfect talk the week before.&lt;/p&gt;
-
-&lt;p&gt;A small part of me does these talks because I know that I am unique to have&lt;/p&gt;</description>
-		</item>
+		<rights>Copyright (c) 2019</rights>
+		<updated>2019-10-08 00:00:00 &#43;0000 UTC</updated>
 		
 		<item>
 			<title>Hacking Imposter Syndrome</title>
