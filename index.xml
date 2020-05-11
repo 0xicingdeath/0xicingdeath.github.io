@@ -9,7 +9,7 @@
 		<updated>2020-05-08 11:17:05 -0400 EDT</updated>
 		
 		<item>
-			<title>Solidity Visibility Keywords and Built-In Modifiers</title>
+			<title>Solidity Function Visibility Specifications and Built-In Modifiers</title>
 			<link>https://nataliechin80.github.io/post/solidity-function-specification-and-modifiers/</link>
 			<pubDate>Fri, 08 May 2020 11:17:05 EDT</pubDate>
 			<author>Natalie Chin</author>
@@ -17,7 +17,7 @@
 			<media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://nataliechin80.github.io/img/erc20.png" medium="image" type="image/jpg" width="100" height="100" />
 			<description>
 
-&lt;p&gt;Solidity functions are usually of the following form, where it specifies a function specifier and a modifier attributed to a certain function. This blog goes into detailed function visibility specifiers (public, external, internal, private) and a few select modifiers (pure, view) that often cause confusion among developers.&lt;/p&gt;
+&lt;p&gt;Solidity functions are usually of the following form, where it specifies a function visibility and a modifier attributed to a certain function. This blog goes into detailed function visibility specifiers (public, external, internal, private) and a few select modifiers (pure, view) that often cause confusion among developers.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;function functionName() [public | external | internal | private] {pure | view} returns (bool) {
     return true; 
@@ -206,9 +206,9 @@
 
 &lt;p&gt;The &lt;code&gt;add()&lt;/code&gt; function showcased above is a pure function, as it receives all the variables that it requires to check for overflow. Given the &lt;code&gt;uint256 a&lt;/code&gt; and  &lt;code&gt;uint256 b&lt;/code&gt;, the add function returns the result of the addition, given that the value has not overflowed.&lt;/p&gt;
 
-&lt;h1 id=&#34;questions&#34;&gt;Questions?&lt;/h1&gt;
+&lt;hr /&gt;
 
-&lt;p&gt;That wraps up the function visibility specification and modifiers - hope it was insightful and interesting!&lt;/p&gt;
+&lt;p&gt;This wraps up the tutorial on the function visibility specifications that are available in native Solidity that allow developers more fine-tuned access control. The native Solidity modifiers (pure and view) provide the ability for us to define the expected behaviour of functionality, which allows smart contracts to be neater and easier to read.&lt;/p&gt;
 </description>
 		</item>
 		

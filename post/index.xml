@@ -12,12 +12,12 @@
     
     
     <item>
-      <title>Solidity Visibility Keywords and Built-In Modifiers</title>
+      <title>Solidity Function Visibility Specifications and Built-In Modifiers</title>
       <link>https://nataliechin80.github.io/post/solidity-function-specification-and-modifiers/</link>
       <pubDate>Fri, 08 May 2020 11:17:05 -0400</pubDate>
       
       <guid>https://nataliechin80.github.io/post/solidity-function-specification-and-modifiers/</guid>
-      <description>Solidity functions are usually of the following form, where it specifies a function specifier and a modifier attributed to a certain function. This blog goes into detailed function visibility specifiers (public, external, internal, private) and a few select modifiers (pure, view) that often cause confusion among developers.
+      <description>Solidity functions are usually of the following form, where it specifies a function visibility and a modifier attributed to a certain function. This blog goes into detailed function visibility specifiers (public, external, internal, private) and a few select modifiers (pure, view) that often cause confusion among developers.
 function functionName() [public | external | internal | private] {pure | view} returns (bool) { return true; }  Function Visibility Keywords In Solidity, there are 4 function visibility keywords, which are typically used in function definitions to explicitly state who should have access rights to a contract for a certain function.</description>
     </item>
     
