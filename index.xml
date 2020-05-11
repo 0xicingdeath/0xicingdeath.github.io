@@ -5,8 +5,212 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<author>Natalie Chin</author>
-		<rights>Copyright (c) 2019</rights>
-		<updated>2019-10-08 00:00:00 &#43;0000 UTC</updated>
+		<rights>Copyright (c) 2020</rights>
+		<updated>2020-05-08 11:17:05 -0400 EDT</updated>
+		
+		<item>
+			<title>Solidity Visibility Keywords and Built-In Modifiers</title>
+			<link>https://nataliechin80.github.io/post/solidity-function-specification-and-modifiers/</link>
+			<pubDate>Fri, 08 May 2020 11:17:05 EDT</pubDate>
+			<author>Natalie Chin</author>
+			<guid>https://nataliechin80.github.io/post/solidity-function-specification-and-modifiers/</guid>
+			<media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://nataliechin80.github.io/img/erc20.png" medium="image" type="image/jpg" width="100" height="100" />
+			<description>
+
+&lt;p&gt;Solidity functions are usually of the following form, where it specifies a function specifier and a modifier attributed to a certain function. This blog goes into detailed function visibility specifiers (public, external, internal, private) and a few select modifiers (pure, view) that often cause confusion among developers.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;function functionName() [public | external | internal | private] {pure | view} returns (bool) {
+    return true; 
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;function-visibility-keywords&#34;&gt;Function Visibility Keywords&lt;/h1&gt;
+
+&lt;p&gt;In Solidity, there are 4 function visibility keywords, which are typically used in function definitions to explicitly state who should have access rights to a contract for a certain function. In many ways, these visibility keywords are similar to specifying access control on functions.&lt;/p&gt;
+
+&lt;h2 id=&#34;public-functions&#34;&gt;Public Functions&lt;/h2&gt;
+
+&lt;p&gt;The public keyword is typically for functions where they can be called by any external account and any internal/external contract on the blockchain. This means that public functions are used in cases where a function is expected to provide information to anyone who calls it. A good example where a public function may be useful is in cases where variables are being accessed or overall state changes.&lt;/p&gt;
+
+&lt;p&gt;By looking at the &lt;a href=&#34;https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol#L115&#34;&gt;ERC20.sol&lt;/a&gt; token implementation, there are a variety of functions that are public. Two examples of public functions in the standard are shown below:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    function transfer(address recipient, uint256 amount) public virtual override returns (bool) {
+        _transfer(_msgSender(), recipient, amount);
+        return true;
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The &lt;code&gt;transfer()&lt;/code&gt; function can be called also be called by anyone with an external address (one in a wallet) and any contract to transfer token funds from the sender to a certain recipient. The public modifier on this function ensures that the access control on this function is as open as possible.&lt;/p&gt;
+
+&lt;h2 id=&#34;external-functions&#34;&gt;External Functions&lt;/h2&gt;
+
+&lt;p&gt;External functions are set on functions that can be called by an external account or external contract in the blockchain. This means that a contract is unable to call an external function, despite the code being written in the contract.&lt;/p&gt;
+
+&lt;p&gt;A prevalent example of external functions are in the &lt;a href=&#34;https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol#L24&#34;&gt;IERC20.sol&lt;/a&gt; contracts, which are interfaces that specify the ERC20 implementation:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    function transfer(address recipient, uint256 amount) external returns (bool);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Similar to interfaces in other object-oriented programming languages, interfaces define the behaviour of a certain contract and do not contain implementation details. The ERC20 Interface &lt;code&gt;transfer()&lt;/code&gt; function specifies that the implementation contract must have a &lt;code&gt;transfer()&lt;/code&gt; function, which takes the same arguments and returns the same values.&lt;/p&gt;
+
+&lt;h2 id=&#34;internal-functions&#34;&gt;Internal Functions&lt;/h2&gt;
+
+&lt;p&gt;Internal functions can only be accessed by the contract the function resides in, and children of the contract. In the case of class hierarchy, this function can be called by inherited contracts but not external accounts or external contracts. These functions are typically helper functions, which are used by functions with more open visibility specifications.&lt;/p&gt;
+
+&lt;p&gt;By taking a look at the native &lt;a href=&#34;https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol&#34;&gt;ERC20.sol&lt;/a&gt; token implementation on OpenZeppelin, there are two transferring functionalities (as seen in &lt;code&gt;transfer&lt;/code&gt; and &lt;code&gt;transferFrom&lt;/code&gt;). Both of these functions make use of the internal &lt;code&gt;_transfer()&lt;/code&gt; functionality, which serves as a helper function for this contract and all other implemented inheritances of the ERC20 token (which has the added option of being Cappable, Pausable, etc).&lt;/p&gt;
+
+&lt;p&gt;Through this ERC20 token code, we can take a deeper look into what the difference between internal and public functions are:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    function transfer(address recipient, uint256 amount) public virtual override returns (bool) {
+        _transfer(_msgSender(), recipient, amount);
+        return true;
+    }
+    function transferFrom(address sender, address recipient, uint256 amount) public virtual override returns (bool) {
+        _transfer(sender, recipient, amount);
+        _approve(sender, _msgSender(), _allowances[sender][_msgSender()].sub(amount, &amp;quot;ERC20: transfer amount exceeds allowance&amp;quot;));
+        return true;
+    }
+    function _transfer(address sender, address recipient, uint256 amount) internal virtual {
+        require(sender != address(0), &amp;quot;ERC20: transfer from the zero address&amp;quot;);
+        require(recipient != address(0), &amp;quot;ERC20: transfer to the zero address&amp;quot;);
+
+        _beforeTokenTransfer(sender, recipient, amount);
+
+        _balances[sender] = _balances[sender].sub(amount, &amp;quot;ERC20: transfer amount exceeds balance&amp;quot;);
+        _balances[recipient] = _balances[recipient].add(amount);
+        emit Transfer(sender, recipient, amount);
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The &lt;code&gt;transferFrom()&lt;/code&gt; and the &lt;code&gt;transfer()&lt;/code&gt; function both have a public visibility on them, which ensures that these functions can be called by anyone. Both of these functions also call an internal &lt;code&gt;_transfer()&lt;/code&gt; function, which performs the transfer functionality. The &lt;code&gt;_transfer()&lt;/code&gt; function is a helper function to the other two functions, which provides the transfer implementations.&lt;/p&gt;
+
+&lt;p&gt;The &lt;strong&gt;internal&lt;/strong&gt; visibility on the &lt;code&gt;_transfer()&lt;/code&gt; function ensures that the function can only be called within the ERC20 Token Implementation. This ensures that external accounts and external contracts are unable to invoke this function.&lt;/p&gt;
+
+&lt;h2 id=&#34;private-functions&#34;&gt;Private Functions&lt;/h2&gt;
+
+&lt;p&gt;Functions with a private visibility are an even smaller subset of internal functions, specifying that the function can ONLY be called inside the contract itself. These functions are typically helper functions, with an even smaller scope of access control - limiting to the contract the code is located in. Private functions should be called by functions that have a wider access scope (such as internal, public, or external) - with the contents of the function calling a private function.&lt;/p&gt;
+
+&lt;p&gt;An example of a private function can be seen in &lt;a href=&#34;https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20Snapshot.sol&#34;&gt;ERC20Snapshot.sol&lt;/a&gt; as part of the OpenZeppelin library, where the &lt;code&gt;_burn()&lt;/code&gt; internal function invokes private functions in the contract.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    function _burn(address account, uint256 value) internal virtual override {
+        _updateAccountSnapshot(account);
+        _updateTotalSupplySnapshot();
+
+        super._burn(account, value);
+    }
+    function _updateAccountSnapshot(address account) private {
+        _updateSnapshot(_accountBalanceSnapshots[account], balanceOf(account));
+    }
+    function _updateSnapshot(Snapshots storage snapshots, uint256 currentValue) private {
+        uint256 currentId = _currentSnapshotId.current();
+        if (_lastSnapshotId(snapshots.ids) &amp;lt; currentId) {
+            snapshots.ids.push(currentId);
+            snapshots.values.push(currentValue);
+        }
+    } 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This example above demonstrates the expected flow of private functions, where the &lt;code&gt;_burn()&lt;/code&gt; function can be invoked by any of the inherited ERC20 contracts. In the function, it calls a private helper function, which updates snapshot data on the ERC20 balances at a certain point in time. In this case, there was a specific design decision chosen to keep all snapshot functionality private to the &lt;code&gt;ERC20Snapshot.sol&lt;/code&gt; file, since no other ERC20 implementations understand the concept of a snapshot.&lt;/p&gt;
+
+&lt;h2 id=&#34;overview-of-function-visibility&#34;&gt;Overview of Function Visibility&lt;/h2&gt;
+
+&lt;p&gt;The table below breaks down the differences between the function visibility.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;Public&lt;/th&gt;
+&lt;th&gt;External&lt;/th&gt;
+&lt;th&gt;Internal&lt;/th&gt;
+&lt;th&gt;Private&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Description&lt;/td&gt;
+&lt;td&gt;Function can be called by &lt;strong&gt;anyone&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Function &lt;strong&gt;cannot&lt;/strong&gt; be called by &lt;code&gt;this&lt;/code&gt; contract&lt;/td&gt;
+&lt;td&gt;Function can be called by &lt;code&gt;this&lt;/code&gt; contract and inherited contracts&lt;/td&gt;
+&lt;td&gt;Function can be called by &lt;code&gt;this&lt;/code&gt; contract &lt;strong&gt;only&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Access Control&lt;/td&gt;
+&lt;td&gt;Wallet, &lt;code&gt;this&lt;/code&gt; contract, External Contract&lt;/td&gt;
+&lt;td&gt;Wallet, External Contract&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;this&lt;/code&gt; contract, Inherited Contracts&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;this&lt;/code&gt; contract&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Function Purpose&lt;/td&gt;
+&lt;td&gt;Getting state, changing state, calling helper&lt;/td&gt;
+&lt;td&gt;Getting state, changing state, calling helper&lt;/td&gt;
+&lt;td&gt;Helper function implementation&lt;/td&gt;
+&lt;td&gt;Helper function implementation&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Note: &lt;code&gt;this&lt;/code&gt; contract refers to the contract where the function is written in, similar to how the Solidity language would support &lt;code&gt;address(this).balance&lt;/code&gt;, which checks the Ether balance of &lt;code&gt;this&lt;/code&gt; contract.&lt;/p&gt;
+
+&lt;h1 id=&#34;solidity-function-modifiers&#34;&gt;Solidity Function Modifiers&lt;/h1&gt;
+
+&lt;p&gt;Aside from function visibility specifiers, there is an important difference between pure and view modifiers that are provided by Solidity.&lt;/p&gt;
+
+&lt;h2 id=&#34;view&#34;&gt;View&lt;/h2&gt;
+
+&lt;p&gt;A function with a view modifier specifies that the function must never &amp;ldquo;modify state&amp;rdquo;. As this definition of &amp;ldquo;modification of state&amp;rdquo; can be ambiguous, here are a few actions which are &lt;strong&gt;not&lt;/strong&gt; allowed in view functions:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Writing to a variable in a contract - this implementation is &lt;strong&gt;saving state&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Emitting events - events are often emitted to notify event listeners that a contract state has changed&lt;/li&gt;
+&lt;li&gt;Sending Ether to another address - transferring Ether among addresses changes the state of the Ether balance&lt;/li&gt;
+&lt;li&gt;Calling a non view/pure function - all functions that a view function calls must also not change state of contracts&lt;/li&gt;
+&lt;li&gt;Using STATICCALL - similar to (4), where the implementation/function may change the state of an object/contract&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;A good example of a view function is a getter function that returns state information from a certain contract. In &lt;a href=&#34;https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol#L103&#34;&gt;ERC20.sol&lt;/a&gt;, there are a few getter functions, including retrieving token supply for a specific address:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    mapping (address =&amp;gt; uint256) private _balances;
+    function balanceOf(address account) public view override returns (uint256) {
+        return _balances[account];
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The &lt;code&gt;balanceOf()&lt;/code&gt; function returns the token balance attributed to a given address, returning one of the entries in the &lt;code&gt;_balance&lt;/code&gt; mapping.&lt;/p&gt;
+
+&lt;h2 id=&#34;pure&#34;&gt;Pure&lt;/h2&gt;
+
+&lt;p&gt;A function with a pure modifier specifies that the function must never modify AND access state. A &lt;code&gt;pure&lt;/code&gt; modifier is stricter than a &lt;code&gt;view&lt;/code&gt; modifier, which ensures that the internal state of a contract can never be accessed. In addition to the list of actions that view functions are not allowed to do, a pure function adds a few more:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;View or modify state - pure functions may perform calculations but are not allowed to access internal contract state&lt;/li&gt;
+&lt;li&gt;Accessing contract Ether balance - cannot perform checks related to balance of addresses&lt;/li&gt;
+&lt;li&gt;Unable to access block, tx, msg data - unable to access transaction information (&lt;code&gt;tx.origin&lt;/code&gt;) or msg information (&lt;code&gt;msg.sender&lt;/code&gt;)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The specifications of a &amp;ldquo;pure&amp;rdquo; function are from functional programming, where the functions&amp;rsquo; arguments define the scope. This means that the function must be able to execute solely with the arguments it has received, without accessing contract state or contract data.&lt;/p&gt;
+
+&lt;p&gt;A good example of a pure function is the &lt;a href=&#34;https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/math/SafeMath.sol#L26&#34;&gt;SafeMath&lt;/a&gt; library, which provides mathematical checks to ensure that variables do not overflow/underflow after performing mathematical calculations such as adding:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    function add(uint256 a, uint256 b) internal pure returns (uint256) {
+        uint256 c = a + b;
+        require(c &amp;gt;= a, &amp;quot;SafeMath: addition overflow&amp;quot;);
+
+        return c;
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The &lt;code&gt;add()&lt;/code&gt; function showcased above is a pure function, as it receives all the variables that it requires to check for overflow. Given the &lt;code&gt;uint256 a&lt;/code&gt; and  &lt;code&gt;uint256 b&lt;/code&gt;, the add function returns the result of the addition, given that the value has not overflowed.&lt;/p&gt;
+
+&lt;h1 id=&#34;questions&#34;&gt;Questions?&lt;/h1&gt;
+
+&lt;p&gt;That wraps up the function visibility specification and modifiers - hope it was insightful and interesting!&lt;/p&gt;
+</description>
+		</item>
 		
 		<item>
 			<title>Hacking Imposter Syndrome</title>
