@@ -15,7 +15,7 @@
 			<author>Natalie Chin</author>
 			<guid>https://nataliechin80.github.io/post/solidity-function-specification-and-modifiers/</guid>
 			<media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://nataliechin80.github.io/img/erc20.jpg" medium="image" type="image/jpg" width="100" height="100" />
-			<description>
+			<description>&lt;p&gt;What&amp;rsquo;s the difference between Solidity Function Visibility (public, external, private, internal)? When should you use one over the other? How do you know when to use Solidity Modifiers (pure, view)? Read more to find out!&lt;/p&gt;
 
 &lt;p&gt;Solidity functions are usually of the following form, where it specifies a function visibility and a modifier attributed to a certain function. This blog goes into detailed function visibility specifiers (public, external, internal, private) and a few select modifiers (pure, view) that often cause confusion among developers.&lt;/p&gt;
 
@@ -30,56 +30,56 @@
 
 &lt;h2 id=&#34;public-functions&#34;&gt;Public Functions&lt;/h2&gt;
 
-&lt;p&gt;The public keyword is typically for functions where they can be called by any external account and any internal/external contract on the blockchain. This means that public functions are used in cases where a function is expected to provide information to anyone who calls it. A good example where a public function may be useful is in cases where variables are being accessed or overall state changes.&lt;/p&gt;
+&lt;p&gt;The public keyword is used for functions where they can be called by any external account and any internal/external contract on the blockchain. This means that public functions are used in cases where a function is expected to provide information to anyone who calls it. A good example where a public function may be useful is in cases where variables are being accessed or overall state changes.&lt;/p&gt;
 
-&lt;p&gt;By looking at the &lt;a href=&#34;https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol#L115&#34;&gt;ERC20.sol&lt;/a&gt; token implementation, there are a variety of functions that are public. Two examples of public functions in the standard are shown below:&lt;/p&gt;
+&lt;p&gt;By looking at the &lt;a href=&#34;https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol#L115&#34;&gt;ERC20.sol&lt;/a&gt; token implementation, there are a variety of functions that are public. An example of public functions in the standard are shown below:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;    function transfer(address recipient, uint256 amount) public virtual override returns (bool) {
-        _transfer(_msgSender(), recipient, amount);
-        return true;
-    }
+&lt;pre&gt;&lt;code&gt;  function transfer(address recipient, uint256 amount) public virtual override returns (bool) {
+    _transfer(_msgSender(), recipient, amount);
+    return true;
+  }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;The &lt;code&gt;transfer()&lt;/code&gt; function can be called also be called by anyone with an external address (one in a wallet) and any contract to transfer token funds from the sender to a certain recipient. The public modifier on this function ensures that the access control on this function is as open as possible.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;transfer()&lt;/code&gt; function can be called by anyone with an external address (one in a wallet) and any contract to transfer token funds from the sender to a certain recipient. The public modifier on this function ensures that there are no access control restrictions on who can call this function.&lt;/p&gt;
 
 &lt;h2 id=&#34;external-functions&#34;&gt;External Functions&lt;/h2&gt;
 
-&lt;p&gt;External functions are set on functions that can be called by an external account or external contract in the blockchain. This means that a contract is unable to call an external function, despite the code being written in the contract.&lt;/p&gt;
+&lt;p&gt;External functions are set on functions that can only be called by an external account or external contract. This means, for a contract &lt;code&gt;A&lt;/code&gt;, if it has a function &lt;code&gt;b()&lt;/code&gt;, no functions in A can access &lt;code&gt;b()&lt;/code&gt;. &lt;code&gt;b()&lt;/code&gt; can be called by externally owned addresses or contracts that are not related to A, but the &lt;code&gt;external&lt;/code&gt; keyword prevents all other functions in the same contract from calling it.&lt;/p&gt;
 
 &lt;p&gt;A prevalent example of external functions are in the &lt;a href=&#34;https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol#L24&#34;&gt;IERC20.sol&lt;/a&gt; contracts, which are interfaces that specify the ERC20 implementation:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;    function transfer(address recipient, uint256 amount) external returns (bool);
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Similar to interfaces in other object-oriented programming languages, interfaces define the behaviour of a certain contract and do not contain implementation details. The ERC20 Interface &lt;code&gt;transfer()&lt;/code&gt; function specifies that the implementation contract must have a &lt;code&gt;transfer()&lt;/code&gt; function, which takes the same arguments and returns the same values.&lt;/p&gt;
+&lt;p&gt;Similar to interfaces in other object-oriented programming languages, interfaces define the behaviour of a certain contract and do not contain implementation details. The ERC20 Interface &lt;code&gt;transfer()&lt;/code&gt; function specifies that the implementation contract must have a &lt;code&gt;transfer()&lt;/code&gt; function, which takes the same arguments and returns the same values. The &lt;code&gt;external&lt;/code&gt; specification ensures that the interface cannot call its own functions (which is not possible due to the interface not containing implementation). This does allow other contracts outside of this function to call this function.&lt;/p&gt;
 
 &lt;h2 id=&#34;internal-functions&#34;&gt;Internal Functions&lt;/h2&gt;
 
-&lt;p&gt;Internal functions can only be accessed by the contract the function resides in, and children of the contract. In the case of class hierarchy, this function can be called by inherited contracts but not external accounts or external contracts. These functions are typically helper functions, which are used by functions with more open visibility specifications.&lt;/p&gt;
+&lt;p&gt;Internal functions can only be accessed by the contract the function resides in, and children of the contract. In the case of class hierarchy, this function can be called by inherited contracts but not external accounts or external contracts. These functions are typically helper functions, which is called by external/public functions.&lt;/p&gt;
 
 &lt;p&gt;By taking a look at the native &lt;a href=&#34;https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol&#34;&gt;ERC20.sol&lt;/a&gt; token implementation on OpenZeppelin, there are two transferring functionalities (as seen in &lt;code&gt;transfer&lt;/code&gt; and &lt;code&gt;transferFrom&lt;/code&gt;). Both of these functions make use of the internal &lt;code&gt;_transfer()&lt;/code&gt; functionality, which serves as a helper function for this contract and all other implemented inheritances of the ERC20 token (which has the added option of being Cappable, Pausable, etc).&lt;/p&gt;
 
 &lt;p&gt;Through this ERC20 token code, we can take a deeper look into what the difference between internal and public functions are:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;    function transfer(address recipient, uint256 amount) public virtual override returns (bool) {
-        _transfer(_msgSender(), recipient, amount);
-        return true;
-    }
-    function transferFrom(address sender, address recipient, uint256 amount) public virtual override returns (bool) {
-        _transfer(sender, recipient, amount);
-        _approve(sender, _msgSender(), _allowances[sender][_msgSender()].sub(amount, &amp;quot;ERC20: transfer amount exceeds allowance&amp;quot;));
-        return true;
-    }
-    function _transfer(address sender, address recipient, uint256 amount) internal virtual {
-        require(sender != address(0), &amp;quot;ERC20: transfer from the zero address&amp;quot;);
-        require(recipient != address(0), &amp;quot;ERC20: transfer to the zero address&amp;quot;);
+&lt;pre&gt;&lt;code&gt;  function transfer(address recipient, uint256 amount) public virtual override returns (bool) {
+    _transfer(_msgSender(), recipient, amount);
+    return true;
+  }
+  function transferFrom(address sender, address recipient, uint256 amount) public virtual override returns (bool) {
+    _transfer(sender, recipient, amount);
+    _approve(sender, _msgSender(), _allowances[sender][_msgSender()].sub(amount, &amp;quot;ERC20: transfer amount exceeds allowance&amp;quot;));
+    return true;
+  }
+  function _transfer(address sender, address recipient, uint256 amount) internal virtual {
+    require(sender != address(0), &amp;quot;ERC20: transfer from the zero address&amp;quot;);
+    require(recipient != address(0), &amp;quot;ERC20: transfer to the zero address&amp;quot;);
 
-        _beforeTokenTransfer(sender, recipient, amount);
+    _beforeTokenTransfer(sender, recipient, amount);
 
-        _balances[sender] = _balances[sender].sub(amount, &amp;quot;ERC20: transfer amount exceeds balance&amp;quot;);
-        _balances[recipient] = _balances[recipient].add(amount);
-        emit Transfer(sender, recipient, amount);
-    }
+    _balances[sender] = _balances[sender].sub(amount, &amp;quot;ERC20: transfer amount exceeds balance&amp;quot;);
+    _balances[recipient] = _balances[recipient].add(amount);
+    emit Transfer(sender, recipient, amount);
+  }
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;The &lt;code&gt;transferFrom()&lt;/code&gt; and the &lt;code&gt;transfer()&lt;/code&gt; function both have a public visibility on them, which ensures that these functions can be called by anyone. Both of these functions also call an internal &lt;code&gt;_transfer()&lt;/code&gt; function, which performs the transfer functionality. The &lt;code&gt;_transfer()&lt;/code&gt; function is a helper function to the other two functions, which provides the transfer implementations.&lt;/p&gt;
@@ -208,8 +208,7 @@
 
 &lt;hr /&gt;
 
-&lt;p&gt;This wraps up the tutorial on the function visibility specifications that are available in native Solidity that allow developers more fine-tuned access control. The native Solidity modifiers (pure and view) provide the ability for us to define the expected behaviour of functionality, which allows smart contracts to be neater and easier to read.&lt;/p&gt;
-</description>
+&lt;p&gt;This wraps up the tutorial on the function visibility specifications that are available in native Solidity that allow developers more fine-tuned access control. The native Solidity modifiers (pure and view) provide the ability for us to define the expected behaviour of functionality, which allows smart contracts to be neater and easier to read.&lt;/p&gt;</description>
 		</item>
 		
 		<item>
