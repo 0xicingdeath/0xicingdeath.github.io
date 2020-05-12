@@ -89,7 +89,7 @@
 <p>Solidity functions are usually of the following form, where it specifies a function visibility and a modifier attributed to a certain function. This blog goes into detailed function visibility specifiers (public, external, internal, private) and a few select modifiers (pure, view) that often cause confusion among developers.</p>
 
 <pre><code>function functionName() [public | external | internal | private] {pure | view} returns (bool) {
-    return true; 
+    return true;
 }
 </code></pre>
 
@@ -121,6 +121,14 @@
 </code></pre>
 
 <p>Similar to interfaces in other object-oriented programming languages, interfaces define the behaviour of a certain contract and do not contain implementation details. The ERC20 Interface <code>transfer()</code> function specifies that the implementation contract must have a <code>transfer()</code> function, which takes the same arguments and returns the same values. The <code>external</code> specification ensures that the interface cannot call its own functions (which is not possible due to the interface not containing implementation). This does allow other contracts outside of this function to call this function.</p>
+
+<h3 id="solidity-under-the-hood-for-public-and-external-functions-see-notes-at-the-end">Solidity: Under the Hood for Public and External Functions (see Notes at the end)</h3>
+
+<p>Internal functions in Solidity are executed via JUMP, which means that the arguments for the function are expected to be located in memory. According to the <a href="https://ethereum.github.io/yellowpaper/paper.pdf">Ethereum Yellowpaper</a>, a JUMPDEST call uses 1 unit of gas.</p>
+
+<p>External functions in Solidity do not use internal functions, thus do not need to keep arguments in memory. This information can be read from the CALLDATA of the transaction, as there&rsquo;s no need to store this in memory for another function to interact with.</p>
+
+<p>When considering the construction and access control on public functions, one could reason that a public function is one that is external AND internal. This construction makes it significantly easier for us to understand why public functions consume more gas. Since public functions can be called by the contract itself, it will always save the arguments in memory. This means that the gas consumption by a public function should be expected to be higher than an external function.</p>
 
 <h2 id="internal-functions">Internal Functions</h2>
 
@@ -176,7 +184,7 @@
             snapshots.ids.push(currentId);
             snapshots.values.push(currentValue);
         }
-    } 
+    }
 </code></pre>
 
 <p>This example above demonstrates the expected flow of private functions, where the <code>_burn()</code> function can be invoked by any of the inherited ERC20 contracts. In the function, it calls a private helper function, which updates snapshot data on the ERC20 balances at a certain point in time. In this case, there was a specific design decision chosen to keep all snapshot functionality private to the <code>ERC20Snapshot.sol</code> file, since no other ERC20 implementations understand the concept of a snapshot.</p>
@@ -278,6 +286,18 @@
 <hr />
 
 <p>This wraps up the tutorial on the function visibility specifications that are available in native Solidity that allow developers more fine-tuned access control. The native Solidity modifiers (pure and view) provide the ability for us to define the expected behaviour of functionality, which allows smart contracts to be neater and easier to read.</p>
+
+<h1 id="notes">Notes</h1>
+
+<p>Thanks Mariano Conti for pointing out the gas difference between external and public functions!</p>
+
+<h2 id="references">References</h2>
+
+<ul>
+<li><a href="https://ethereum.stackexchange.com/questions/19380/external-vs-public-best-practices">https://ethereum.stackexchange.com/questions/19380/external-vs-public-best-practices</a></li>
+<li><a href="https://ethereum.stackexchange.com/questions/28813/how-to-write-an-optimized-gas-cost-smart-contract">https://ethereum.stackexchange.com/questions/28813/how-to-write-an-optimized-gas-cost-smart-contract</a></li>
+<li><a href="https://ethereum.github.io/yellowpaper/paper.pdf">https://ethereum.github.io/yellowpaper/paper.pdf</a></li>
+</ul>
 </article>
 
 		</main>
