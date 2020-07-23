@@ -2,66 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Natalie Chin</title>
-    <link>https://nataliechin80.github.io/post/</link>
+    <link>https://natchineth.com/post/</link>
     <description>Recent content in Posts on Natalie Chin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 08 May 2020 11:17:05 -0400</lastBuildDate>
     
-	<atom:link href="https://nataliechin80.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://natchineth.com/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Solidity Function Visibility Specifications and Built-In Modifiers</title>
-      <link>https://nataliechin80.github.io/post/solidity-function-specification-and-modifiers/</link>
+      <link>https://natchineth.com/post/solidity-function-specification-and-modifiers/</link>
       <pubDate>Fri, 08 May 2020 11:17:05 -0400</pubDate>
       
-      <guid>https://nataliechin80.github.io/post/solidity-function-specification-and-modifiers/</guid>
+      <guid>https://natchineth.com/post/solidity-function-specification-and-modifiers/</guid>
       <description>&lt;p&gt;What&amp;rsquo;s the difference between Solidity Function Visibility (public, external, private, internal)? When should you use one over the other? How do you know when to use Solidity Modifiers (pure, view)? Read more to find out!&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Women in Tech</title>
-      <link>https://nataliechin80.github.io/post/women-in-tech/</link>
+      <link>https://natchineth.com/post/women-in-tech/</link>
       <pubDate>Wed, 06 May 2020 16:23:36 -0400</pubDate>
       
-      <guid>https://nataliechin80.github.io/post/women-in-tech/</guid>
+      <guid>https://natchineth.com/post/women-in-tech/</guid>
       <description>&lt;p&gt;“Stay afraid, but do it anyway. What’s important is the action. You don’t have to wait to be confident. Just do it and eventually the confidence will follow.” - Carrie Fisher&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Looking Forward Moving Back</title>
-      <link>https://nataliechin80.github.io/post/looking-forward-moving-back/</link>
+      <link>https://natchineth.com/post/looking-forward-moving-back/</link>
       <pubDate>Thu, 06 Dec 2018 00:00:16 -0400</pubDate>
       
-      <guid>https://nataliechin80.github.io/post/looking-forward-moving-back/</guid>
+      <guid>https://natchineth.com/post/looking-forward-moving-back/</guid>
       <description>&lt;p&gt;This is a part of a previous series that I started while  at STK to honour females in tech.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Girls Don&#39;t Understand Computers</title>
-      <link>https://nataliechin80.github.io/post/girls-dont-understand-computers/</link>
+      <link>https://natchineth.com/post/girls-dont-understand-computers/</link>
       <pubDate>Fri, 09 Nov 2018 22:08:27 -0400</pubDate>
       
-      <guid>https://nataliechin80.github.io/post/girls-dont-understand-computers/</guid>
+      <guid>https://natchineth.com/post/girls-dont-understand-computers/</guid>
       <description>&lt;p&gt;There will always be people in the world who try to bring you down. It&amp;rsquo;s about who&amp;rsquo;s there to help you get back up, and how you keep going that matters.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Automated Eth Wrapping</title>
-      <link>https://nataliechin80.github.io/post/automated-eth-wrapping/</link>
+      <link>https://natchineth.com/post/automated-eth-wrapping/</link>
       <pubDate>Fri, 21 Sep 2018 23:53:13 -0400</pubDate>
       
-      <guid>https://nataliechin80.github.io/post/automated-eth-wrapping/</guid>
+      <guid>https://natchineth.com/post/automated-eth-wrapping/</guid>
       <description>&lt;p&gt;How to make a contract auto wrap and unwrap ETH&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Smart Contract Security</title>
-      <link>https://nataliechin80.github.io/post/smart-contract-security/</link>
+      <link>https://natchineth.com/post/smart-contract-security/</link>
       <pubDate>Tue, 31 Jul 2018 23:42:24 -0400</pubDate>
       
-      <guid>https://nataliechin80.github.io/post/smart-contract-security/</guid>
+      <guid>https://natchineth.com/post/smart-contract-security/</guid>
       <description>&lt;p&gt;Storing your cryptocurrency in a private wallet vs a smart contract wallet&lt;/p&gt;</description>
     </item>
     

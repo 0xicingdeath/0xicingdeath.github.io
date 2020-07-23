@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>solidity on Natalie Chin</title>
-    <link>https://nataliechin80.github.io/tags/solidity/</link>
+    <link>https://natchineth.com/tags/solidity/</link>
     <description>Recent content in solidity on Natalie Chin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 08 May 2020 11:17:05 -0400</lastBuildDate>
     
-	<atom:link href="https://nataliechin80.github.io/tags/solidity/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://natchineth.com/tags/solidity/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Solidity Function Visibility Specifications and Built-In Modifiers</title>
-      <link>https://nataliechin80.github.io/post/solidity-function-specification-and-modifiers/</link>
+      <link>https://natchineth.com/post/solidity-function-specification-and-modifiers/</link>
       <pubDate>Fri, 08 May 2020 11:17:05 -0400</pubDate>
       
-      <guid>https://nataliechin80.github.io/post/solidity-function-specification-and-modifiers/</guid>
+      <guid>https://natchineth.com/post/solidity-function-specification-and-modifiers/</guid>
       <description>&lt;p&gt;What&amp;rsquo;s the difference between Solidity Function Visibility (public, external, private, internal)? When should you use one over the other? How do you know when to use Solidity Modifiers (pure, view)? Read more to find out!&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Automated Eth Wrapping</title>
-      <link>https://nataliechin80.github.io/post/automated-eth-wrapping/</link>
+      <link>https://natchineth.com/post/automated-eth-wrapping/</link>
       <pubDate>Fri, 21 Sep 2018 23:53:13 -0400</pubDate>
       
-      <guid>https://nataliechin80.github.io/post/automated-eth-wrapping/</guid>
+      <guid>https://natchineth.com/post/automated-eth-wrapping/</guid>
       <description>&lt;p&gt;How to make a contract auto wrap and unwrap ETH&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Smart Contract Security</title>
-      <link>https://nataliechin80.github.io/post/smart-contract-security/</link>
+      <link>https://natchineth.com/post/smart-contract-security/</link>
       <pubDate>Tue, 31 Jul 2018 23:42:24 -0400</pubDate>
       
-      <guid>https://nataliechin80.github.io/post/smart-contract-security/</guid>
+      <guid>https://natchineth.com/post/smart-contract-security/</guid>
       <description>&lt;p&gt;Storing your cryptocurrency in a private wallet vs a smart contract wallet&lt;/p&gt;</description>
     </item>
     
