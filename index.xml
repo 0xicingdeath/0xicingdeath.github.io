@@ -130,7 +130,7 @@
 &lt;li&gt;Payback ETH flashloan&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h1 id=&#34;flash-loans-lose-little-gain-everything-implications-on-defi-security&#34;&gt;Flash Loans: Lose Little, Gain Everything - Implications on DeFi Security&lt;/h1&gt;
+&lt;h1 id=&#34;lose-little-gain-everything-implications-on-defi-security&#34;&gt;Lose Little, Gain Everything - Implications on DeFi Security&lt;/h1&gt;
 
 &lt;p&gt;While the DeFi space has always consisted of Lego blocks with applications like collaterlized debt, providing liquidity, or synthetic tokens, Flash loans bring on a whole new variant. Their lack of collateralization is due to a user&amp;rsquo;s need to take the loan out, use the funds, and pay it back at the end of the same transaction. Flash loaners only pay the fee to take funds out of the lending pool - and can do anything they want with it thereafter.&lt;/p&gt;
 
@@ -148,7 +148,7 @@
 
 &lt;p&gt;Aside from individual DeFi platforms, whales with access to a significant pool of funds can affect largely token volume and trading. An example of this may be creating a large dip in supply and rise in demand, which opens up the opportunity for large profits when they sell their token supply at the end of the transaction.&lt;/p&gt;
 
-&lt;h2 id=&#34;the-future-of-flash-loans&#34;&gt;The Future of Flash Loans&lt;/h2&gt;
+&lt;h1 id=&#34;the-future-of-flash-loans&#34;&gt;The Future of Flash Loans&lt;/h1&gt;
 
 &lt;p&gt;It will be really interesting to see the future development of flash loans and see other use cases that pop up. With the DeFi space continuously changing and projects pushing updates, it will also be incredibly interesting to see what other vulnerabilities and security implications flash loans bring up.&lt;/p&gt;
 </description>
