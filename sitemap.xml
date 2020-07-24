@@ -19,14 +19,32 @@
   </url>
   
   <url>
-    <loc>https://natchineth.com/post/solidity-function-specification-and-modifiers/</loc>
-    <lastmod>2020-05-08T11:17:05-04:00</lastmod>
+    <loc>https://natchineth.com/tags/</loc>
+    <lastmod>2020-07-23T11:33:34-04:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://natchineth.com/tags/</loc>
-    <lastmod>2020-05-08T11:17:05-04:00</lastmod>
+    <loc>https://natchineth.com/tags/defi/</loc>
+    <lastmod>2020-07-23T11:33:34-04:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://natchineth.com/tags/ethereum/</loc>
+    <lastmod>2020-07-23T11:33:34-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://natchineth.com/tags/solidity/</loc>
+    <lastmod>2020-07-23T11:33:34-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://natchineth.com/post/solidity-function-specification-and-modifiers/</loc>
+    <lastmod>2020-05-08T11:17:05-04:00</lastmod>
   </url>
   
   <url>
@@ -36,19 +54,7 @@
   </url>
   
   <url>
-    <loc>https://natchineth.com/tags/ethereum/</loc>
-    <lastmod>2020-05-08T11:17:05-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://natchineth.com/tags/sol/</loc>
-    <lastmod>2020-05-08T11:17:05-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://natchineth.com/tags/solidity/</loc>
     <lastmod>2020-05-08T11:17:05-04:00</lastmod>
     <priority>0</priority>
   </url>

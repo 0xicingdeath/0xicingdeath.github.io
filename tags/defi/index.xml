@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>defi on Natalie Chin</title>
+    <link>https://natchineth.com/tags/defi/</link>
+    <description>Recent content in defi on Natalie Chin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 23 Jul 2020 11:33:34 -0400</lastBuildDate>
+    
+	<atom:link href="https://natchineth.com/tags/defi/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A Finance Noob&#39;s Learning about Flash Loans</title>
+      <link>https://natchineth.com/post/flash-loans/</link>
+      <pubDate>Thu, 23 Jul 2020 11:33:34 -0400</pubDate>
+      
+      <guid>https://natchineth.com/post/flash-loans/</guid>
+      <description>For the past few weeks (or months?), I kept seeing tweets about flash loans in my Twitter feed. Recently, I&amp;rsquo;d been spending a lot more of my time trying to better understand the translation of code to bytecode, but I finally had some time to spare to learn more about flash loans and how they differ from more &amp;ldquo;traditional loans&amp;rdquo;, like Compound and Maker, two giants in the decentralized finance space.</description>
+    </item>
+    
+  </channel>
+</rss>

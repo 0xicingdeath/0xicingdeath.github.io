@@ -130,9 +130,11 @@
 &lt;li&gt;Payback ETH flashloan&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h1 id=&#34;what-does-it-mean-for-defi-security&#34;&gt;What does it mean for DeFi Security?&lt;/h1&gt;
+&lt;h1 id=&#34;flash-loans-lose-little-gain-everything-implications-on-defi-security&#34;&gt;Flash Loans: Lose Little, Gain Everything - Implications on DeFi Security&lt;/h1&gt;
 
-&lt;p&gt;The DeFi space has always consisted of Lego blocks, with applications with collateral, providing liquidity, or synthetic tokens. Flash loans bring a whole new variant - allowing any contract to borrow, use, and give money back within 15-20 seconds.&lt;/p&gt;
+&lt;p&gt;While the DeFi space has always consisted of Lego blocks with applications like collaterlized debt, providing liquidity, or synthetic tokens, Flash loans bring on a whole new variant. Their lack of collateralization is due to a user&amp;rsquo;s need to take the loan out, use the funds, and pay it back at the end of the same transaction. Flash loaners only pay the fee to take funds out of the lending pool - and can do anything they want with it thereafter.&lt;/p&gt;
+
+&lt;p&gt;This means an attacker could potentially take on less risk with a flash loan than executing an attack with their own funds. If an attacker attempts to attack a smart contract bug with their own funds, if they do it incorrectly, they have the &lt;em&gt;chance&lt;/em&gt; of losing their own funds. With a flash loan in a smart contract, if their call to another platform&amp;rsquo;s smart contract fails, the entire transaction will revert and it will be as if the attacker never really had the flash loan in the first place. In this way, flash loans enable these attackers to take on less risk while executing a smart contract attack.&lt;/p&gt;
 
 &lt;h2 id=&#34;small-smart-contract-bugs-are-even-more-dangerous&#34;&gt;Small smart contract bugs are even more dangerous&lt;/h2&gt;
 
@@ -142,9 +144,13 @@
 
 &lt;h2 id=&#34;anyone-can-be-a-whale&#34;&gt;Anyone can be a whale&lt;/h2&gt;
 
-&lt;p&gt;Given that flash loans do not require collateral, flash loans enable every-day users to become &amp;ldquo;whales&amp;rdquo;, users who hold a significantly large portion of funds - often large enough to change the supply/demand in their favour. This new requirements puts pressure on all DeFi systems to think through the ramifications of high-volume, high-value transactions executing through their platforms. While the blockchain space has always had whales, it will be interesting to see whether there are changes that DeFi platforms implement due to this.&lt;/p&gt;
+&lt;p&gt;Given that flash loans do not require collateral, these loans allow every-day users to become &amp;ldquo;whales&amp;rdquo; - users who hold a significantly large portion of funds - large enough to change supply/demand in their favour. This new requirement puts pressure on all DeFi systems to consider the ramifications of high-volume-high-value transactions executing through their platform.&lt;/p&gt;
 
-&lt;p&gt;##&lt;/p&gt;
+&lt;p&gt;Aside from individual DeFi platforms, whales with access to a significant pool of funds can affect largely token volume and trading. An example of this may be creating a large dip in supply and rise in demand, which opens up the opportunity for large profits when they sell their token supply at the end of the transaction.&lt;/p&gt;
+
+&lt;h2 id=&#34;the-future-of-flash-loans&#34;&gt;The Future of Flash Loans&lt;/h2&gt;
+
+&lt;p&gt;It will be really interesting to see the future development of flash loans and see other use cases that pop up. With the DeFi space continuously changing and projects pushing updates, it will also be incredibly interesting to see what other vulnerabilities and security implications flash loans bring up.&lt;/p&gt;
 </description>
 		</item>
 		
