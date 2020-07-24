@@ -6,7 +6,147 @@
 		<language>en-us</language>
 		<author>Natalie Chin</author>
 		<rights>Copyright (c) 2020</rights>
-		<updated>2020-05-08 11:17:05 -0400 EDT</updated>
+		<updated>2020-07-23 11:33:34 -0400 EDT</updated>
+		
+		<item>
+			<title>A Finance Noob&#39;s Learning about Flash Loans</title>
+			<link>https://natchineth.com/post/flash-loans/</link>
+			<pubDate>Thu, 23 Jul 2020 11:33:34 EDT</pubDate>
+			<author>Natalie Chin</author>
+			<guid>https://natchineth.com/post/flash-loans/</guid>
+			<media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://natchineth.com/img/default-header-img.tn-500x500.jpg" medium="image" type="image/jpg" width="100" height="100" />
+			<description>
+
+&lt;p&gt;For the past few weeks (or months?), I kept seeing tweets about flash loans in my Twitter feed. Recently, I&amp;rsquo;d been spending a lot more of my time trying to better understand the translation of code to bytecode, but I finally had some time to spare to learn more about flash loans and how they differ from more &amp;ldquo;traditional loans&amp;rdquo;, like Compound and Maker, two giants in the decentralized finance space.&lt;/p&gt;
+
+&lt;h1 id=&#34;flash-loans&#34;&gt;Flash Loans&lt;/h1&gt;
+
+&lt;h2 id=&#34;what-are-flash-loans&#34;&gt;What are flash loans?&lt;/h2&gt;
+
+&lt;p&gt;In the simplest terms possible, a flash loan is a loan that is exists over the span of a single transaction (15 seconds), allowing a contract to borrow funds, use the funds for purposes, and repay the loan + associated interest by the end of the transaction. The smart contract can put these funds through any system they want, as long as the amount + interest is sent back into the lending pool contract. Unlike Maker, no collateral is required for these loans. Flash loans ensure that the amount and the fee for borrowing is paid back to the lending pool by the end of the transaction, otherwise it reverts.&lt;/p&gt;
+
+&lt;h2 id=&#34;how-do-they-work&#34;&gt;How do they work?&lt;/h2&gt;
+
+&lt;p&gt;These flash loans execute in lending pools, which have checks to ensure that the smart contract has repaid their loans at the end of the transaction. If the flash loan is not returned, the entire transaction (including the borrowing of the loan) is reverted and the state rolls back.&lt;/p&gt;
+
+&lt;p&gt;While walking through &lt;a href=&#34;https://github.com/aave/aave-protocol/blob/master/contracts/lendingpool/LendingPool.sol#L843&#34;&gt;Aave&amp;rsquo;s Lending Pool flashloan function&lt;/a&gt; implementation in detail, the loan essentially execute __ main steps:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Checks the available liquidity in the Lending Pool contract (reverts if the flash loan is too large)
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;reverts&lt;/em&gt; if the flash loan is too large&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Calculates the protocol and amount fee
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;user&amp;rsquo;s total fee&lt;/strong&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;amountFee = flash_loan_amount * FLASHLOAN_FEE_TOTAL / 10000&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;protocol fee&lt;/strong&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;protocolFee = amountFee * FLASHLOAN_FEE_PROTOCOL / 10000&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Lending Pool Constants &lt;a href=&#34;https://github.com/aave/aave-protocol/blob/master/contracts/configuration/LendingPoolParametersProvider.sol#L17&#34;&gt;are defined here&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;FLASHLOAN_FEE_TOTAL = 35&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;FLASHLOAN_FEE_PROTOCOL = 3000&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;reverts&lt;/em&gt; if either amount fee or protocol fee are &amp;lt;0 - means that the amount is too small for a flash loan&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Transfers funds to a user&amp;rsquo;s smart contract&lt;/li&gt;
+&lt;li&gt;Calls &lt;code&gt;reciever.executeOperation()&lt;/code&gt;, the function that would need to be overridden to execute a flash loan
+
+&lt;ul&gt;
+&lt;li&gt;Aave&amp;rsquo;s &lt;a href=&#34;https://github.com/aave/flashloan-box/blob/master/contracts/Flashloan.sol#L14&#34;&gt;Flashloan-box&lt;/a&gt; repository sets up infrastructure for a developer to create a flash loan&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Checks to ensure that the available liquidity in the Lending Pool Contract is the same as step 1
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;reverts&lt;/em&gt; if &lt;code&gt;currentLiquidity != previousLiquidity + amountFee&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;As seen above, flash loans target smart contract developers, unlike Maker/Compound. By implementing &lt;code&gt;executeOperation()&lt;/code&gt;, a developer can choose what they want to spend their flash loan funds on.&lt;/p&gt;
+
+&lt;h2 id=&#34;why-are-they-useful&#34;&gt;Why are they useful?&lt;/h2&gt;
+
+&lt;p&gt;Flash loans help a variety of purposes, including:&lt;/p&gt;
+
+&lt;h3 id=&#34;refinancing-debt&#34;&gt;Refinancing Debt&lt;/h3&gt;
+
+&lt;p&gt;Flash loans enable users to get a better interest rate for debt that they&amp;rsquo;ve taken out of a system.&lt;/p&gt;
+
+&lt;p&gt;Assume a user has put collateral down to take &lt;code&gt;$10k&lt;/code&gt; from a system - this means that this user be required to pay back &lt;code&gt;$x + interest&lt;/code&gt; in the future. If Company A is offering a 10% interest, and Company B is offering 5% interest, users would prefer to go with the lowest interest rate, as they prefer to pay less for the money they have borrowed.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Scenario&lt;/th&gt;
+&lt;th&gt;Company A&lt;/th&gt;
+&lt;th&gt;Company B&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&amp;ldquo;Original&amp;rdquo; Loan&lt;/td&gt;
+&lt;td&gt;debt = $10000 &lt;br&gt; interest = 10%&lt;/td&gt;
+&lt;td&gt;debt = $0 &lt;br&gt; interest = 5%&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Better Rate&lt;/td&gt;
+&lt;td&gt;debt = $0 &lt;br&gt; interest = 10%&lt;/td&gt;
+&lt;td&gt;debt = $10000 &lt;br&gt; interest = 5%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;A flash loan could be written with the following steps to facilitate refinancing:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Take out a flash loan in the amount sufficient to pay back the loan from Company A&lt;/li&gt;
+&lt;li&gt;Send the funds to Company A and unlock collateral, essentially paying back the loan and zero-ing the debt&lt;/li&gt;
+&lt;li&gt;Send collateral to Company B, and borrow funds at 5%&lt;/li&gt;
+&lt;li&gt;Pay flash loan back at the end of the transaction&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;collateral-swaps&#34;&gt;Collateral Swaps&lt;/h3&gt;
+
+&lt;p&gt;Flash loans also enable users to change the underlying collateral mechanism, in systems such as Maker and Compound.&lt;/p&gt;
+
+&lt;p&gt;Assuming a user has to put ETH collateral into Maker to withdraw DAI, resulting in the user having an Ether-backed collateral. If a different collateral, such as BAT or USDC has a better borrowing rate, users may want to change the collateral type they use. Flash loans can be used to do this as well:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Take out an ETH flash loan in the amount of the withdrawn DAI + interest&lt;/li&gt;
+&lt;li&gt;Swap ETH to other collateral (ie: USDC/BAT) on Uniswap&lt;/li&gt;
+&lt;li&gt;Deposit new collateral into Maker&lt;/li&gt;
+&lt;li&gt;Withdraw original ETH collateral from Maker&lt;/li&gt;
+&lt;li&gt;Payback ETH flashloan&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;what-does-it-mean-for-defi-security&#34;&gt;What does it mean for DeFi Security?&lt;/h1&gt;
+
+&lt;p&gt;The DeFi space has always consisted of Lego blocks, with applications with collateral, providing liquidity, or synthetic tokens. Flash loans bring a whole new variant - allowing any contract to borrow, use, and give money back within 15-20 seconds.&lt;/p&gt;
+
+&lt;h2 id=&#34;small-smart-contract-bugs-are-even-more-dangerous&#34;&gt;Small smart contract bugs are even more dangerous&lt;/h2&gt;
+
+&lt;p&gt;For DeFi smart contracts, this means that smaller bugs, such as one allowing users to extract 0.01% more tokens than expected - which may not have been too big of a problem with small inputs such as 1ETH become increasingly more profitable for hackers via flash loans. In the past, these hackers would be limited to the amount of funds in their wallet - but flash loans allow these users to have access to a significantly larger funding pool.&lt;/p&gt;
+
+&lt;p&gt;Flash loans allow hackers, who wouldn&amp;rsquo;t otherwise have sufficient funds - be millionnaires/trillionaires (dependent on the amount in the lending pool) for 15 seconds. During this time, they receive the funds, invoke the buggy smart contract and/or logic, return funds + fees to the lending pool, and pocket the remainder of the profits.&lt;/p&gt;
+
+&lt;h2 id=&#34;anyone-can-be-a-whale&#34;&gt;Anyone can be a whale&lt;/h2&gt;
+
+&lt;p&gt;Given that flash loans do not require collateral, flash loans enable every-day users to become &amp;ldquo;whales&amp;rdquo;, users who hold a significantly large portion of funds - often large enough to change the supply/demand in their favour. This new requirements puts pressure on all DeFi systems to think through the ramifications of high-volume, high-value transactions executing through their platforms. While the blockchain space has always had whales, it will be interesting to see whether there are changes that DeFi platforms implement due to this.&lt;/p&gt;
+
+&lt;p&gt;##&lt;/p&gt;
+</description>
+		</item>
 		
 		<item>
 			<title>Solidity Function Visibility Specifications and Built-In Modifiers</title>
