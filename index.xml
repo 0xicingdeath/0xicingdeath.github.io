@@ -15,9 +15,7 @@
 			<author>Natalie Chin</author>
 			<guid>https://natchineth.com/post/flash-loans/</guid>
 			<media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://natchineth.com/img/default-header-img.tn-500x500.jpg" medium="image" type="image/jpg" width="100" height="100" />
-			<description>
-
-&lt;p&gt;For the past few weeks (or months?), I kept seeing tweets about flash loans in my Twitter feed. Recently, I&amp;rsquo;d been spending a lot more of my time trying to better understand the translation of code to bytecode, but I finally had some time to spare to learn more about flash loans and how they differ from more &amp;ldquo;traditional loans&amp;rdquo;, like Compound and Maker, two giants in the decentralized finance space.&lt;/p&gt;
+			<description>&lt;p&gt;A flash loan is no-collateral loan existing over the span of a single transaction, allowing a contract to borrow funds, use funds, and repay the loan by the end of the same transaction. It&amp;rsquo;s like being a millionnaire for 15 seconds.&lt;/p&gt;
 
 &lt;h1 id=&#34;flash-loans&#34;&gt;Flash Loans&lt;/h1&gt;
 
@@ -150,8 +148,7 @@
 
 &lt;h1 id=&#34;the-future-of-flash-loans&#34;&gt;The Future of Flash Loans&lt;/h1&gt;
 
-&lt;p&gt;It will be really interesting to see the future development of flash loans and see other use cases that pop up. With the DeFi space continuously changing and projects pushing updates, it will also be incredibly interesting to see what other vulnerabilities and security implications flash loans bring up.&lt;/p&gt;
-</description>
+&lt;p&gt;It will be really interesting to see the future development of flash loans and see other use cases that pop up. With the DeFi space continuously changing and projects pushing updates, it will also be incredibly interesting to see what other vulnerabilities and security implications flash loans bring up.&lt;/p&gt;</description>
 		</item>
 		
 		<item>

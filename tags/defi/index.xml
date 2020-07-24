@@ -17,7 +17,7 @@
       <pubDate>Thu, 23 Jul 2020 11:33:34 -0400</pubDate>
       
       <guid>https://natchineth.com/post/flash-loans/</guid>
-      <description>For the past few weeks (or months?), I kept seeing tweets about flash loans in my Twitter feed. Recently, I&amp;rsquo;d been spending a lot more of my time trying to better understand the translation of code to bytecode, but I finally had some time to spare to learn more about flash loans and how they differ from more &amp;ldquo;traditional loans&amp;rdquo;, like Compound and Maker, two giants in the decentralized finance space.</description>
+      <description>&lt;p&gt;A flash loan is no-collateral loan existing over the span of a single transaction, allowing a contract to borrow funds, use funds, and repay the loan by the end of the same transaction. It&amp;rsquo;s like being a millionnaire for 15 seconds.&lt;/p&gt;</description>
     </item>
     
   </channel>
