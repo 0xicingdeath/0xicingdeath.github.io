@@ -96,10 +96,10 @@
 
 <p>These flash loans execute in lending pools, which have checks to ensure that the smart contract has repaid their loans at the end of the transaction. If the flash loan is not returned, the entire transaction (including the borrowing of the loan) is reverted and the state rolls back.</p>
 
-<p>While walking through <a href="https://github.com/aave/aave-protocol/blob/master/contracts/lendingpool/LendingPool.sol#L843">Aave&rsquo;s Lending Pool flashloan function</a> implementation in detail, the loan essentially execute __ main steps:</p>
+<p>While walking through <a href="https://github.com/aave/aave-protocol/blob/master/contracts/lendingpool/LendingPool.sol#L843">Aave&rsquo;s Lending Pool flashloan function</a> implementation in detail, the loan essentially execute these main steps:</p>
 
 <ol>
-<li>Checks the available liquidity in the Lending Pool contract (reverts if the flash loan is too large)
+<li>Checks the available liquidity in the Lending Pool contract
 
 <ul>
 <li><em>reverts</em> if the flash loan is too large</li>
