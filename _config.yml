@@ -1,0 +1,54 @@
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+title: Nat Chin
+description: "blocksec researcher"
+baseurl: "" # the subpath of the site
+url: "https://0xicingdeath.github.io" # the base hostname & protocol for the site
+og_image: /assets/img/profile-pic.jpg
+
+# header:
+#   pages:
+#     - name: Home
+#       slug: /
+# reenable these two if and when local blog is desired
+# - name: Work
+# - name: Blog
+
+footer:
+  show_powered_by: true
+  contact:
+    - type: email
+      name: Email
+      value: me@natchineth.com
+  follow:
+    - type: twitter
+      name: Twitter
+      link: http://twitter.com/0xicingdeath
+      username: "@0xicingdeath"
+    - type: github
+      name: GitHub
+      link: http://github.com/0xicingdeath
+
+# Build settings
+markdown: kramdown
+sass:
+  style: :compressed
+plugins:
+  - jekyll-feed
+
+# Excluded items
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - feed.xml
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Used for defeating caching
+version: 1
