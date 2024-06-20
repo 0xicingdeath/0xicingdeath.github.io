@@ -1,6 +1,5 @@
-I"l
-<p>
-Hello! I'm Nat.
+I";<p>
+Hello! I'm Nat. I'm a blockchain security engineer.
 </p>
 
 <p>
@@ -21,9 +20,12 @@ After 4 years of working as a blockchain security engineer at Trail of Bits, and
 <p>In addition to learning new technologies, I am always passionate about sharing the knowledge I have gained over the years of reviewing code. The below highlight my public speaking engagements:</p>
 
 <ul>
-  <li>Professor at George Brown College</li>
+  <li><a href="https://www.georgebrown.ca/programs/blockchain-development-program-postgraduate-t475">Professor at George Brown College</a> – designed curriculum and content to classes of up to 45 students, teaching the basic concepts of smart contract development and security</li>
   <li><a href="https://www.youtube.com/watch?v=vETc-RXZoKA">Smart Contract Security: The Beta (2023)</a> – first talk to kick off the Defi Security Summit, talking about recommendations to writing safe code and embedding security into ones development process instead of as an afterthought</li>
-  <li><a href="https://www.youtube.com/watch?v=vQTexNuWDrM&amp;t=2s">Advanced Defi Invariants Part 1 (2022)</a> – highlighted the invariants that were written for Primitive and teaching the audience how to reason about complex codebases</li>
-  <li><a href="https://www.youtube.com/watch?v=vQTexNuWDrM&amp;t=2s">Advanced Defi Invariants Part 1 (2022)</a> – highlighted the invariants that were written for Primitive and teaching the audience how to reason about complex codebases</li>
+  <li><a href="https://www.youtube.com/watch?v=vQTexNuWDrM&amp;t=2s">Advanced Defi Invariants Part 1 (2022)</a> – part 1 of a part 2 series highlighted the invariants that were written for Primitive and teaching the audience how to reason about complex codebases</li>
+  <li><a href="https://www.youtube.com/watch?v=zsjVamRTn5M&amp;t=1s">Advanced Defi Invariants Part 2 (2022)</a> – the second part of the series, continuing on advanced invariant development</li>
+  <li><a href="https://github.com/trailofbits/publications/tree/master/presentations/How%20to%20fuzz%20like%20a%20pro-Defi%20Security%20Summit-EthCC-EthTaipei#:~:text=Security%20Summit%20101-,Slides,-EthCC">Defi Security Summit 101 (2022) </a> – discussing the benefits of using fuzzing throughout ones development process</li>
+  <li><a href="https://github.com/trailofbits/publications/tree/master/presentations/How%20to%20fuzz%20like%20a%20pro-Defi%20Security%20Summit-EthCC-EthTaipei#:~:text=Security%20Summit%20101-,Slides,-EthCC">EthCC (2022) </a> – discussing the benefits of using fuzzing throughout ones development process</li>
+  <li><a href="https://github.com/trailofbits/publications/blob/master/presentations/How%20to%20fuzz%20like%20a%20pro-Defi%20Security%20Summit-EthCC-EthTaipei/Eth%20Taipei%20Workshop.pdf">EthTaipei Fuzzing Workshop</a> – teaching attendees the basics of fuzzing, and tips on tricks on integrating fuzzers into their systems</li>
 </ul>
 :ET
