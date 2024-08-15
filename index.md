@@ -10,13 +10,15 @@ Hello! I'm Nat. I'm a blockchain security engineer.
 </p>
 
 <p>
-After 4 years of working as a blockchain security engineer at Trail of Bits, and 3 years of working as a blockchain engineer, I'm currently on hiatus, taking a step back from computers and technology. Once I'm back, I'll be ready to take on the world again!
+After 4 years working as a blockchain security engineer at Trail of Bits and touring around the conference circuit, I'm currently on hiatus. Find me in the mountains, basking in the sun, paddleboarding on the water, walking in the forest, or falling off walls.
+
+While I am taking on a few contracts for 2024, my availability is limited. My email, twitter and tg are always open to chat about tooling, fuzzing, or security; and can be found on the bottom of the page. Sorry if there's a delay in my responses!
 </p>
 
 <h2>Technical Experience</h2>
 <p>My extensive experience with smart contracts and ethereum has given me ample opportunity to understand defi protocols, NFT marketplaces, and scaling solutions. While much of my work is not public, I share public knowledge whenever possible. Some of my highlights can be found below:
   <ul>
-    <li><a href="https://blog.trailofbits.com/2024/04/30/curvance-invariants-unleashed/">Curvance Invariant Development blog post</a> – a highlight of the largest and longest solo fuzzing engagement with 219 invariants</li>
+    <li><a href="https://blog.trailofbits.com/2024/04/30/curvance-invariants-unleashed/">Curvance Invariant Development blog post</a> – a highlight of the largest and longest solo fuzzing engagement with 216 invariants</li>
     <li><a href="https://github.com/trailofbits/publications/blob/master/reviews/2024-03-curvance-invariant-development.pdf">Curvance Invariant Development report</a> – the full report containing details and findings of the 10 week invariant development engagement highlighted in the blog post above</li>
     <li><a href="https://github.com/primitivefinance/rmm-core/tree/main/contracts/crytic">Primitive Finance Invariant Development</a> – fuzzing different versions of the Primitive ecosystem during an engagement where manual review and fuzzing was conducted</li>
     <li><a href="https://github.com/crytic/solc-select">Author of solc-select</a> – a tool that allows users to quickly switch between Solidity compiler versions</li>
