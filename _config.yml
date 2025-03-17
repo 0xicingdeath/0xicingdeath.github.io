@@ -7,13 +7,12 @@ baseurl: "" # the subpath of the site
 url: "https://0xicingdeath.github.io" # the base hostname & protocol for the site
 og_image: /assets/img/profile-pic.jpg
 
-# header:
-#   pages:
-#     - name: Home
-#       slug: /
-# reenable these two if and when local blog is desired
-# - name: Work
-# - name: Blog
+header:
+  pages:
+    - name: Home
+      slug: /
+    - name: Blog
+      slug: /blog
 
 footer:
   show_powered_by: true
