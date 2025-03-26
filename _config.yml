@@ -5,7 +5,6 @@ title: Nat Chin
 description: "blocksec researcher"
 baseurl: "" # the subpath of the site
 url: "https://0xicingdeath.github.io" # the base hostname & protocol for the site
-og_image: /assets/img/profile-pic.jpg
 
 header:
   pages:
