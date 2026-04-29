@@ -14,5 +14,5 @@ I **thrive on solving complex problems** and I am particularly passionate about 
  - **Smart Contract Security**: Deep mastery of Solidity, EVM, and vulnerability patterns 
  - **Security Tools & Automation**: Expert-level fuzzing, and custom tool development
  - **Protocol Design & Architecture**:Experience with DeFi protocols, NFT marketplaces, and L2 scaling solutions
- - **Leadership & Mentorship**: Proven track record of managing direct reports and leading client-facing projects.
- - **Education**: Freuent conference speaker and contributor to blockchain security research.
+ - **Leadership & Mentorship**: Proven track record of managing direct reports and leading client-facing projects
+ - **Education**: Frequent conference speaker and contributor to blockchain security research
