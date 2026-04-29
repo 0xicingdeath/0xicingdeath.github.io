@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nat Chin</title>
+    <link>//localhost:1313/</link>
+    <description>Recent content on Nat Chin</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 28 Apr 2026 15:49:43 -0400</lastBuildDate>
+    <atom:link href="//localhost:1313/atom.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>When Bitwise NOT breaks Differential Tests</title>
+      <link>//localhost:1313/posts/nearly-slipped-away/</link>
+      <pubDate>Tue, 28 Apr 2026 15:49:43 -0400</pubDate>
+      <guid>//localhost:1313/posts/nearly-slipped-away/</guid>
+      <description>&lt;p&gt;When you build your test suite to work for you, it &lt;em&gt;really&lt;/em&gt; works.&lt;/p&gt;&#xA;&lt;p&gt;In a recent engagement, I used differential testing to verify if two implementations of the same logic—one in Golang, one in Solidity—were actually identical. This was a perfect use-case for differential fuzzing - logic that looks the same, under manual review. But looks aren&amp;rsquo;t everything.&lt;/p&gt;&#xA;&lt;p&gt;To find them, I built a &amp;ldquo;fuzzing harness.&amp;rdquo; Imagine a monkey smashing a keyboard, taking that random input, and feeding it to the equivalent program in Solidity and Golang. If the Go version succeed on the input but the Solidity version hates it (or vice-versa), the fuzzer errors.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Curvance Invariants Unleashed</title>
+      <link>//localhost:1313/posts/curvance-invariants-unleashed/</link>
+      <pubDate>Tue, 30 Apr 2024 15:46:49 -0400</pubDate>
+      <guid>//localhost:1313/posts/curvance-invariants-unleashed/</guid>
+      <description>&lt;p&gt;Initially posted on Trail of Bits Blog: &lt;a href=&#34;https://blog.trailofbits.com/2024/04/30/curvance-invariants-unleashed/&#34;&gt;Curvance: Invariants Unleashed&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Ultimate Secure Wallet</title>
+      <link>//localhost:1313/posts/the-ultimate-secure-wallet/</link>
+      <pubDate>Tue, 31 Jul 2018 15:40:47 -0400</pubDate>
+      <guid>//localhost:1313/posts/the-ultimate-secure-wallet/</guid>
+      <description>&lt;p&gt;Initially posted on &lt;a href=&#34;https://medium.com/stk-token/state-channels-the-ultimate-secure-wallet-9a17da38bd77&#34;&gt;State Channels Smart Contract: The Ultimate Secure Wallet&lt;/a&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Safety has always been a major concern in the cryptocurrency industry. Once in a while, we’ll see cryptocurrency exchanges get hacked for millions of dollars. The concern of security is among one of the top reasons why people are reluctant to get into the cryptocurrency space. At STK, the security and the safety of your assets is always our top priority. Instead of a traditional wallet, we made a choice to use the smart contract and payment channels for our app. Due to the security nature of these contracts, we have not pushed our contracts up to mainnet yet. They will be pushed on mainnet soon after auditing.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>//localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/about/</guid>
+      <description>&lt;p&gt;I bridge the gap between building high-assurance software and breaking it. With a background as a developer, a hackathon organizer, and a 4 year tenure at Trail of Bits, I specialize in invariant-driven security.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Authored: &lt;a href=&#34;https://www.google.com/search?q=%5Bhttps://github.com/crytic/solc-select%5D(https://github.com/crytic/solc-select)&#34;&gt;solc-select&lt;/a&gt; (Standard industry tool for Solidity version management)&lt;/li&gt;&#xA;&lt;li&gt;Proven: Led 100+ security reviews for industry leaders like Coinbase, Optimism, Scroll, Frax&lt;/li&gt;&#xA;&lt;li&gt;Specialty: Record-breaking invariant engagements (216 custom invariants for Curvance)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;invariant-development--open-source&#34;&gt;Invariant Development &amp;amp; Open Source&lt;/h3&gt;&#xA;&lt;p&gt;My development background allows me to translate complex protocol logic into formal invariants, creating automated testing suites that uncover edge cases missed by traditional manual reviews.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

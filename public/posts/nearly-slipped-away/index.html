@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Liste - //localhost:1313/">
+    <title>When Bitwise NOT breaks Differential Tests | Nat Chin</title>
+    <meta name="description" content="A minimal hugo theme focus on content">
+    <meta property="og:url" content="//localhost:1313/posts/nearly-slipped-away/">
+  <meta property="og:site_name" content="Nat Chin">
+  <meta property="og:title" content="When Bitwise NOT breaks Differential Tests">
+  <meta property="og:description" content="When you build your test suite to work for you, it really works.
+In a recent engagement, I used differential testing to verify if two implementations of the same logic—one in Golang, one in Solidity—were actually identical. This was a perfect use-case for differential fuzzing - logic that looks the same, under manual review. But looks aren’t everything.
+To find them, I built a “fuzzing harness.” Imagine a monkey smashing a keyboard, taking that random input, and feeding it to the equivalent program in Solidity and Golang. If the Go version succeed on the input but the Solidity version hates it (or vice-versa), the fuzzer errors.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-04-28T15:49:43-04:00">
+    <meta property="article:modified_time" content="2026-04-28T15:49:43-04:00">
+
+    
+  <meta itemprop="name" content="When Bitwise NOT breaks Differential Tests">
+  <meta itemprop="description" content="When you build your test suite to work for you, it really works.
+In a recent engagement, I used differential testing to verify if two implementations of the same logic—one in Golang, one in Solidity—were actually identical. This was a perfect use-case for differential fuzzing - logic that looks the same, under manual review. But looks aren’t everything.
+To find them, I built a “fuzzing harness.” Imagine a monkey smashing a keyboard, taking that random input, and feeding it to the equivalent program in Solidity and Golang. If the Go version succeed on the input but the Solidity version hates it (or vice-versa), the fuzzer errors.">
+  <meta itemprop="datePublished" content="2026-04-28T15:49:43-04:00">
+  <meta itemprop="dateModified" content="2026-04-28T15:49:43-04:00">
+  <meta itemprop="wordCount" content="741">
+    
+    <link rel="canonical" href="//localhost:1313/posts/nearly-slipped-away/">
+    <link rel="icon" href="//localhost:1313//assets/favicon.ico">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link href="https://www.google-analytics.com" rel="preconnect" crossorigin>
+    <link rel="alternate" type="application/atom+xml" title="Nat Chin" href="//localhost:1313//atom.xml" />
+    <link rel="alternate" type="application/json" title="Nat Chin" href="//localhost:1313//feed.json" />
+    <link rel="shortcut icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bricolage+Grotesque">
+    
+    <style>*,:after,:before{box-sizing:border-box;padding:0}body{font:1rem/1.5 bricolage grotesque,-apple-system,BlinkMacSystemFont,segoe ui,Helvetica,Arial,sans-serif;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;padding:2rem;background:#fffdfa;color:#000}.skip-link{position:absolute;top:-40px;left:0;background:#eee;z-index:100}.skip-link:focus{top:0}header{display:flex;justify-content:space-between;align-items:center;position:relative;padding-bottom:1rem}header .burger{display:none;background:0 0;border:none;padding:0;cursor:pointer}header .burger span{display:block;width:25px;height:3px;background:#000;margin:5px 0;transition:all .3s ease}@media(max-width:768px){header .burger{display:block;z-index:2}header .nav-menu{position:fixed;top:0;right:-100%;width:100%;height:100vh;background:#fffdfa;padding:2rem;transition:.3s ease;z-index:1}header .nav-menu.active{right:0}header .nav-menu ul{flex-direction:column;align-items:center;width:100%}header .nav-menu ul li{display:block;font-size:1.2rem;border-bottom:1px dotted #000;height:50px;display:flex;justify-content:center;align-items:center}header.menu-open .burger span:first-child{transform:rotate(45deg)translate(5px,6px)}header.menu-open .burger span:nth-child(2){opacity:0}header.menu-open .burger span:last-child{transform:rotate(-45deg)translate(5px,-6px)}}header a{text-decoration:none}header ul{list-style-type:none;padding:0}header li,header a{display:inline}.link{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-decoration:none}.time{font-variant-numeric:tabular-nums;white-space:nowrap}blockquote{border-left:5px solid #eee;padding-left:1rem;margin:0}a,a:visited{color:inherit}a:hover,a.heading-link{text-decoration:none}pre{padding:.5rem;overflow:auto;overflow-x:scroll;overflow-wrap:normal}code,pre{font-family:San Francisco Mono,Monaco,consolas,lucida console,dejavu sans mono,bitstream vera sans mono,monospace;font-size:normal;font-size:small;background:#eee}code{margin:.1rem;border:none;overflow:visible;overflow-wrap:anywhere}ul{list-style-type:square}ul,ol{padding-left:1.2rem}.list{line-height:2;list-style-type:none;padding-left:0}.list li{padding-bottom:.1rem}.meta{color:#777}.content{max-width:70ch;margin:0 auto}h2.post{padding-top:.5rem}header ul a:first-child{padding-left:1rem}.nav{height:1px;background:#000;content:'';max-width:10%}.list li{display:flex;align-items:baseline}.list li time{flex:initial}.hr-list{margin-top:0;margin-bottom:0;margin-right:.5rem;margin-left:.5rem;height:1px;border:0;border-bottom:1px dotted #ccc;flex:1 0 1rem}.m,hr{border:0;margin:3rem 0}img{max-width:100%;height:auto}.post-date{margin:5% 0}.index-date{color:#9a9a9a}.animate-blink{animation:opacity 1s infinite;opacity:1}@keyframes opacity{0%{opacity:1}50%{opacity:.5}100%{opacity:0}}.tags{display:flex;justify-content:space-between}.tags ul{padding:0;margin:0}.tags li{display:inline}.avatar{height:120px;width:120px;position:relative;margin:-10px 0 0 15px;float:right;border-radius:50%}table{width:100%;border-collapse:collapse}th,td{border:1px solid #ddd;text-align:left;padding:8px}th{background-color:#f2f2f2}</style>
+  
+    
+    
+    
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "posts",
+        "name": "When Bitwise NOT breaks Differential Tests",
+        "headline": "When Bitwise NOT breaks Differential Tests",
+        "alternativeHeadline": "",
+        "description": "\u003cp\u003eWhen you build your test suite to work for you, it \u003cem\u003ereally\u003c\/em\u003e works.\u003c\/p\u003e\n\u003cp\u003eIn a recent engagement, I used differential testing to verify if two implementations of the same logic—one in Golang, one in Solidity—were actually identical. This was a perfect use-case for differential fuzzing - logic that looks the same, under manual review. But looks aren\u0026rsquo;t everything.\u003c\/p\u003e\n\u003cp\u003eTo find them, I built a \u0026ldquo;fuzzing harness.\u0026rdquo; Imagine a monkey smashing a keyboard, taking that random input, and feeding it to the equivalent program in Solidity and Golang. If the Go version succeed on the input but the Solidity version hates it (or vice-versa), the fuzzer errors.\u003c\/p\u003e",
+        "inLanguage": "en-us",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "\/\/localhost:1313\/posts\/nearly-slipped-away\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Nat Chin"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Nat Chin"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Nat Chin"
+        },
+        "copyrightHolder" : "Nat Chin",
+        "copyrightYear" : "2026",
+        "dateCreated": "2026-04-28T15:49:43.00Z",
+        "datePublished": "2026-04-28T15:49:43.00Z",
+        "dateModified": "2026-04-28T15:49:43.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Nat Chin",
+            "url": "//localhost:1313/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "\/\/localhost:1313\/assets\/favicon.ico",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": "//localhost:1313/assets/favicon.ico",
+        "url" : "\/\/localhost:1313\/posts\/nearly-slipped-away\/",
+        "wordCount" : "741",
+        "genre" : [ ],
+        "keywords" : [ ]
+    }
+    </script>
+     
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const burger = document.querySelector('.burger');
+            const nav = document.querySelector('.nav-menu');
+            const header = document.querySelector('header');
+        
+            if (burger) {
+                burger.addEventListener('click', () => {
+                    nav.classList.toggle('active');
+                    header.classList.toggle('menu-open');
+                });
+        
+                
+                document.addEventListener('click', (e) => {
+                    if (!header.contains(e.target) && nav.classList.contains('active')) {
+                        nav.classList.remove('active');
+                        header.classList.remove('menu-open');
+                    }
+                });
+            }
+        });
+    </script> 
+  </head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main</a>
+  <main id="main">
+  <div class="content">
+    
+<header>
+  <p style="padding: 0;margin: 0;">
+    <a href="//localhost:1313/">
+      <b>Nat Chin</b>
+      <span class="text-stone-500 animate-blink">▮</span>
+    </a>
+  </p>
+
+  
+  <button class="burger" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <nav class="nav-menu">
+    <ul style="padding: 0;margin: 0;">
+      
+      
+        <li class="">
+          <a href="/posts/"><span>Post</span></a>
+        </li>
+      
+        <li class="">
+          <a href="/about/"><span>About</span></a>
+        </li>
+      
+    </ul>
+  </nav>
+  
+</header>
+<hr class="hr-list" style="padding: 0;margin: 0;">
+    <section>
+      <h2 class="post">When Bitwise NOT breaks Differential Tests</h2>
+      <p>When you build your test suite to work for you, it <em>really</em> works.</p>
+<p>In a recent engagement, I used differential testing to verify if two implementations of the same logic—one in Golang, one in Solidity—were actually identical. This was a perfect use-case for differential fuzzing - logic that looks the same, under manual review. But looks aren&rsquo;t everything.</p>
+<p>To find them, I built a &ldquo;fuzzing harness.&rdquo; Imagine a monkey smashing a keyboard, taking that random input, and feeding it to the equivalent program in Solidity and Golang. If the Go version succeed on the input but the Solidity version hates it (or vice-versa), the fuzzer errors.</p>
+<h3 id="diggin-into-the-code">Diggin&rsquo; into the code</h3>
+<p>The goal was for these two implementations to be identical.</p>
+<p><strong>Golang Original:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span><span style="color:#75715e">// ensure MAP_ANONYMOUS is set and fd == -1</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">if</span> <span style="color:#111">(</span><span style="color:#75af00">flags</span><span style="color:#111">.</span><span style="color:#75af00">val</span><span style="color:#111">()</span><span style="color:#f92672">&amp;</span><span style="color:#ae81ff">0x20</span><span style="color:#111">)</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">||</span> <span style="color:#75af00">fd</span> <span style="color:#f92672">!=</span> <span style="color:#75af00">u64Mask</span><span style="color:#111">()</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#75af00">addr</span> <span style="color:#111">=</span> <span style="color:#75af00">u64Mask</span><span style="color:#111">()</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#75af00">errCode</span> <span style="color:#111">=</span> <span style="color:#75af00">toU64</span><span style="color:#111">(</span><span style="color:#ae81ff">0x4d</span><span style="color:#111">)</span> <span style="color:#75715e">// no error</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span> 
+</span></span></code></pre></div><p><strong>Solidity Original:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-solidity" data-lang="solidity"><span style="display:flex;"><span><span style="color:#00a8c8">switch</span> <span style="color:#111">or</span><span style="color:#111">(</span><span style="color:#111">iszero</span><span style="color:#111">(</span><span style="color:#111">and</span><span style="color:#111">(</span><span style="color:#111">flags</span><span style="color:#111">,</span> <span style="color:#ae81ff">0x20</span><span style="color:#111">)),</span> <span style="color:#111">not</span><span style="color:#111">(</span><span style="color:#111">eq</span><span style="color:#111">(</span><span style="color:#111">fd</span><span style="color:#111">,</span> <span style="color:#111">u64Mask</span><span style="color:#111">())))</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#00a8c8">case</span> <span style="color:#ae81ff">1</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#111">addr</span> <span style="color:#f92672">:=</span> <span style="color:#111">u64Mask</span><span style="color:#111">()</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#111">errCode</span> <span style="color:#f92672">:=</span> <span style="color:#111">toU64</span><span style="color:#111">(</span><span style="color:#ae81ff">0x4d</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span></code></pre></div><h3 id="eurekaor-kind-of">Eureka&hellip;.or kind of</h3>
+<p>At a high level, both codebases were intended to return 1 on their first lines, to enter the <code>if</code>/<code>switch</code> statement. Instead, the program produced two separate numeric outputs, which was miscalculated. The fuzzer had found a deviation in which one of the calculations uses a padded variable, causing a discrepancy.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Step</th>
+          <th>Golang Logic</th>
+          <th>Solidity Logic</th>
+          <th>Match?</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1. Check Flags</td>
+          <td><code>31&amp;0x20 ==0 -&gt; 1</code></td>
+          <td><code>isZero(and(31, 0x20)) -&gt; 1</code></td>
+          <td>✅</td>
+      </tr>
+      <tr>
+          <td>2. Equality Check **</td>
+          <td><code>fd == u64Mask() = 1</code></td>
+          <td><code>eq(18446744073709551551, u64Mask()) = 0000000000000000000000000000000000000000000000000000000000000000</code></td>
+          <td>❓</td>
+      </tr>
+      <tr>
+          <td>3. The NOT</td>
+          <td>Result is already <code>1</code></td>
+          <td><code>1111111111111111111111111111111111111111111111111111111111111111 -&gt; 0xff.ff</code></td>
+          <td>❌</td>
+      </tr>
+  </tbody>
+</table>
+<p>*Note: Step 2 in Golang logic combines step 2 and 3 in one. This is why the result is already 1.</p>
+<h3 id="what-happened">What happened?</h3>
+<p>In Golang, the result of the check is a literal <code>1</code>. The logic is only a single bit - this is <strong>expected behaviour.</strong></p>
+<p>In Yul, the <code>not()</code> operator is applied <em>bitwise</em>. When the equality check <code>eq(fd, u64Mask())</code> returned a 0, it was interpreted as <code>00...00</code>. Applying the <code>not()</code> operator on the 32 byte word of zeroes, flipped <strong>every single bit.</strong></p>
+<p>The result in Solidity wasn&rsquo;t a <code>1</code> - it was a <code>1111111111111111111111111111111111111111111111111111111111111111</code>.</p>
+<p>Because the Solidity code used a <code>switch</code> statement, which expected a result of <code>1</code>, the control flow did not enter the branch. In Golang, the same path resulted in a <code>1</code>, which ran the associated code. This resulted in the final result of both implementations to be mismatched.</p>
+<h4 id="evolution-of-the-fuzzer">Evolution of the Fuzzer</h4>
+<p>The fuzzer went through four distinct iterations:</p>
+<ul>
+<li><strong>V0 (Sanity Check):</strong> - Simple success/failure check - if one version reverts with input, both must revert and vice versa.</li>
+<li><strong>V0.5 (Error Matching):</strong> - Tightened constraints. If both versions fail, the error codes must match.</li>
+<li><strong>V1 (Input Targeting):</strong> - Defined specific numeric ranges for inputs to ensure that the fuzzer could explore additional flows.</li>
+<li><strong>V2 (Coverage Bumper):</strong> - Analyzed branch coverage of unit tests, and realized that this if statement had no coverage. I manually seeded the fuzzer with inputs that should trigger this statement. <strong>The fuzzer found the deviation in seconds</strong></li>
+</ul>
+<h3 id="smart-dumb-monkey-smashing-keyboard"><em>Smart</em> <del>Dumb</del> Monkey-Smashing-Keyboard</h3>
+<p>I mentioned that fuzzing is like a monkey smashing a keyboard, but a &ldquo;dumb&rdquo; monkey uses input space inefficiently. If you&rsquo;re testing liquidity pools or low-level masks, a random <code>uint256</code> will almost always just trigger either the same happy paths already discovered, or generic &ldquo;Balance too low&rdquo; or more likely, a series of reverts that causes the fuzzer to get nowhere.</p>
+<p>A &ldquo;Smart&rdquo; Fuzzer (V2) uses directed input generation. By constraining the &ldquo;monkey&rdquo; to smash keys within specific numeric ranges (like values just above or below u64Mask), we maximize coveraged reached by the fuzzer.</p>
+<p>This is the intersection of security research and development: knowing where the code is likely to have issues and guiding the tools to look there. It is highly improbable the fuzzer would have found this specific bit-flip on its own without those manual adjustments to the harness. It is also highly improbable that this bug would be found via manual review.</p>
+<h3 id="lessons-for-the-road">Lessons for the Road</h3>
+<ol>
+<li><strong>Logical vs. Bitwise:</strong> In Yul, always use <code>iszero(x)</code> for negation. Avoid <code>not()</code> unless you are actually manipulating bits.</li>
+<li><strong>Stop and think:</strong> Focus on the areas your unit tests don&rsquo;t reach. Use coverage reports as a gauge for where to target your fuzzer.</li>
+<li><strong>Always Deterministic:</strong> Never ignore a failed test, especially if it&rsquo;s only <em>sometimes</em> fails. If any test fails once, you&rsquo;re likely sitting on a bug. Understand it. Investigate it.</li>
+</ol>
+
+      
+      <div class="post-date">
+        <span class="g time">April 28, 2026 </span> &#8729;
+         
+      </div>
+      
+    </section>
+    
+    
+    
+  </div>
+</main>
+</body>
+</html>
