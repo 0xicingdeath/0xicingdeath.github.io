@@ -8,7 +8,9 @@ With a four year tenure at **Trail of Bits**, I was the first member of the unof
 
 I **thrive on solving complex problems** and I am particularly passionate about invariant identification, and building automated testing suites. By proactively identifying invariants during calls and code walkthroughs, I provide clients a strategic foundation that leads to a deeper understanding of their codebase and safe protocols. 
 
-**I am currently available for security review contracts, development opportunities, and strategic advisory.**
+**I am currently available for security review contracts, development opportunities, and strategic advisory.** 
+
+Email: `me [at] natchineth [dot] com` | X: `0xicingdeath` | Telegram: `icingdeath0`
 
 ## Core Skills & Expertise
  - **Smart Contract Security**: Deep mastery of Solidity, EVM, and vulnerability patterns 
